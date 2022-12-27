@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GridLayout_Practice</string>
+    <string name="Easy">Easy</string>
+    <string name="testing">Testing</string>
+    <string name="todo">TODO</string>
+    <string name="sorting">Sorting</string>
+    <string name="selection_sort">Selection Sort</string>
+    <string name="bubble_sort">Bubble Sort</string>
+    <string name="marge_sort">Marge Sort</string>
+    <string name="medium">Medium</string>
+    <string name="algorithm">Algorithm</string>
+    <string name="visualization">Visualization</string>
+    <string name="analysis">Analysis</string>
+    <string name="selection_sort_description">Selection Sort Description</string>
+</resources>
