@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/parent_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Sorting_Description_Section">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:background="#673AB7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="#673AB7">
 
         <ImageView
             android:id="@+id/sorting_description_back_btn"
@@ -35,37 +34,282 @@
             android:textSize="18sp" />
     </RelativeLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        >
 
-        <Button
-            android:id="@+id/visualization"
-            android:layout_width="95dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:fitsSystemWindows="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:text="@string/visualization" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/analysis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:fitsSystemWindows="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:text="@string/analysis" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/selection_sort"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textColor="#9C27B0"
+                android:textSize="30sp" />
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="75dp"
+                android:background="@drawable/logo"
+                android:layout_gravity="center"
+                android:backgroundTint="#673AB7"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/alef"
+                android:gravity="left"
+                android:text="@string/selection_sort_dec_1"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/alef"
+                android:gravity="left"
+                android:text="@string/selection_sort_2"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/alef"
+                android:gravity="left"
+                android:text="Lets consider the following array as an example:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/alef"
+                android:gravity="left"
+                android:text="@string/arr"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/alef"
+                android:gravity="left"
+                android:text="@string/first_pass"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/alef"
+                android:gravity="left"
+                android:text="@string/the"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/alef"
+                    android:textStyle="bold"
+                    android:text="64"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    />
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/alef"
+                    android:text="25"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/alef"
+                    android:text="12"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/alef"
+                    android:text="22"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/alef"
+                    android:text="11"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/alef"
+                android:gravity="left"
+                android:text="\u2022 Thus, replace 64 with 11. After one iteration 11, which happens to be the least value in the array, tends to appear in the first position of the sorted list."
+                android:textColor="#000000"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/alef"
+                    android:textStyle="bold"
+                    android:text="11"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    />
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/alef"
+                    android:text="25"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/alef"
+                    android:text="12"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/alef"
+                    android:text="22"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/alef"
+                    android:text="64"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/visualization"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:fitsSystemWindows="true"
+                    android:background="@drawable/stroke_background"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="@string/visualization"
+                    />
+
+                <Button
+                    android:id="@+id/analysis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:fitsSystemWindows="true"
+                    android:background="@drawable/stroke_background"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="@string/analysis" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
