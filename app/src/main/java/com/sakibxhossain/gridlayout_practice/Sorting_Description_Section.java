@@ -36,7 +36,7 @@ public class Sorting_Description_Section extends AppCompatActivity {
         analysis_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent selection_visual = new Intent(Sorting_Description_Section.this, Selection_Sort_Visualizer_Analysis.class);
+                Intent selection_visual = new Intent(Sorting_Description_Section.this, Selection_Sort.class);
                 startActivity(selection_visual);
             }
         });
@@ -44,7 +44,7 @@ public class Sorting_Description_Section extends AppCompatActivity {
         visualization_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent selection_visual = new Intent(Sorting_Description_Section.this, Selection_Sort_Visualizer_Analysis.class);
+                Intent selection_visual = new Intent(Sorting_Description_Section.this, Selection_Sort.class);
                 startActivity(selection_visual);
             }
         });

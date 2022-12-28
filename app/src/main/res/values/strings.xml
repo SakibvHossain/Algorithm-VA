@@ -17,4 +17,38 @@
     <string name="arr">arr[] = {64, 25, 12, 22, 11}</string>
     <string name="first_pass">First pass:</string>
     <string name="the">\u2022 For the first position in the sorted array, the whole array is traversed from index 0 to 4 sequentially. The first position where 64 is stored presently, after traversing whole array it is clear that 11 is the lowest value</string>
+
+
+    <!-- Selection Sort -->
+    <string name="selection_1">1&#160;import java.io.*;</string>
+    <string name="selection_2">2&#160;public class SelectionSort{</string>
+    <string name="selection_3">3&#160;&#160;void sort(int arr[]){</string>
+    <string name="selection_4">4&#160;&#160;&#160;int n = arr.length;</string>
+    <string name="selection_5">5&#160;&#160;&#160;for(int i=0; i &#60;&#160; n - 1; i++){</string>
+    <string name="selection_6">6&#160;&#160;&#160;&#160;int min_idx = i;</string>
+    <string name="selection_7">7&#160;&#160;&#160;&#160;for(int j=i+1;&#160;j&#160;&#60;&#160;n;&#160;j++){</string>
+    <string name="selection_8">8&#160;&#160;&#160;&#160;&#160;if(arr[j] &#60; arr[min_idx]){</string>
+    <string name="selection_9">9&#160;&#160;&#160;&#160;&#160;&#160;min_idx = j;</string>
+    <string name="selection_10">10&#160;&#160;&#160;&#160;int temp = arr[min_idx];</string>
+    <string name="selection_11">11&#160;&#160;&#160;&#160;arr[min_idx] = arr[i];</string>
+    <string name="selection_12">12&#160;&#160;&#160;&#160;arr[i] = temp;</string>
+    <string name="selection_13">13&#160;&#160;&#160;}</string>
+    <string name="selection_14">14&#160;&#160;}</string>
+    <string name="selection_15">15&#160;&#160;void printArray(int arr[]){</string>
+    <string name="selection_16">16&#160;&#160;&#160;int n = arr.length;</string>
+    <string name="selection_17">17&#160;&#160;&#160;for(int i=0; i &#60; n; i++){</string>
+    <string name="selection_18">18&#160;&#160;&#160;&#160;System.out.println(arr[i]+" ");</string>
+    <string name="selection_19">19&#160;&#160;&#160;}</string>
+    <string name="selection_20">20&#160;&#160;}</string>
+    <string name="selection_21">21&#160;&#160;public static void main(String[] args){</string>
+    <string name="selection_22">22&#160;&#160;&#160;SelectionSort ob = new SelectionSort();</string>
+    <string name="selection_23">23&#160;&#160;&#160;int[] arr = {64,25,12,22,11};</string>
+    <string name="selection_24">24&#160;&#160;&#160;ob.sort(arr);</string>
+    <string name="selection_25">25&#160;&#160;&#160;System.out.println("Sorted Array");</string>
+    <string name="selection_26">26&#160;&#160;&#160;ob.printArray(arr);</string>
+    <string name="selection_27">27&#160;&#160;}</string>
+    <string name="selection_28">27&#160;}</string>
+
+
+
 </resources>
