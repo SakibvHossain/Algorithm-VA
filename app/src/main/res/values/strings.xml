@@ -47,8 +47,11 @@
     <string name="selection_25">25&#160;&#160;&#160;System.out.println("Sorted Array");</string>
     <string name="selection_26">26&#160;&#160;&#160;ob.printArray(arr);</string>
     <string name="selection_27">27&#160;&#160;}</string>
-    <string name="selection_28">27&#160;}</string>
-
+    <string name="selection_28">28&#160;}</string>
+    <string name="program_output">Program Output</string>
+    <string name="array_demo">Array = { 64, 25, 12, 22, 11 };</string>
+    <string name="variables">Variables</string>
+    <string name="memory">Memory</string>
 
 
 </resources>

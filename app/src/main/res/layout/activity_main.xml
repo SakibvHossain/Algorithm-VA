@@ -12,37 +12,38 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:elevation="4dp"
-            android:background="#00BCD4"
+            android:background="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:id="@+id/icon_main_activity"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/logo"
+                    android:layout_width="55dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/app_logo"
                     android:contentDescription="@string/todo" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
                     android:orientation="vertical">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/algorithm"
-                            android:textColor="#fff"/>
+                            android:textColor="#673AB7"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="#fff"
+                            android:textColor="#673AB7"
                             android:text="@string/visualization"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="#fff"
+                            android:textColor="#673AB7"
                             android:text="@string/analysis"/>
                 </LinearLayout>
 

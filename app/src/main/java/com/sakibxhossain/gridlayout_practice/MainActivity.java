@@ -21,11 +21,11 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
 
     int[] itemsImage = new int[] {
-            R.drawable.logo, R.drawable.logo,
-            R.drawable.logo, R.drawable.logo,
-            R.drawable.logo, R.drawable.logo,
-            R.drawable.logo, R.drawable.logo,
-            R.drawable.logo
+            R.drawable.app_logo, R.drawable.app_logo,
+            R.drawable.app_logo, R.drawable.app_logo,
+            R.drawable.app_logo, R.drawable.app_logo,
+            R.drawable.app_logo, R.drawable.app_logo,
+            R.drawable.app_logo
     };
 
     String[] itemTitle = new String[]{
