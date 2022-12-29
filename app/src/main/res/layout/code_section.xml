@@ -145,37 +145,44 @@
                 android:textColor="@color/white"
                 android:text="@string/selection_24"/>
             <TextView
+                android:id="@+id/Selection_line_25"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_25"/>
             <TextView
+                android:id="@+id/Selection_line_26"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_26"/>
             <TextView
+                android:id="@+id/Selection_line_27"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_27"/>
 
             <TextView
+                android:id="@+id/Selection_line_28"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_28"/>
             <TextView
+                android:id="@+id/Selection_line_29"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_29"/>
             <TextView
+                android:id="@+id/Selection_line_30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_30"/>
             <TextView
+                android:id="@+id/Selection_line_31"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"

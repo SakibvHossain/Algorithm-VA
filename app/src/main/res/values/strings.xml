@@ -44,7 +44,7 @@
     <string name="selection_22">22&#160;&#160;&#160;}</string>
     <string name="selection_23">23&#160;&#160;}</string>
     <string name="selection_24">24&#160;&#160;public static void main(String[] args){</string>
-    <string name="selection_25">25&#160;&#160;&#160;int[] arr = {64,25,12,22,11};</string>
+    <string name="selection_25">25&#160;&#160;&#160;int[] arr = {4, 8, 2, 9, 5}</string>
     <string name="selection_26">26&#160;&#160;&#160;sort(arr);</string>
     <string name="selection_27">27&#160;&#160;&#160;if(isSorted(arr)){</string>
     <string name="selection_28">28&#160;&#160;&#160;&#160;System.out.println(Arrays.toString(arr));</string>
@@ -52,9 +52,10 @@
     <string name="selection_30">30&#160;&#160;}</string>
     <string name="selection_31">31&#160;}</string>
     <string name="program_output">Program Output</string>
-    <string name="array_demo">Sorted Array = { 64, 25, 12, 22, 11 };</string>
+    <string name="array_demo">Sorted Array = {4, 8, 2, 9, 5}</string>
     <string name="variables">Variables</string>
     <string name="memory">Memory</string>
+    <string name="_1">1</string>
 
 
 </resources>
