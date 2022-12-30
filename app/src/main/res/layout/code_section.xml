@@ -188,6 +188,29 @@
                 android:textColor="@color/white"
                 android:text="@string/selection_31"/>
 
+            <TextView
+                android:id="@+id/Selection_line_32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/selection_32"/>
+
+            <TextView
+                android:id="@+id/Selection_line_33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/selection_33"/>
+
+            <TextView
+                android:id="@+id/Selection_line_34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/selection_34"/>
+
+
+
         </LinearLayout>
 
 

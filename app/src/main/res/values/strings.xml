@@ -28,29 +28,32 @@
     <string name="selection_6">6&#160;&#160;&#160;&#160;int min_idx = i;</string>
     <string name="selection_7">7&#160;&#160;&#160;&#160;for(int j=i+1;&#160;j&#160;&#60;&#160;n;&#160;j++){</string>
     <string name="selection_8">8&#160;&#160;&#160;&#160;&#160;if(arr[j] &#60; arr[min_idx]){</string>
-    <string name="selection_9">9&#160;&#160;&#160;&#160;&#160;&#160;min_idx = j;</string>
-    <string name="selection_10">10&#160;&#160;&#160;&#160;int temp = arr[min_idx];</string>
-    <string name="selection_11">11&#160;&#160;&#160;&#160;arr[min_idx] = arr[i];</string>
-    <string name="selection_12">12&#160;&#160;&#160;&#160;arr[i] = temp;</string>
-    <string name="selection_13">13&#160;&#160;&#160;}</string>
-    <string name="selection_14">14&#160;&#160;}</string>
-    <string name="selection_15">15&#160;&#160;public static boolean isSorted(int arr[]){</string>
-    <string name="selection_16">16&#160;&#160;&#160;int prev = arr[0];</string>
-    <string name="selection_17">17&#160;&#160;&#160;for(int i=1; i &#60; arr.length; i++){</string>
-    <string name="selection_18">18&#160;&#160;&#160;&#160;if(prev > arr[i]){</string>
-    <string name="selection_19">19&#160;&#160;&#160;&#160;&#160;System.out.println("Selection Sort Fails");</string>
-    <string name="selection_20">20&#160;&#160;&#160;&#160;&#160;return false;</string>
-    <string name="selection_21">21&#160;&#160;&#160;&#160;}</string>
-    <string name="selection_22">22&#160;&#160;&#160;}</string>
-    <string name="selection_23">23&#160;&#160;}</string>
-    <string name="selection_24">24&#160;&#160;public static void main(String[] args){</string>
-    <string name="selection_25">25&#160;&#160;&#160;int[] arr = {4, 8, 2, 9, 5}</string>
-    <string name="selection_26">26&#160;&#160;&#160;sort(arr);</string>
-    <string name="selection_27">27&#160;&#160;&#160;if(isSorted(arr)){</string>
-    <string name="selection_28">28&#160;&#160;&#160;&#160;System.out.println(Arrays.toString(arr));</string>
-    <string name="selection_29">29&#160;&#160;&#160;}</string>
-    <string name="selection_30">30&#160;&#160;}</string>
-    <string name="selection_31">31&#160;}</string>
+    <string name="selection_9">9&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;min_idx = j;</string>
+    <string name="selection_10">10&#160;&#160;&#160;&#160;&#160;}</string>
+    <string name="selection_11">11&#160;&#160;&#160;&#160;}</string>
+    <string name="selection_12">12&#160;&#160;&#160;&#160;int temp = arr[min_idx];</string>
+    <string name="selection_13">13&#160;&#160;&#160;&#160;arr[min_idx] = arr[i];</string>
+    <string name="selection_14">14&#160;&#160;&#160;&#160;arr[i] = temp;</string>
+    <string name="selection_15">15&#160;&#160;&#160;}</string>
+    <string name="selection_16">16&#160;&#160;}</string>
+    <string name="selection_17">17&#160;&#160;public static boolean isSorted(int arr[]){</string>
+    <string name="selection_18">18&#160;&#160;&#160;int prev = arr[0];</string>
+    <string name="selection_19">19&#160;&#160;&#160;for(int i=1; i &#60; arr.length; i++){</string>
+    <string name="selection_20">20&#160;&#160;&#160;&#160;if(prev > arr[i]){</string>
+    <string name="selection_21">21&#160;&#160;&#160;&#160;&#160;System.out.println(&quot;Selection Sort Fails&quot;);</string>
+    <string name="selection_22">22&#160;&#160;&#160;&#160;&#160;return false;</string>
+    <string name="selection_23">23&#160;&#160;&#160;&#160;}</string>
+    <string name="selection_24">24&#160;&#160;&#160;}</string>
+    <string name="selection_25">25&#160;&#160;&#160;return true;</string>
+    <string name="selection_26">26&#160;&#160;}</string>
+    <string name="selection_27">27&#160;&#160;public static void main(String[] args){</string>
+    <string name="selection_28">28&#160;&#160;&#160;int[] arr = {4, 8, 2, 9, 5}</string>
+    <string name="selection_29">29&#160;&#160;&#160;sort(arr);</string>
+    <string name="selection_30">30&#160;&#160;&#160;if(isSorted(arr)){</string>
+    <string name="selection_31">31&#160;&#160;&#160;&#160;System.out.println(Arrays.toString(arr));</string>
+    <string name="selection_32">32&#160;&#160;&#160;}</string>
+    <string name="selection_33">33&#160;&#160;}</string>
+    <string name="selection_34">34&#160;}</string>
     <string name="program_output">Program Output</string>
     <string name="array_demo">Sorted Array = {4, 8, 2, 9, 5}</string>
     <string name="variables">Variables</string>
