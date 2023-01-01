@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Selection_Sort_Visualizer_Analysis extends AppCompatActivity {
+public class Selection_Sort_Analysis extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
