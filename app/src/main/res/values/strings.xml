@@ -47,18 +47,23 @@
     <string name="selection_25">25&#160;&#160;&#160;return true;</string>
     <string name="selection_26">26&#160;&#160;}</string>
     <string name="selection_27">27&#160;&#160;public static void main(String[] args){</string>
-    <string name="selection_28">28&#160;&#160;&#160;int[] arr = {4, 8, 2, 9, 5}</string>
-    <string name="selection_29">29&#160;&#160;&#160;sort(arr);</string>
-    <string name="selection_30">30&#160;&#160;&#160;if(isSorted(arr)){</string>
-    <string name="selection_31">31&#160;&#160;&#160;&#160;System.out.println(Arrays.toString(arr));</string>
+    <string name="selection_28">28&#160;&#160;&#160;int[] array = {4, 8, 2, 9, 5}</string>
+    <string name="selection_29">29&#160;&#160;&#160;sort(array);</string>
+    <string name="selection_30">30&#160;&#160;&#160;if(isSorted(array)){</string>
+    <string name="selection_31">31&#160;&#160;&#160;&#160;System.out.println(Arrays.toString(array));</string>
     <string name="selection_32">32&#160;&#160;&#160;}</string>
     <string name="selection_33">33&#160;&#160;}</string>
     <string name="selection_34">34&#160;}</string>
     <string name="program_output">Program Output</string>
     <string name="array_demo">[4, 8, 2, 9, 5]</string>
     <string name="variables">Variables</string>
-    <string name="memory">Memory</string>
+    <string name="memory">Analyzing</string>
+    <string name="array_name">array</string>
     <string name="_1">1</string>
+    <string name="main_section_executed">main: 17</string>
+    <string name="sort_method_called">sort: 3</string>
+    <string name="isSorted_method_called">isSorted: 17</string>
+    <string name="initial_condition">0</string>
 
 
 </resources>
