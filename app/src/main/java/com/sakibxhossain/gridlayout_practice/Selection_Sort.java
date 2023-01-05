@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 
@@ -21,8 +23,15 @@ public class Selection_Sort extends AppCompatActivity {
     TextView initial_Count, final_Count;
 
     //Code section textViews
-    TextView selection_25,selection_26,selection_27,selection_28,selection_29,selection_30,selection_31;
+    TextView selection_28, selection_03, selection_29, selection_04, selection_05, selection_06, selection_07, selection_08
+            ,selection_09, selection_10, selection_11, selection_12, selection_13, selection_14, selection_15, selection_16,
+            selection_17, selection_18, selection_19, selection_20,selection_30, selection_24, selection_25, selection_26, selection_31
+            , selection_32, selection_33;
     //Code section textViews
+
+    //
+     TextView print_sorted_array;
+    //
 
     //track array operations
       int count = -1;
@@ -54,18 +63,69 @@ public class Selection_Sort extends AppCompatActivity {
         //Handler Hooks
 
 
+        //Array will be displayed
+        print_sorted_array = findViewById(R.id.print_sorted_array);
+
         //code section TextViews
-        selection_25 = findViewById(R.id.Selection_line_25);
-        selection_26 = findViewById(R.id.Selection_line_26);
-        selection_27 = findViewById(R.id.Selection_line_27);
         selection_28 = findViewById(R.id.Selection_line_28);
         selection_29 = findViewById(R.id.Selection_line_29);
+        selection_03 = findViewById(R.id.Selection_line_03);
+        selection_04 = findViewById(R.id.Selection_line_04);
+        selection_05 = findViewById(R.id.Selection_line_05);
+        selection_06 = findViewById(R.id.Selection_line_06);
+        selection_07 = findViewById(R.id.Selection_line_07);
+        selection_08 = findViewById(R.id.Selection_line_08);
+        selection_09 = findViewById(R.id.Selection_line_09);
+        selection_10 = findViewById(R.id.Selection_line_10);
+        selection_11 = findViewById(R.id.Selection_line_11);
+        selection_12 = findViewById(R.id.Selection_line_12);
+        selection_13 = findViewById(R.id.Selection_line_13);
+        selection_14 = findViewById(R.id.Selection_line_14);
+        selection_15 = findViewById(R.id.Selection_line_15);
+        selection_16 = findViewById(R.id.Selection_line_16);
         selection_30 = findViewById(R.id.Selection_line_30);
+        selection_17 = findViewById(R.id.Selection_line_17);
+        selection_18 = findViewById(R.id.Selection_line_18);
+        selection_19 = findViewById(R.id.Selection_line_19);
+        selection_20 = findViewById(R.id.Selection_line_20);
+        selection_24 = findViewById(R.id.Selection_line_24);
+        selection_25 = findViewById(R.id.Selection_line_25);
+        selection_26 = findViewById(R.id.Selection_line_26);
         selection_31 = findViewById(R.id.Selection_line_31);
+        selection_32 = findViewById(R.id.Selection_line_32);
+        selection_33 = findViewById(R.id.Selection_line_33);
         //code section Textviews
 
-        TextView[] list_of_views = {selection_25,selection_26,selection_27,selection_28,selection_29,selection_30,selection_31};
+        TextView[] list_of_views = {
+                  selection_28, selection_29, selection_03
+                , selection_04, selection_05, selection_06
+                , selection_07, selection_08, selection_07
+                , selection_08, selection_09, selection_10
+                , selection_07, selection_08, selection_07
+                , selection_08, selection_11, selection_12
+                , selection_13, selection_14, selection_05
+                , selection_06, selection_07, selection_08
+                , selection_09, selection_10, selection_07
+                , selection_08, selection_07, selection_08
+                , selection_11, selection_12, selection_13
+                , selection_14, selection_05, selection_06
+                , selection_07, selection_08, selection_07
+                , selection_08, selection_09, selection_10
+                , selection_11, selection_12, selection_13
+                , selection_14, selection_05, selection_06
+                , selection_07, selection_08, selection_09
+                , selection_10, selection_11, selection_12
+                , selection_13, selection_14, selection_15
+                , selection_16, selection_30, selection_17
+                , selection_18, selection_19, selection_20
+                , selection_24, selection_19, selection_20
+                , selection_24, selection_19, selection_20
+                , selection_24, selection_19, selection_20
+                , selection_24, selection_25, selection_26
+                , selection_31, selection_32, selection_33
+        };
 
+        final_Count.setText(String.valueOf(list_of_views.length));
         //list_of_views[count].setBackgroundColor(getColor(R.color.completeTransparent));
 
         //Analysis operations
@@ -77,6 +137,9 @@ public class Selection_Sort extends AppCompatActivity {
                     if(count > 0){
                         count--;
                         back_track = count + 1;
+                        if(count == 75){
+                            print_sorted_array.setVisibility(View.INVISIBLE);
+                        }
                         initial_Count.setText(String.valueOf(count+algo_operations));
                         list_of_views[count].setBackgroundColor(getColor(R.color.transparentWhite));
                         list_of_views[back_track].setBackgroundColor(getColor(R.color.completeTransparent));
@@ -93,6 +156,7 @@ public class Selection_Sort extends AppCompatActivity {
                  public void onClick(View view) {
                      //list_of_views[count].setBackgroundColor(getColor(R.color.completeTransparent));
 
+
                      if(count < list_of_views.length - 1){
                          count++;
                          if(count==0){
@@ -100,6 +164,11 @@ public class Selection_Sort extends AppCompatActivity {
                          }else {
                              forward_track = count - 1;
                              //initial_Count.setText(String.valueOf(count));
+                             if(count == 76){
+                                 print_sorted_array.setVisibility(View.VISIBLE);
+                             }else if(count == 77){
+                                 Toast.makeText(Selection_Sort.this,"Program Terminated", Toast.LENGTH_SHORT).show();
+                             }
                              list_of_views[forward_track].setBackgroundColor(getColor(R.color.completeTransparent));
                              list_of_views[count].setBackgroundColor(getColor(R.color.transparentWhite));
                          }

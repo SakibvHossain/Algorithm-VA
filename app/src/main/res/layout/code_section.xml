@@ -30,96 +30,115 @@
                 android:textColor="@color/white"
                 android:text="@string/selection_1"/>
             <TextView
+                android:id="@+id/Selection_line_02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_2"/>
             <TextView
+                android:id="@+id/Selection_line_03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_3"/>
             <TextView
+                android:id="@+id/Selection_line_04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_4"/>
             <TextView
+                android:id="@+id/Selection_line_05"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_5"/>
             <TextView
+                android:id="@+id/Selection_line_06"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_6"/>
             <TextView
+                android:id="@+id/Selection_line_07"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_7"/>
             <TextView
+                android:id="@+id/Selection_line_08"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_8"/>
             <TextView
+                android:id="@+id/Selection_line_09"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_9"/>
             <TextView
+                android:id="@+id/Selection_line_10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_10"/>
             <TextView
+                android:id="@+id/Selection_line_11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_11"/>
             <TextView
+                android:id="@+id/Selection_line_12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_12"/>
             <TextView
+                android:id="@+id/Selection_line_13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_13"/>
             <TextView
+                android:id="@+id/Selection_line_14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_14"/>
             <TextView
+                android:id="@+id/Selection_line_15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_15"/>
             <TextView
+                android:id="@+id/Selection_line_16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_16"/>
             <TextView
+                android:id="@+id/Selection_line_17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_17"/>
             <TextView
+                android:id="@+id/Selection_line_18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_18"/>
             <TextView
+                android:id="@+id/Selection_line_19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_19"/>
             <TextView
+                android:id="@+id/Selection_line_20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
@@ -140,6 +159,7 @@
                 android:textColor="@color/white"
                 android:text="@string/selection_23"/>
             <TextView
+                android:id="@+id/Selection_line_24"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
