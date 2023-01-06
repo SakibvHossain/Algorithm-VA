@@ -176,12 +176,13 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/selection_26"/>
+
             <TextView
                 android:id="@+id/Selection_line_27"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_27"/>
+                android:text="@string/selection_27"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/Selection_line_28"

@@ -57,7 +57,7 @@
     <string name="program_output">Program Output</string>
     <string name="array_demo">[4, 8, 2, 9, 5]</string>
     <string name="variables">Variables</string>
-    <string name="memory">Analyzing</string>
+    <string name="memory">Analyzing View</string>
     <string name="array_name">array</string>
     <string name="_1">1</string>
     <string name="main_section_executed">main: 17</string>

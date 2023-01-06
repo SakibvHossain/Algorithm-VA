@@ -8,6 +8,7 @@ import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,11 +24,17 @@ public class Selection_Sort extends AppCompatActivity {
     TextView initial_Count, final_Count;
 
     //Code section textViews
-    TextView selection_28, selection_03, selection_29, selection_04, selection_05, selection_06, selection_07, selection_08
+    TextView selection_27 ,selection_28, selection_03, selection_29, selection_04, selection_05, selection_06, selection_07, selection_08
             ,selection_09, selection_10, selection_11, selection_12, selection_13, selection_14, selection_15, selection_16,
             selection_17, selection_18, selection_19, selection_20,selection_30, selection_24, selection_25, selection_26, selection_31
             , selection_32, selection_33;
     //Code section textViews
+
+    //main method
+       LinearLayout layoutMainExecuted, layoutMainVariable, arrayMainExecuted;
+       TextView arr_index_0, arr_index_1, arr_index_2, arr_index_3, arr_index_4;
+    //main method
+
 
     //
      TextView print_sorted_array;
@@ -62,11 +69,28 @@ public class Selection_Sort extends AppCompatActivity {
            //TextView
         //Handler Hooks
 
+        //main method variable hooks
+         //layout
+           layoutMainExecuted = findViewById(R.id.layout_main_executed);
+           layoutMainVariable = findViewById(R.id.layout_main_variables);
+           arrayMainExecuted = findViewById(R.id.array_main_executed);
+         //layout
+
+         //TextView
+           arr_index_0 = findViewById(R.id.index_0);
+           arr_index_1 = findViewById(R.id.index_1);
+           arr_index_2 = findViewById(R.id.index_2);
+           arr_index_3 = findViewById(R.id.index_3);
+           arr_index_4 = findViewById(R.id.index_4);
+         //TextView
+        //main method variable hooks
+
 
         //Array will be displayed
         print_sorted_array = findViewById(R.id.print_sorted_array);
 
         //code section TextViews
+        selection_27 = findViewById(R.id.Selection_line_27);
         selection_28 = findViewById(R.id.Selection_line_28);
         selection_29 = findViewById(R.id.Selection_line_29);
         selection_03 = findViewById(R.id.Selection_line_03);
@@ -97,6 +121,7 @@ public class Selection_Sort extends AppCompatActivity {
         //code section Textviews
 
         TextView[] list_of_views = {
+                  selection_27,
                   selection_28, selection_29, selection_03
                 , selection_04, selection_05, selection_06
                 , selection_07, selection_08, selection_07
