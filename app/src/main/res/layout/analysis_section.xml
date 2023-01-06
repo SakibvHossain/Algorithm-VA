@@ -73,9 +73,11 @@
 
         <!-- main method analysis section -->
         <LinearLayout
+            android:id="@+id/layout_main_executed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:visibility="visible"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="match_parent"
@@ -86,10 +88,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layout_main_variables"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="8dp"
+            android:visibility="visible"
             android:background="@drawable/handler_stroke_background"
             >
             <LinearLayout
@@ -195,6 +199,7 @@
 
         <!-- sorted method analysis section -->
         <LinearLayout
+            android:id="@+id/sort_method_executed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -208,6 +213,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/sort_method_variables"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -248,6 +254,7 @@
                android:layout_margin="4dp"
                android:orientation="horizontal">
                <TextView
+                   android:id="@+id/sort_method_variable_n"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:textColor="#656060"
@@ -257,6 +264,7 @@
                    android:layout_margin="2dp"
                    />
                <TextView
+                   android:id="@+id/sort_method_variable_n_value"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:textColor="#635C5C"
@@ -279,6 +287,7 @@
                    android:weightSum="2">
 
                    <TextView
+                       android:id="@+id/sort_method_variable_i"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="4dp"
@@ -287,6 +296,7 @@
                        android:text="i" />
 
                    <TextView
+                       android:id="@+id/sort_method_variable_i_value"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="4dp"
@@ -303,6 +313,7 @@
                    android:weightSum="2">
 
                    <TextView
+                       android:id="@+id/sort_method_variable_minIndex"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="4dp"
@@ -311,6 +322,7 @@
                        android:text="min_idx" />
 
                    <TextView
+                       android:id="@+id/sort_method_variable_minIndex_value"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="4dp"
@@ -327,6 +339,7 @@
                    android:weightSum="2">
 
                    <TextView
+                       android:id="@+id/sort_method_variable_j"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="4dp"
@@ -335,6 +348,7 @@
                        android:text="j" />
 
                    <TextView
+                       android:id="@+id/sort_method_variable_j_value"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="4dp"
@@ -344,6 +358,7 @@
 
                </LinearLayout>
                <LinearLayout
+                   android:id="@+id/sort_method_swap_operation"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
                    android:layout_margin="8dp"
@@ -357,6 +372,7 @@
                        android:weightSum="2">
 
                        <TextView
+                           android:id="@+id/sort_method_variable_temp"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:layout_margin="4dp"
@@ -365,6 +381,7 @@
                            android:text="temp" />
 
                        <TextView
+                           android:id="@+id/sort_method_variable_temp_value"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:layout_margin="4dp"
@@ -381,6 +398,7 @@
                        android:weightSum="2">
 
                        <TextView
+                           android:id="@+id/sort_method_variable_arr_minIdx"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:layout_margin="4dp"
@@ -389,6 +407,7 @@
                            android:text="arr[min_idx]" />
 
                        <TextView
+                           android:id="@+id/sort_method_variable_arr_minIdx_value"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:layout_margin="4dp"
@@ -405,6 +424,7 @@
                        android:weightSum="2">
 
                        <TextView
+                           android:id="@+id/sort_method_variable_arr_i"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:layout_margin="4dp"
@@ -413,6 +433,7 @@
                            android:text="arr[i]" />
 
                        <TextView
+                           android:id="@+id/sort_method_variable_arr_i_value"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:layout_margin="4dp"
@@ -428,6 +449,7 @@
 
         <!-- isSorted method analysis section -->
         <LinearLayout
+            android:id="@+id/isSorted_executed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -440,6 +462,7 @@
                 android:text="@string/isSorted_method_called"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/isSorted_method_variables"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -485,6 +508,7 @@
                 android:weightSum="3">
 
                 <TextView
+                    android:id="@+id/isSorted_operation_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -493,6 +517,7 @@
                     android:text="i" />
 
                 <TextView
+                    android:id="@+id/isSorted_operation_1_value"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -500,6 +525,7 @@
                     android:gravity="center"
                     android:text="@string/initial_condition" />
                 <TextView
+                    android:id="@+id/isSorted_operation_1_condition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -516,6 +542,7 @@
                 android:weightSum="3">
 
                 <TextView
+                    android:id="@+id/isSorted_operation_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -524,6 +551,7 @@
                     android:text="i" />
 
                 <TextView
+                    android:id="@+id/isSorted_operation_2_value"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -531,6 +559,7 @@
                     android:gravity="center"
                     android:text="@string/initial_condition" />
                 <TextView
+                    android:id="@+id/isSorted_operation_2_condition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -547,6 +576,7 @@
                 android:weightSum="3">
 
                 <TextView
+                    android:id="@+id/isSorted_operation_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -555,6 +585,7 @@
                     android:text="i" />
 
                 <TextView
+                    android:id="@+id/isSorted_operation_3_value"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -562,6 +593,7 @@
                     android:gravity="center"
                     android:text="@string/initial_condition" />
                 <TextView
+                    android:id="@+id/isSorted_operation_3_condition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -578,6 +610,7 @@
                 android:weightSum="3">
 
                 <TextView
+                    android:id="@+id/isSorted_operation_4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -586,6 +619,7 @@
                     android:text="i" />
 
                 <TextView
+                    android:id="@+id/isSorted_operation_4_value"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -593,6 +627,41 @@
                     android:gravity="center"
                     android:text="@string/initial_condition" />
                 <TextView
+                    android:id="@+id/isSorted_operation_4_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="false" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/isSorted_operation_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="i" />
+
+                <TextView
+                    android:id="@+id/isSorted_operation_5_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/initial_condition" />
+                <TextView
+                    android:id="@+id/isSorted_operation_5_condition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
