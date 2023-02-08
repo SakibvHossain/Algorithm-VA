@@ -213,7 +213,8 @@ public class Selection_Sort extends AppCompatActivity {
                     if(count > 0){
                         count--;
                         back_track = count + 1;
-                        if(count == 77){
+                        if(count == 76){
+
                             print_sorted_array.setVisibility(View.INVISIBLE);
                         }else if(count == 0){
                             layoutMainExecuted.setVisibility(View.INVISIBLE);
@@ -245,7 +246,7 @@ public class Selection_Sort extends AppCompatActivity {
                          }else {
                              forward_track = count - 1;
                              //initial_Count.setText(String.valueOf(count));
-                             if(count == 78){
+                             if(count == 77){
                                  print_sorted_array.setVisibility(View.VISIBLE);
                              }else if(count == 79){
                                  Toast.makeText(Selection_Sort.this,"Program Terminated", Toast.LENGTH_SHORT).show();
@@ -253,11 +254,11 @@ public class Selection_Sort extends AppCompatActivity {
                                  layoutMainExecuted.setVisibility(View.VISIBLE);
                                  layoutMainVariable.setVisibility(View.VISIBLE);
                              }else if(count == 2){
-                                 arr_index_0.setText(String.valueOf(4));
-                                 arr_index_1.setText(String.valueOf(8));
-                                 arr_index_2.setText(String.valueOf(2));
-                                 arr_index_3.setText(String.valueOf(9));
-                                 arr_index_4.setText(String.valueOf(5));
+                                 arr_index_0.setText(" ");
+                                 arr_index_1.setText(" ");
+                                 arr_index_2.setText(" ");
+                                 arr_index_3.setText(" ");
+                                 arr_index_4.setText(" ");
                                  arrayMainExecuted.setVisibility(View.VISIBLE);
                              }
                              list_of_views[forward_track].setBackgroundColor(getColor(R.color.completeTransparent));

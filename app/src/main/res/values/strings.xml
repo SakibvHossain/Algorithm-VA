@@ -55,7 +55,7 @@
     <string name="selection_33">33&#160;&#160;}</string>
     <string name="selection_34">34&#160;}</string>
     <string name="program_output">Program Output</string>
-    <string name="array_demo">[4, 8, 2, 9, 5]</string>
+    <string name="array_demo">[2, 4, 5, 8, 9]</string>
     <string name="variables">Variables</string>
     <string name="memory">Analyzing View</string>
     <string name="array_name">array</string>

@@ -529,7 +529,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/initial_condition" />
+                    android:text="0" />
                 <TextView
                     android:id="@+id/isSorted_operation_1_condition"
                     android:layout_width="match_parent"
@@ -563,7 +563,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/initial_condition" />
+                    android:text="1" />
                 <TextView
                     android:id="@+id/isSorted_operation_2_condition"
                     android:layout_width="match_parent"
@@ -597,7 +597,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/initial_condition" />
+                    android:text="2" />
                 <TextView
                     android:id="@+id/isSorted_operation_3_condition"
                     android:layout_width="match_parent"
@@ -631,7 +631,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/initial_condition" />
+                    android:text="3" />
                 <TextView
                     android:id="@+id/isSorted_operation_4_condition"
                     android:layout_width="match_parent"
@@ -665,7 +665,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/initial_condition" />
+                    android:text="4" />
                 <TextView
                     android:id="@+id/isSorted_operation_5_condition"
                     android:layout_width="match_parent"
@@ -673,7 +673,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="false" />
+                    android:text="true" />
 
             </LinearLayout>
         </LinearLayout>
