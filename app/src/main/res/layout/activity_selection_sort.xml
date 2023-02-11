@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Selection_Sort">
+    tools:context=".Selection_Sort_Analysis">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"

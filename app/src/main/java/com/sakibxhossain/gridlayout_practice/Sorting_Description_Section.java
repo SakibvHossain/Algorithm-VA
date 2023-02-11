@@ -3,12 +3,12 @@ package com.sakibxhossain.gridlayout_practice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class Sorting_Description_Section extends AppCompatActivity {
 
@@ -36,7 +36,7 @@ public class Sorting_Description_Section extends AppCompatActivity {
         analysis_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent selection_visual = new Intent(Sorting_Description_Section.this, Selection_Sort.class);
+                Intent selection_visual = new Intent(Sorting_Description_Section.this, Selection_Sort_Analysis.class);
                 startActivity(selection_visual);
             }
         });
@@ -44,7 +44,7 @@ public class Sorting_Description_Section extends AppCompatActivity {
         visualization_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent selection_visual = new Intent(Sorting_Description_Section.this, Selection_Sort.class);
+                Intent selection_visual = new Intent(Sorting_Description_Section.this, Selection_Sort_Visualization.class);
                 startActivity(selection_visual);
             }
         });

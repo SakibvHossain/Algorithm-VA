@@ -11,10 +11,13 @@ import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.sakibxhossain.gridlayout_practice.helper.Sorting_Adapter;
 import com.sakibxhossain.gridlayout_practice.helper.Sorting_ClickListener;
 
 public class Sorting extends AppCompatActivity {
+
+    FirebaseFirestore firebaseFirestore;
 
     String[] algo_title = {
            "Selection Sort", "Bubble Sort",
@@ -28,6 +31,7 @@ public class Sorting extends AppCompatActivity {
             "Medium", "Medium"
     };
 
+
     ImageView text_ber_back_button;
     GridView sorting_gridview;
     Sorting_Adapter sorting_adapter;
@@ -37,6 +41,8 @@ public class Sorting extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sorting);
+
+        firebaseFirestore = FirebaseFirestore.getInstance();
 
         text_ber_back_button = findViewById(R.id.sorting_bar_button);
         sorting_gridview = findViewById(R.id.sorting_Section_gridView);
