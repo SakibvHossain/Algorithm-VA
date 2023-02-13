@@ -34,6 +34,7 @@
                 android:background="@drawable/logo"
                 android:contentDescription="@string/todo" />
 
+
             <TextView
                 android:id="@+id/item_name"
                 android:layout_width="wrap_content"

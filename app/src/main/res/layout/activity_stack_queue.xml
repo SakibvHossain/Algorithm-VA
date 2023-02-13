@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Sorting">
+    tools:context=".Stack_Queue">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:background="#673AB7"
         >
         <ImageView
-            android:id="@+id/sorting_bar_button"
+            android:id="@+id/stack_queue_bar_button"
             android:layout_width="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_height="30dp"
@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/sorting_bar_button"
+            android:layout_toEndOf="@+id/stack_queue_bar_button"
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center"
             android:text="@string/sorting"
@@ -32,7 +32,7 @@
             android:textSize="18sp" />
     </RelativeLayout>
     <GridView
-        android:id="@+id/sorting_Section_gridView"
+        android:id="@+id/stack_Queue_Section_gridView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"

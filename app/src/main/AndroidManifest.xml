@@ -8,12 +8,19 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/algorithm_logo_finalxxxhdpi"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/algorithm_logo_finalxxxhdpi"
         android:supportsRtl="true"
         android:theme="@style/Theme.GridLayout_Practice"
         tools:targetApi="31">
+        <activity
+            android:name=".Stack_Queue"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Onboarding_Screen"
             android:exported="false">
@@ -36,7 +43,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Splash_Screen"
+            android:name=".MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -71,7 +78,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Splash_Screen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

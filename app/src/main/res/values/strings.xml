@@ -1,6 +1,49 @@
 <resources>
     <string name="app_name">Algorithm VA</string>
     <string name="Easy">Easy</string>
+
+    <string name="splash_screen_bottom_text">Algorithm Visualization Analysis</string>
+    <string name="demo_txt">Hello world!</string>
+
+    <!-- Strings for On Boarding Screen -->
+
+    <!--Titles-->
+    <string name="first_slide_title">Search Your Location</string>
+    <string name="second_slide_title">Make A Call</string>
+    <string name="third_slide_title">Add Missing Place</string>
+    <string name="fourth_slide_title">Sit Back And Enjoy</string>
+
+    <!--Descriptions-->
+    <string name="first_slide_desc">You can search any place nearby or with-in the specified city. We will display specific or all related shops to match your search. </string>
+    <string name="second_slide_desc">We provide almost all the numbers of all departments and shops registered with us. You can perform bookings as well.</string>
+    <string name="third_slide_desc">If you have a shop or somethings and want to be a part of our growing industry then add your place by follwing simple steps.</string>
+    <string name="fourth_slide_desc">We will handle everything for you. As you have the app in your pocket then you dont have to worry about anything.  </string>
+
+    <!--Buttons-->
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Next</string>
+    <string name="let_get_started">Lets Get Started</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="create_account">Create New Account</string>
+    <string name="Confirm_password">Confirm Password</string>
+    <string name="already_have_account">Already have an account</string>
+    <!-- Strings related to login -->
+    <string name="username">Enter username</string>
+    <string name="password">Enter Password</string>
+    <string name="prompt_email">Enter Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!--Welcome Strings-->
+    <string name="welcome_screen">LETS START YOUR JOURNEY</string>
+    <string name="signin">Sign In</string>
+    <string name="signup">Sign Up</string>
+
     <string name="testing">Testing</string>
     <string name="todo">TODO</string>
     <string name="sorting">Sorting</string>

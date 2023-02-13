@@ -21,18 +21,26 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
 
     int[] itemsImage = new int[] {
-            R.drawable.app_logo, R.drawable.app_logo,
-            R.drawable.app_logo, R.drawable.app_logo,
-            R.drawable.app_logo, R.drawable.app_logo,
-            R.drawable.app_logo, R.drawable.app_logo,
+            R.raw.sorting,
+            R.drawable.app_logo,
+            R.drawable.app_logo,
+            R.drawable.app_logo,
+            R.drawable.app_logo,
+            R.drawable.app_logo,
+            R.drawable.app_logo,
+            R.drawable.app_logo,
             R.drawable.app_logo
     };
 
     String[] itemTitle = new String[]{
-            "Sorting", "Searching",
-            "Stack & Queue", "Tree",
-            "Graph", "Dynamic",
-            "Greedy", "String",
+            "Sorting",
+            "Searching",
+            "Stack & Queue",
+            "Tree",
+            "Graph",
+            "Dynamic",
+            "Greedy",
+            "String",
             "Hashing"
     };
 
@@ -73,11 +81,17 @@ public class MainActivity extends AppCompatActivity {
 //                }
                 switch (position) {
                     case 0:
-                        Intent intent = new Intent(MainActivity.this, Sorting.class);
-                        startActivity(intent);
+                        Intent sorting = new Intent(MainActivity.this, Sorting.class);
+                        startActivity(sorting);
                         break;
                     case 1:
+//                        Intent intent = new Intent(MainActivity.this, Sorting.class);
+//                        startActivity(intent);
+//                        break;
                     case 2:
+                        Intent stack_queue = new Intent(MainActivity.this, Stack_Queue.class);
+                        startActivity(stack_queue);
+                        break;
                     case 3:
                     case 4:
                     case 5:

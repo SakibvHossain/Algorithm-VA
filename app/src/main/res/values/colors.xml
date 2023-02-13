@@ -10,4 +10,5 @@
     <color name="red">#E91E63</color>
     <color name="transparentWhite">#9AFFFFFF</color>
     <color name="completeTransparent">#00FFFFFF</color>
+    <color name="splash_screen_background">#1D57BB</color>
 </resources>

@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="8dp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:background="@drawable/handler_stroke_background"
             >
             <LinearLayout

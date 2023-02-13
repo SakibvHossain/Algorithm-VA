@@ -69,6 +69,8 @@ public class Main_Adapter extends BaseAdapter {
             item_difficulty_assign.setTextColor(Color.parseColor("#E91E63"));
         }else if(Objects.equals(item_Difficulty[position], "Medium")){
             item_difficulty_assign.setTextColor(Color.parseColor("#AA00FF"));
+        }else{
+            item_difficulty_assign.setTextColor(Color.parseColor("#2E7D32"));
         }
 
         cardView.setOnClickListener(new View.OnClickListener() {

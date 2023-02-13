@@ -4,6 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".Onboarding_Screen">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/onboarding_ViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/onboarding_relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <Button
+        android:id="@+id/skip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/skip_btn"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp"
+        android:onClick="skip"
+        android:background="#00000000"
+        android:drawableEnd="@drawable/ic_baseline_done_all_24"
+        tools:ignore="UsingOnClickInXml" />
+
+    <RelativeLayout
+        android:id="@+id/onboarding_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/onboarding_getStart_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/splash_screen_background"
+            android:text="@string/let_get_started"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/onboarding_linearlayout_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp" />
+
+        <Button
+            android:id="@+id/onboarding_next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="#00000000"
+            android:drawableTint="@color/splash_screen_background"
+            android:contentDescription="@string/next_btn"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:onClick="next"
+            android:paddingBottom="30dp"
+            tools:ignore="UsingOnClickInXml" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

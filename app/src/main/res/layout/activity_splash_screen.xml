@@ -4,6 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/splash_screen_background"
     tools:context=".Splash_Screen">
+
+    <ImageView
+        android:id="@+id/splashscreen_ImageView"
+        android:layout_width="157dp"
+        android:layout_height="110dp"
+        android:contentDescription="@string/splash_screen_bottom_text"
+        android:src="@drawable/app_logo_ava"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/splashscreen_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/splash_screen_bottom_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="4dp"
+        android:textSize="16sp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
