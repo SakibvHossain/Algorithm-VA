@@ -43,7 +43,7 @@
                 android:layout_marginEnd="12dp"
                 android:gravity="left"
                 android:visibility="invisible"
-                android:text="@string/array_demo"
+                android:text=""
                 android:textSize="16sp"
                 android:fontFamily="@font/ubuntu_medium"
                 android:textColor="@color/white"
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="8dp"
-            android:visibility="visible"
+            android:visibility="invisible"
             android:background="@drawable/handler_stroke_background"
             >
             <LinearLayout
@@ -128,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:weightSum="2"
-                android:visibility="invisible"
+                android:visibility="gone"
                 android:orientation="horizontal">
 
                 <TextView
@@ -223,7 +223,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="8dp"
-            android:visibility="visible"
+            android:visibility="invisible"
             android:background="@drawable/handler_stroke_background">
 
             <LinearLayout
@@ -254,13 +254,14 @@
             </LinearLayout>
 
            <LinearLayout
+               android:id="@+id/sort_method_variable_n"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
+               android:visibility="gone"
                android:weightSum="2"
                android:layout_margin="4dp"
                android:orientation="horizontal">
                <TextView
-                   android:id="@+id/sort_method_variable_n"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:textColor="#656060"
@@ -286,14 +287,14 @@
                android:layout_height="match_parent"
                android:orientation="vertical">
                <LinearLayout
+                   android:id="@+id/sort_method_variable_i"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:layout_margin="4dp"
+                   android:visibility="gone"
                    android:orientation="horizontal"
                    android:weightSum="2">
-
                    <TextView
-                       android:id="@+id/sort_method_variable_i"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="4dp"
@@ -312,14 +313,15 @@
 
                </LinearLayout>
                <LinearLayout
+                   android:id="@+id/sort_method_variable_minIndex"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:layout_margin="4dp"
+                   android:visibility="gone"
                    android:orientation="horizontal"
                    android:weightSum="2">
 
                    <TextView
-                       android:id="@+id/sort_method_variable_minIndex"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="4dp"
@@ -338,14 +340,15 @@
 
                </LinearLayout>
                <LinearLayout
+                   android:id="@+id/sort_method_variable_j"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:layout_margin="4dp"
+                   android:visibility="gone"
                    android:orientation="horizontal"
                    android:weightSum="2">
 
                    <TextView
-                       android:id="@+id/sort_method_variable_j"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="4dp"
@@ -363,22 +366,25 @@
                        android:text="@string/initial_condition" />
 
                </LinearLayout>
+
                <LinearLayout
                    android:id="@+id/sort_method_swap_operation"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
                    android:layout_margin="8dp"
+                   android:visibility="invisible"
                    android:background="@drawable/handler_stroke_background"
                    android:orientation="vertical">
                    <LinearLayout
+                       android:id="@+id/sort_method_variable_temp"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="4dp"
+                       android:visibility="gone"
                        android:orientation="horizontal"
                        android:weightSum="2">
 
                        <TextView
-                           android:id="@+id/sort_method_variable_temp"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:layout_margin="4dp"
@@ -397,14 +403,15 @@
 
                    </LinearLayout>
                    <LinearLayout
+                       android:id="@+id/sort_method_variable_arr_minIdx"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="4dp"
+                       android:visibility="gone"
                        android:orientation="horizontal"
                        android:weightSum="2">
 
                        <TextView
-                           android:id="@+id/sort_method_variable_arr_minIdx"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:layout_margin="4dp"
@@ -423,14 +430,15 @@
 
                    </LinearLayout>
                    <LinearLayout
+                       android:id="@+id/sort_method_variable_arr_i"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="4dp"
+                       android:visibility="gone"
                        android:orientation="horizontal"
                        android:weightSum="2">
 
                        <TextView
-                           android:id="@+id/sort_method_variable_arr_i"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:layout_margin="4dp"
@@ -459,6 +467,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:visibility="invisible"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
@@ -472,6 +481,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:visibility="invisible"
             android:background="@drawable/handler_stroke_background"
             android:orientation="vertical">
             <LinearLayout
@@ -507,14 +517,15 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/isSorted_operation_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
+                android:visibility="gone"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
                 <TextView
-                    android:id="@+id/isSorted_operation_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -541,14 +552,15 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/isSorted_operation_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
+                android:visibility="gone"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
                 <TextView
-                    android:id="@+id/isSorted_operation_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -575,14 +587,15 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/isSorted_operation_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
+                android:visibility="gone"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
                 <TextView
-                    android:id="@+id/isSorted_operation_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -609,14 +622,15 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/isSorted_operation_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
+                android:visibility="gone"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
                 <TextView
-                    android:id="@+id/isSorted_operation_4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -643,14 +657,15 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/isSorted_operation_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
+                android:visibility="gone"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
                 <TextView
-                    android:id="@+id/isSorted_operation_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
