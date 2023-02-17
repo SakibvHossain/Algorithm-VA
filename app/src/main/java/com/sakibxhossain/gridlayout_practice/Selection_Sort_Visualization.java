@@ -132,9 +132,8 @@ public class Selection_Sort_Visualization extends AppCompatActivity {
                 , selection_13, selection_14, selection_15
                 , selection_16, selection_30, selection_17
                 , selection_18, selection_19, selection_20
-                , selection_24, selection_19, selection_20
-                , selection_24, selection_19, selection_20
-                , selection_24, selection_19, selection_20
+                , selection_19, selection_20, selection_19
+                , selection_20, selection_19, selection_20
                 , selection_24, selection_25, selection_26
                 , selection_31, selection_32, selection_33
                 , selection_34
@@ -161,7 +160,7 @@ public class Selection_Sort_Visualization extends AppCompatActivity {
                         animation_3();
                     }else if(count == 56){
                         animation_4();
-                    }else if(count == 76){
+                    }else if(count == 73){
                         print_array.setVisibility(View.INVISIBLE);
                     }
 
@@ -194,9 +193,9 @@ public class Selection_Sort_Visualization extends AppCompatActivity {
                             animation_3();
                         }else if(count == 57){
                             animation_4();
-                        }else if(count == 77){
+                        }else if(count == 74){
                             print_array.setVisibility(View.VISIBLE);
-                        }else if(count==79){
+                        }else if(count==76){
                             Toast.makeText(Selection_Sort_Visualization.this,"Program Terminated",Toast.LENGTH_SHORT).show();
                         }
                         //initial_Count.setText(String.valueOf(count));

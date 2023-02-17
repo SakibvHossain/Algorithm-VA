@@ -57,12 +57,29 @@ public class Selection_Sort_Analysis extends AppCompatActivity {
                  , sortMethodVariable_minIdx
                  , sortMethodVariable_Temp
                  , sortMethodVariable_arr_minIdx
-                 , sortMethodVariable_arr_i;
+                 , sortMethodVariable_arr_i
+                 , isSorted_method_executed
+                 , isSorted_method_variable
+                 , isSorted_operation_1
+                 , isSorted_operation_2
+                 , isSorted_operation_3
+                 , isSorted_operation_4
+                 , isSorted_operation_5;
 
       TextView  sortMethodVariable_n_value
               , sortMethodVariable_i_value
               , sortMethodVariable_minIdx_value
-              , sortMethodVariable_j_value;
+              , sortMethodVariable_j_value
+              , isSorted_operation_value1
+              , isSorted_operation_value2
+              , isSorted_operation_value3
+              , isSorted_operation_value4
+              , isSorted_operation_value5
+              , isSorted_operation_Condition1
+              , isSorted_operation_Condition2
+              , isSorted_operation_Condition3
+              , isSorted_operation_Condition4
+              , isSorted_operation_Condition5;
       //swap
       TextView sortMethodVariable_Temp_value, sortMethodVariable_arr_minIdx_value
               , sortMethodVariable_arr_i_value;
@@ -95,11 +112,26 @@ public class Selection_Sort_Analysis extends AppCompatActivity {
     // increment i
     int i = 0;
     int j = 0;
-    int min_idx = 0;
     boolean is_time_to_increment = false;
+
+    // 2nd increment of j
+    int j2 = 0;
+    int min_idx2 = 0;
+    // 3rd increment of j
+    int j3 = 0;
+    int min_idx3 = 0;
+    // 4th increment of j
+    int j4 = 0;
+    int min_idx4 = 0;
+
+    // Track isSorted method
+    int isSorted_for_i = 1;
 
     //Tracking array operation access
      boolean dont_give_permission_21_to_access = true;
+     boolean dont_give_permission_35_to_access = true;
+     boolean dont_give_permission_47_to_access = true;
+     boolean dont_give_permission_57_to_access = true;
 
 
     @SuppressLint("MissingInflatedId")
@@ -160,7 +192,34 @@ public class Selection_Sort_Analysis extends AppCompatActivity {
           sortMethodVariable_arr_i = findViewById(R.id.sort_method_variable_arr_i);
           //TextView
 
-          //
+        //printing array hooks
+          //LinearLayout
+          isSorted_method_executed = findViewById(R.id.isSorted_executed);
+          isSorted_method_variable = findViewById(R.id.isSorted_method_variables);
+          isSorted_operation_1 = findViewById(R.id.isSorted_operation_1);
+          isSorted_operation_2 = findViewById(R.id.isSorted_operation_2);
+          isSorted_operation_3 = findViewById(R.id.isSorted_operation_3);
+          isSorted_operation_4 = findViewById(R.id.isSorted_operation_4);
+          isSorted_operation_5 = findViewById(R.id.isSorted_operation_5);
+          //LinearLayout
+
+          //TextView
+          //value
+          isSorted_operation_value1 = findViewById(R.id.isSorted_operation_1_value);
+          isSorted_operation_value2 = findViewById(R.id.isSorted_operation_2_value);
+          isSorted_operation_value3 = findViewById(R.id.isSorted_operation_3_value);
+          isSorted_operation_value4 = findViewById(R.id.isSorted_operation_4_value);
+          isSorted_operation_value5 = findViewById(R.id.isSorted_operation_5_value);
+          //condition
+          isSorted_operation_Condition1 = findViewById(R.id.isSorted_operation_1_condition);
+          isSorted_operation_Condition2 = findViewById(R.id.isSorted_operation_2_condition);
+          isSorted_operation_Condition3 = findViewById(R.id.isSorted_operation_3_condition);
+          isSorted_operation_Condition4 = findViewById(R.id.isSorted_operation_4_condition);
+          isSorted_operation_Condition5 = findViewById(R.id.isSorted_operation_5_condition);
+          //TextView
+        //printing array hooks
+
+
         //sort method variable hooks
 
         //Array will be displayed
@@ -221,9 +280,8 @@ public class Selection_Sort_Analysis extends AppCompatActivity {
                 , selection_13, selection_14, selection_15
                 , selection_16, selection_30, selection_17
                 , selection_18, selection_19, selection_20
-                , selection_24, selection_19, selection_20
-                , selection_24, selection_19, selection_20
-                , selection_24, selection_19, selection_20
+                , selection_19, selection_20, selection_19
+                , selection_20, selection_19, selection_20
                 , selection_24, selection_25, selection_26
                 , selection_31, selection_32, selection_33
                 , selection_34
@@ -241,8 +299,7 @@ public class Selection_Sort_Analysis extends AppCompatActivity {
                     if(count > 0){
                         count--;
                         back_track = count + 1;
-                        if(count == 76){
-
+                        if(count == 73){
                             print_sorted_array.setVisibility(View.INVISIBLE);
                         }else if(count == 0){
                             layoutMainExecuted.setVisibility(View.INVISIBLE);
@@ -268,6 +325,7 @@ public class Selection_Sort_Analysis extends AppCompatActivity {
                         }else if(count == 11){
                             sortMethodVariable_minIdx_value.setText(String.valueOf(i));
                         }else if(count == 17){
+                            sortMethodVariable_j_value.setText(String.valueOf(j));
                             sortMethodSwapOperation.setVisibility(View.GONE);
                         }else if(count == 18){
                             sortMethodSwapOperation.setVisibility(View.GONE);
@@ -275,14 +333,121 @@ public class Selection_Sort_Analysis extends AppCompatActivity {
                         }else if(count == 19){
                             sortMethodVariable_arr_minIdx.setVisibility(View.GONE);
                         }else if(count == 20){
-                            dont_give_permission_21_to_access = false;
                             sortMethodVariable_arr_i.setVisibility(View.GONE);
                             arr_index_0.setText(String.valueOf(copy_initial_array[0]));
                             arr_index_1.setText(String.valueOf(copy_initial_array[1]));
                             arr_index_2.setText(String.valueOf(copy_initial_array[2]));
                             arr_index_3.setText(String.valueOf(copy_initial_array[3]));
                             arr_index_4.setText(String.valueOf(copy_initial_array[4]));
+                        }else if(count == 21){
+                            i--;
+                            sortMethodVariable_i_value.setText(String.valueOf(i));
+                        }else if(count == 22){
+                            j2 = 0;
+                            sortMethodVariable_minIdx_value.setText(String.valueOf(2));
+                        }else if(count == 23 || count == 27 || count == 29 || count == 25 || count == 31){
+                            if(count == 23){
+                                j2--;
+                                sortMethodVariable_j_value.setText(String.valueOf(0));
+                            }else if(count == 25){
+                                sortMethodVariable_minIdx_value.setText(String.valueOf(i));
+                            }else if(count == 31){
+                                sortMethodVariable_j_value.setText(String.valueOf(j2));
+                            }else{
+                                j2--;
+                                sortMethodVariable_j_value.setText(String.valueOf(j2));
+                            }
+                        }else if(count == 32 || count == 33 || count == 34){
+                            if(count == 32){
+                                sortMethodVariable_Temp_value.setText(String.valueOf(copy_initial_array[2]));
+                            }else if(count == 33){
+                                sortMethodVariable_arr_minIdx_value.setText(String.valueOf(copy_initial_array[0]));
+                            }else{
+                                dont_give_permission_35_to_access = false;
+                                sortMethodVariable_arr_i_value.setText(String.valueOf(copy_initial_array[2]));
+                                arr_index_0.setText(String.valueOf(copy_array_1[0]));
+                                arr_index_1.setText(String.valueOf(copy_array_1[1]));
+                                arr_index_2.setText(String.valueOf(copy_array_1[2]));
+                                arr_index_3.setText(String.valueOf(copy_array_1[3]));
+                                arr_index_4.setText(String.valueOf(copy_array_1[4]));
+                            }
+                        }else if(count == 35){
+                            i--;
+                            sortMethodVariable_i_value.setText(String.valueOf(i));
+                        }else if(count == 36){
+                            j3 = 0;
+                            sortMethodVariable_minIdx_value.setText(String.valueOf(2));
+                        }else if(count == 37 || count == 39 || count == 41 || count == 43){
+                            if(count == 37){
+                                j3--;
+                                sortMethodVariable_j_value.setText(String.valueOf(0));
+                            }else if(count == 41){
+                                sortMethodVariable_minIdx_value.setText(String.valueOf(i));
+                            }else if(count == 43){
+                                sortMethodVariable_j_value.setText(String.valueOf(j3));
+                            }else{
+                                j3--;
+                                sortMethodVariable_j_value.setText(String.valueOf(j3));
+                            }
+                        }else if(count == 44 || count == 45 || count == 46){
+                            if(count == 44){
+                                sortMethodVariable_Temp_value.setText(String.valueOf(copy_array_1[2]));
+                            }else if(count == 45){
+                                sortMethodVariable_arr_minIdx_value.setText(String.valueOf(copy_array_1[1]));
+                            }else{
+                                dont_give_permission_47_to_access = false;
+                                sortMethodVariable_arr_i_value.setText(String.valueOf(copy_array_1[2]));
+                                arr_index_0.setText(String.valueOf(copy_array_2[0]));
+                                arr_index_1.setText(String.valueOf(copy_array_2[1]));
+                                arr_index_2.setText(String.valueOf(copy_array_2[2]));
+                                arr_index_3.setText(String.valueOf(copy_array_2[3]));
+                                arr_index_4.setText(String.valueOf(copy_array_2[4]));
+                            }
+                        }else if(count == 47){
+                            i--;
+                            sortMethodVariable_i_value.setText(String.valueOf(i));
+                        }else if(count == 48){
+                            j4 = 0;
+                            sortMethodVariable_minIdx_value.setText(String.valueOf(4));
+                        }else if(count == 49 || count == 51 || count == 53 ){
+                            if(count == 49){
+                                j4--;
+                                sortMethodVariable_j_value.setText(String.valueOf(0));
+                            }else if(count == 51){
+                                sortMethodVariable_minIdx_value.setText(String.valueOf(i));
+                            }else{
+                                sortMethodVariable_j_value.setText(String.valueOf(j4));
+                            }
+                        }else if(count == 54 || count == 55 || count == 56){
+                            if(count == 54){
+                                sortMethodVariable_Temp_value.setText(String.valueOf(copy_array_2[4]));
+                            }else if(count == 55){
+                                sortMethodVariable_arr_minIdx_value.setText(String.valueOf(copy_array_2[2]));
+                            }else{
+                                dont_give_permission_57_to_access = false;
+                                sortMethodVariable_arr_i_value.setText(String.valueOf(copy_array_2[4]));
+                                arr_index_0.setText(String.valueOf(copy_array_3[0]));
+                                arr_index_1.setText(String.valueOf(copy_array_3[1]));
+                                arr_index_2.setText(String.valueOf(copy_array_3[2]));
+                                arr_index_3.setText(String.valueOf(copy_array_3[3]));
+                                arr_index_4.setText(String.valueOf(copy_array_3[4]));
+                            }
+                        }else if(count == 59){
+                            isSorted_method_executed.setVisibility(View.GONE);
+                            isSorted_method_variable.setVisibility(View.GONE);
+                        }else if(count == 62 || count == 63 || count == 64 || count == 66 || count == 68){
+                            if(count == 62){
+                                isSorted_for_i = 1;
+                                isSorted_operation_1.setVisibility(View.GONE);
+                            }else if(count == 63){
+                                isSorted_operation_Condition1.setText("");
+                            }else{
+                                isSorted_for_i--;
+                                isSorted_operation_Condition1.setText(getString(R.string.condition_false));
+                                isSorted_operation_value1.setText(String.valueOf(isSorted_for_i));
+                            }
                         }
+
                         initial_Count.setText(String.valueOf(count+algo_operations));
                         list_of_views[count].setBackgroundColor(getColor(R.color.transparentWhite));
                         list_of_views[back_track].setBackgroundColor(getColor(R.color.completeTransparent));
@@ -307,10 +472,10 @@ public class Selection_Sort_Analysis extends AppCompatActivity {
                          }else {
                              forward_track = count - 1;
                              //initial_Count.setText(String.valueOf(count));
-                             if(count == 77){
+                             if(count == 74){
                                  print_sorted_array.setVisibility(View.VISIBLE);
                                  print_sorted_array.setText(String.valueOf(Arrays.toString(arr)));
-                             }else if(count == 79){
+                             }else if(count == 76){
                                  Toast.makeText(Selection_Sort_Analysis.this,"Program Terminated", Toast.LENGTH_SHORT).show();
                              }else if(count == 1){
                                  layoutMainExecuted.setVisibility(View.VISIBLE);
@@ -341,25 +506,154 @@ public class Selection_Sort_Analysis extends AppCompatActivity {
                                  sortMethodVariable_j_value.setText(String.valueOf(j));
                              }else if(count == 12){
                                  sortMethodVariable_minIdx_value.setText(String.valueOf(j));
-                                 min_idx = j;
+                             }else if(count == 18){
+                                 sortMethodVariable_j_value.setText(String.valueOf(0));
                              }else if(count == 19){
-                                 sortMethodSwapOperation.setVisibility(View.VISIBLE);
-                                 sortMethodVariable_Temp.setVisibility(View.VISIBLE);
-                                 sortMethodVariable_Temp_value.setText(String.valueOf(arr[min_idx]));
-                             }else if(count == 20){
-                                 sortMethodVariable_arr_minIdx.setVisibility(View.VISIBLE);
-                                 sortMethodVariable_arr_minIdx_value.setText(String.valueOf(arr[i]));
-                             }else if(count == 21){
-                                 sortMethodVariable_arr_i.setVisibility(View.VISIBLE);
-                                 sortMethodVariable_arr_i_value.setText(String.valueOf(arr[min_idx]));
                                  if(dont_give_permission_21_to_access){
+                                     sortMethodSwapOperation.setVisibility(View.VISIBLE);
+                                     sortMethodVariable_Temp.setVisibility(View.VISIBLE);
+                                     sortMethodVariable_Temp_value.setText(String.valueOf(arr[2]));
+                                 }else{
+                                     sortMethodSwapOperation.setVisibility(View.VISIBLE);
+                                     sortMethodVariable_Temp.setVisibility(View.VISIBLE);
+                                     sortMethodVariable_Temp_value.setText(String.valueOf(copy_initial_array[2]));
+                                 }
+                             }else if(count == 20){
+                                 if(dont_give_permission_21_to_access){
+                                     sortMethodVariable_arr_minIdx.setVisibility(View.VISIBLE);
+                                     sortMethodVariable_arr_minIdx_value.setText(String.valueOf(arr[0]));
+                                 }else{
+                                     sortMethodVariable_arr_minIdx.setVisibility(View.VISIBLE);
+                                     sortMethodVariable_arr_minIdx_value.setText(String.valueOf(copy_initial_array[0]));
+                                 }
+                             }else if(count == 21){
+                                 if(dont_give_permission_21_to_access){
+                                     sortMethodVariable_arr_i.setVisibility(View.VISIBLE);
+                                     sortMethodVariable_arr_i_value.setText(String.valueOf(arr[2]));
                                      sort_selection_sort(arr);
+                                     dont_give_permission_21_to_access = false;
+                                 }else{
+                                     sortMethodVariable_arr_i.setVisibility(View.VISIBLE);
+                                     sortMethodVariable_arr_i_value.setText(String.valueOf(copy_initial_array[2]));
                                  }
                                  arr_index_0.setText(String.valueOf(copy_array_1[0]));
                                  arr_index_1.setText(String.valueOf(copy_array_1[1]));
                                  arr_index_2.setText(String.valueOf(copy_array_1[2]));
                                  arr_index_3.setText(String.valueOf(copy_array_1[3]));
                                  arr_index_4.setText(String.valueOf(copy_array_1[4]));
+                             }else if(count == 22){
+                                 i++;
+                                 sortMethodVariable_i_value.setText(String.valueOf(i));
+                             }else if(count == 23){
+                                 sortMethodVariable_minIdx_value.setText(String.valueOf(i));
+                                 j2 = i;
+                             }else if(count == 24 || count == 28 || count == 30 || count == 26 || count == 32){
+                                 if(count == 26){
+                                     min_idx2 = j2;
+                                     sortMethodVariable_minIdx_value.setText(String.valueOf(j2));
+                                 }else if(count == 32){
+                                     sortMethodVariable_j_value.setText(String.valueOf(0));
+                                 }else{
+                                     j2++;
+                                     sortMethodVariable_j_value.setText(String.valueOf(j2));
+                                 }
+                             }else if(count == 33 || count == 34 || count == 35){
+                                 if(count == 33){
+                                     sortMethodVariable_Temp_value.setText(String.valueOf(copy_array_1[2]));
+                                 }else if(count == 34){
+                                     sortMethodVariable_arr_minIdx_value.setText(String.valueOf(copy_array_1[1]));
+                                 }else{
+                                     if(dont_give_permission_35_to_access){
+                                         sort_selection_sort(arr);
+                                     }
+                                     sortMethodVariable_arr_i_value.setText(String.valueOf(copy_array_1[2]));
+                                     arr_index_0.setText(String.valueOf(copy_array_2[0]));
+                                     arr_index_1.setText(String.valueOf(copy_array_2[1]));
+                                     arr_index_2.setText(String.valueOf(copy_array_2[2]));
+                                     arr_index_3.setText(String.valueOf(copy_array_2[3]));
+                                     arr_index_4.setText(String.valueOf(copy_array_2[4]));
+                                 }
+                             }else if(count == 36){
+                                 i++;
+                                 sortMethodVariable_i_value.setText(String.valueOf(i));
+                             }else if(count == 37){
+                                 sortMethodVariable_minIdx_value.setText(String.valueOf(i));
+                                 j3 = i;
+                             }else if(count == 38 || count == 40 || count == 42 || count == 44 ){
+                                 if(count == 42){
+                                     min_idx3 = j3;
+                                     sortMethodVariable_minIdx_value.setText(String.valueOf(j3));
+                                 }else if(count == 44){
+                                     sortMethodVariable_j_value.setText(String.valueOf(0));
+                                 }else{
+                                     j3++;
+                                     sortMethodVariable_j_value.setText(String.valueOf(j3));
+                                 }
+                             } else if(count == 45 || count == 46 || count == 47){
+                                 if(count == 45){
+                                     sortMethodVariable_Temp_value.setText(String.valueOf(copy_array_2[4]));
+                                 }else if(count == 46){
+                                     sortMethodVariable_arr_minIdx_value.setText(String.valueOf(copy_array_2[2]));
+                                 }else{
+                                     if(dont_give_permission_47_to_access){
+                                         sort_selection_sort(arr);
+                                     }
+                                     sortMethodVariable_arr_i_value.setText(String.valueOf(copy_array_2[4]));
+                                     arr_index_0.setText(String.valueOf(copy_array_3[0]));
+                                     arr_index_1.setText(String.valueOf(copy_array_3[1]));
+                                     arr_index_2.setText(String.valueOf(copy_array_3[2]));
+                                     arr_index_3.setText(String.valueOf(copy_array_3[3]));
+                                     arr_index_4.setText(String.valueOf(copy_array_3[4]));
+                                 }
+                             } else if(count == 48){
+                                 i++;
+                                 sortMethodVariable_i_value.setText(String.valueOf(i));
+                             }else if(count == 49){
+                                 sortMethodVariable_minIdx_value.setText(String.valueOf(i));
+                                 j4 = i;
+                             }else if(count == 50 || count == 52 || count == 54 ){
+                                 if(count == 52){
+                                     min_idx4 = j4;
+                                     sortMethodVariable_minIdx_value.setText(String.valueOf(j4));
+                                 }else if(count == 54){
+                                     sortMethodVariable_j_value.setText(String.valueOf(0));
+                                 }else{
+                                     j4++;
+                                     sortMethodVariable_j_value.setText(String.valueOf(j4));
+                                 }
+                             }else if(count == 55 || count == 56 || count == 57){
+                                 if(count == 55){
+                                     sortMethodVariable_Temp_value.setText(String.valueOf(copy_array_3[4]));
+                                 }else if(count == 56){
+                                     sortMethodVariable_arr_minIdx_value.setText(String.valueOf(copy_array_3[3]));
+                                 }else{
+                                     if(dont_give_permission_57_to_access){
+                                         sort_selection_sort(arr);
+                                     }
+                                     sortMethodVariable_arr_i_value.setText(String.valueOf(copy_array_3[4]));
+                                     arr_index_0.setText(String.valueOf(copy_array_4[0]));
+                                     arr_index_1.setText(String.valueOf(copy_array_4[1]));
+                                     arr_index_2.setText(String.valueOf(copy_array_4[2]));
+                                     arr_index_3.setText(String.valueOf(copy_array_4[3]));
+                                     arr_index_4.setText(String.valueOf(copy_array_4[4]));
+                                 }
+                             }else if(count == 59){
+                                 Toast.makeText(Selection_Sort_Analysis.this,"End of Sort method",Toast.LENGTH_SHORT).show();
+                             }else if(count == 60){
+                                 isSorted_method_executed.setVisibility(View.VISIBLE);
+                                 isSorted_method_variable.setVisibility(View.VISIBLE);
+                             }else if(count == 63 || count == 64 || count == 65 || count == 67 || count == 69){
+                                 if(count == 63){
+                                     isSorted_operation_1.setVisibility(View.VISIBLE);
+                                     isSorted_operation_value1.setText(String.valueOf(isSorted_for_i));
+                                 }else if(count == 64){
+                                     isSorted_operation_Condition1.setText(getString(R.string.condition_false));
+                                 }else{
+                                     isSorted_for_i++;
+                                     isSorted_operation_value1.setText(String.valueOf(isSorted_for_i));
+                                 }
+                             }else if(count == 73){
+                                 Toast.makeText(Selection_Sort_Analysis.this,"isSorted method terminated",Toast.LENGTH_SHORT).show();
                              }
                              list_of_views[forward_track].setBackgroundColor(getColor(R.color.completeTransparent));
                              list_of_views[count].setBackgroundColor(getColor(R.color.transparentWhite));

@@ -7,7 +7,6 @@
     app:layout_editor_absoluteX="1dp"
     app:layout_editor_absoluteY="1dp"
     android:layout_margin="8dp"
-    android:background="@drawable/handler_stroke_background"
     android:fillViewport="true">
 
     <LinearLayout
@@ -467,7 +466,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:visibility="invisible"
+            android:visibility="gone"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
@@ -476,12 +475,13 @@
                 android:textColor="@color/red"
                 android:text="@string/isSorted_method_called"/>
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/isSorted_method_variables"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:visibility="invisible"
+            android:visibility="gone"
             android:background="@drawable/handler_stroke_background"
             android:orientation="vertical">
             <LinearLayout
@@ -531,7 +531,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="i" />
+                    android:text="@string/i" />
 
                 <TextView
                     android:id="@+id/isSorted_operation_1_value"
@@ -540,7 +540,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="0" />
+                    android:text="" />
                 <TextView
                     android:id="@+id/isSorted_operation_1_condition"
                     android:layout_width="match_parent"
@@ -548,7 +548,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="false" />
+                    android:text="" />
 
             </LinearLayout>
             <LinearLayout
@@ -566,7 +566,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="i" />
+                    android:text="@string/i" />
 
                 <TextView
                     android:id="@+id/isSorted_operation_2_value"
@@ -575,7 +575,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="1" />
+                    android:text="" />
                 <TextView
                     android:id="@+id/isSorted_operation_2_condition"
                     android:layout_width="match_parent"
@@ -583,7 +583,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="false" />
+                    android:text="" />
 
             </LinearLayout>
             <LinearLayout
@@ -601,7 +601,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="i" />
+                    android:text="@string/i" />
 
                 <TextView
                     android:id="@+id/isSorted_operation_3_value"
@@ -610,7 +610,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="2" />
+                    android:text="" />
                 <TextView
                     android:id="@+id/isSorted_operation_3_condition"
                     android:layout_width="match_parent"
@@ -618,7 +618,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="false" />
+                    android:text="" />
 
             </LinearLayout>
             <LinearLayout
@@ -636,7 +636,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="i" />
+                    android:text="@string/i" />
 
                 <TextView
                     android:id="@+id/isSorted_operation_4_value"
@@ -645,7 +645,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="3" />
+                    android:text="" />
                 <TextView
                     android:id="@+id/isSorted_operation_4_condition"
                     android:layout_width="match_parent"
@@ -653,7 +653,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="false" />
+                    android:text="" />
 
             </LinearLayout>
             <LinearLayout
@@ -671,7 +671,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="i" />
+                    android:text="@string/i" />
 
                 <TextView
                     android:id="@+id/isSorted_operation_5_value"
@@ -680,7 +680,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="4" />
+                    android:text="" />
                 <TextView
                     android:id="@+id/isSorted_operation_5_condition"
                     android:layout_width="match_parent"
@@ -688,7 +688,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="true" />
+                    android:text="" />
 
             </LinearLayout>
         </LinearLayout>
