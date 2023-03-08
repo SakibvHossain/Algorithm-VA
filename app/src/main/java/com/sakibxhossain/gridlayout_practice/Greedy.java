@@ -17,11 +17,11 @@ import com.sakibxhossain.gridlayout_practice.helper.Tree_ClickListener;
 public class Greedy extends AppCompatActivity {
 
     String[] algo_title = {
-            "Longest Common Subsequence"
+            "Haffman Coding"
     };
 
     String[] algo_difficulty = {
-            "hard"
+            "Hard"
     };
 
 
@@ -44,7 +44,7 @@ public class Greedy extends AppCompatActivity {
             public void onItemClicked(int position) {
                 switch (position) {
                     case 0:
-                        Intent btt = new Intent(Greedy.this, Longest_Common_Subsequence_Description.class);
+                        Intent btt = new Intent(Greedy.this, Haffman_Coding_Description.class);
                         startActivity(btt);
                         break;
                     case 1:
