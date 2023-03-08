@@ -8,10 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.sakibxhossain.gridlayout_practice.helper.Sorting_Adapter;
-import com.sakibxhossain.gridlayout_practice.helper.Sorting_ClickListener;
 import com.sakibxhossain.gridlayout_practice.helper.Stack_Queue_Adapter;
 import com.sakibxhossain.gridlayout_practice.helper.Stack_Queue_ClickListener;
 
@@ -45,10 +42,14 @@ public class Stack_Queue extends AppCompatActivity {
             public void onItemClicked(int position) {
                 switch (position) {
                     case 0:
-                    case 1:
-                    case 2:
-                        Toast.makeText(Stack_Queue.this,"Nothing implemented yet",Toast.LENGTH_SHORT).show();
+                        Intent stack = new Intent(Stack_Queue.this, Stack_Description.class);
+                        startActivity(stack);
                         break;
+                    case 1:
+                        Intent queue = new Intent(Stack_Queue.this, Queue_Description.class);
+                        startActivity(queue);
+                        break;
+
                     default:
                         System.out.println("Looking forward to the Weekend");
                 }

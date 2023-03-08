@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.Switch;
-import android.widget.Toast;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.sakibxhossain.gridlayout_practice.helper.Sorting_Adapter;
@@ -20,15 +18,13 @@ public class Sorting extends AppCompatActivity {
     FirebaseFirestore firebaseFirestore;
 
     String[] algo_title = {
-           "Selection Sort", "Bubble Sort",
-           "Insertion Sort", "Counting Sort",
-           "Quick Sort", "Marge Sort"
+           "Selection Sort",
+           "Insertion Sort", "Marge Sort"
     };
 
     String[] algo_difficulty = {
             "Easy", "Easy",
-            "Easy", "Medium",
-            "Medium", "Medium"
+            "Medium"
     };
 
 
@@ -52,21 +48,22 @@ public class Sorting extends AppCompatActivity {
             @Override
             public void onItemClicked(int position) {
 //                if(position==0){
-//                    Intent intent = new Intent(Sorting.this, Sorting_Description_Section.class);
+//                    Intent intent = new Intent(Sorting.this, Selection_Sort_Description.class);
 //                    startActivity(intent);
 //                }
 
                 switch (position) {
                     case 0:
-                        Intent intent = new Intent(Sorting.this, Sorting_Description_Section.class);
-                        startActivity(intent);
+                        Intent selection = new Intent(Sorting.this, Selection_Sort_Description.class);
+                        startActivity(selection);
                         break;
                     case 1:
+                        Intent insertion = new Intent(Sorting.this, Insertion_Sort_Description.class);
+                        startActivity(insertion);
+                        break;
                     case 2:
-                    case 3:
-                    case 4:
-                    case 5:
-                        Toast.makeText(Sorting.this,"Nothing implemented",Toast.LENGTH_SHORT).show();
+                        Intent Marge = new Intent(Sorting.this, Marge_Sort_Description.class);
+                        startActivity(Marge);
                         break;
                     default:
                         System.out.println("Looking forward to the Weekend");

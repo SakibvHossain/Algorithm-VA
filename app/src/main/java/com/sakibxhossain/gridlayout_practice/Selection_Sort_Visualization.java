@@ -213,7 +213,7 @@ public class Selection_Sort_Visualization extends AppCompatActivity {
         analysis_back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goBack = new Intent(Selection_Sort_Visualization.this, Sorting_Description_Section.class);
+                Intent goBack = new Intent(Selection_Sort_Visualization.this, Selection_Sort_Description.class);
                 startActivity(goBack);
             }
         });

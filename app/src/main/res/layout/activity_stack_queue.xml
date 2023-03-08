@@ -27,7 +27,7 @@
             android:layout_toEndOf="@+id/stack_queue_bar_button"
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center"
-            android:text="@string/sorting"
+            android:text="Stack_Queue"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </RelativeLayout>

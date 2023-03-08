@@ -21,15 +21,15 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
 
     int[] itemsImage = new int[] {
-            R.raw.sorting,
-            R.drawable.app_logo,
-            R.drawable.app_logo,
-            R.drawable.app_logo,
-            R.drawable.app_logo,
-            R.drawable.app_logo,
-            R.drawable.app_logo,
-            R.drawable.app_logo,
-            R.drawable.app_logo
+            R.drawable.sorting,
+            R.drawable.searching,
+            R.drawable.stack_queue,
+            R.drawable.tree,
+            R.drawable.graph,
+            R.drawable.dynamic,
+            R.drawable.greedy,
+            R.drawable.string,
+            R.raw.sorting
     };
 
     String[] itemTitle = new String[]{
@@ -67,10 +67,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         gridView = findViewById(R.id.grid_view);
-        icon_main = findViewById(R.id.icon_main_activity);
-
-        bottom_aim = AnimationUtils.loadAnimation(this,R.anim.bottom_anim);
-        icon_main.setAnimation(bottom_aim);
+      //  icon_main = findViewById(R.id.icon_main_activity);
 
         adapter = new Main_Adapter(this, itemsImage, itemTitle, itemDifficulty, new ClickListener() {
             @Override
@@ -85,20 +82,36 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(sorting);
                         break;
                     case 1:
-//                        Intent intent = new Intent(MainActivity.this, Sorting.class);
-//                        startActivity(intent);
-//                        break;
+                        Intent intent = new Intent(MainActivity.this, Searching.class);
+                        startActivity(intent);
+                        break;
                     case 2:
                         Intent stack_queue = new Intent(MainActivity.this, Stack_Queue.class);
                         startActivity(stack_queue);
                         break;
                     case 3:
+                        Intent tree = new Intent(MainActivity.this, Tree.class);
+                        startActivity(tree);
+                        break;
                     case 4:
+                        Intent graph = new Intent(MainActivity.this, Graph.class);
+                        startActivity(graph);
+                        break;
                     case 5:
+                        Intent dynamic = new Intent(MainActivity.this, Dynamic.class);
+                        startActivity(dynamic);
+                        break;
                     case 6:
+                        Intent greedy = new Intent(MainActivity.this, Greedy.class);
+                        startActivity(greedy);
+                        break;
                     case 7:
+                        Intent string_algo = new Intent(MainActivity.this, Strings_Algo.class);
+                        startActivity(string_algo);
+                        break;
                     case 8:
-                        Toast.makeText(MainActivity.this,"Nothing implemented",Toast.LENGTH_SHORT).show();
+                        Intent hashing = new Intent(MainActivity.this, Hashing.class);
+                        startActivity(hashing);
                         break;
                     default:
                         System.out.println("Looking forward to the Weekend");

@@ -138,7 +138,7 @@ public class Selection_Sort_Analysis extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selection_sort);
+        setContentView(R.layout.activity_selection_sort_analysis);
         //Handler Hooks
            //Button
              back_btn = findViewById(R.id.handler_back_button);
@@ -322,6 +322,7 @@ public class Selection_Sort_Analysis extends AppCompatActivity {
                         }else if(count == 9 || count == 13 || count == 15){
                             j--;
                             sortMethodVariable_j_value.setText(String.valueOf(j));
+
                         }else if(count == 11){
                             sortMethodVariable_minIdx_value.setText(String.valueOf(i));
                         }else if(count == 17){
@@ -669,7 +670,7 @@ public class Selection_Sort_Analysis extends AppCompatActivity {
         analysis_back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goBack = new Intent(Selection_Sort_Analysis.this, Sorting_Description_Section.class);
+                Intent goBack = new Intent(Selection_Sort_Analysis.this, Selection_Sort_Description.class);
                 startActivity(goBack);
             }
         });
