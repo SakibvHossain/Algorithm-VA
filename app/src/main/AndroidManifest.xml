@@ -15,6 +15,27 @@
         android:theme="@style/Theme.GridLayout_Practice"
         tools:targetApi="31">
         <activity
+            android:name=".Longest_Common_Subsequence_Visualization"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Longest_Common_Subsequence_Analysis"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Longest_Common_Subsequence_Description"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".DFS_Visualization"
             android:exported="false">
             <meta-data
