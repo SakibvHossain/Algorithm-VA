@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.google.android.material.button.MaterialButton;
 import com.sakibxhossain.gridlayout_practice.Insertion_Sort_Analysis;
 import com.sakibxhossain.gridlayout_practice.Insertion_Sort_Visualization;
+import com.sakibxhossain.gridlayout_practice.Linear_Search_Analysis;
+import com.sakibxhossain.gridlayout_practice.Linear_Search_Visualization;
 import com.sakibxhossain.gridlayout_practice.Marge_Sort_Analysis;
 import com.sakibxhossain.gridlayout_practice.Marge_Sort_Visualization;
 import com.sakibxhossain.gridlayout_practice.R;
@@ -153,9 +155,36 @@ public class code_fragment extends Fragment {
             });
 
             load_Insertion_Sort_Code(data);
+        }else if(Objects.equals(token, "linear")){
+            analysis_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Analysis = new Intent(getContext(), Linear_Search_Analysis.class);
+                    startActivity(go_for_Analysis);
+                }
+            });
+
+            visualize_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Visualize = new Intent(getContext(), Linear_Search_Visualization.class);
+                    startActivity(go_for_Visualize);
+                }
+            });
+
+            load_Linear_Search_Code(data);
         }
 
         return myView;
+    }
+
+    private void load_Linear_Search_Code(Bundle data) {
+        if(data != null){
+            codeString = data.getString("linear_search_code");
+            code_Implementation_String = data.getString("linear_search_description");
+        }
+        codeView.showCode(codeString);
+        marge_des.setText(code_Implementation_String);
     }
 
     ////////////////////////////////////// todo:: Insertion Sort //////////////////////////////

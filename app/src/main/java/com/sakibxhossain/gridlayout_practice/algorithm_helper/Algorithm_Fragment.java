@@ -63,8 +63,27 @@ public class Algorithm_Fragment extends Fragment {
             load_selection_sort_algorithm(data);
         }else if(Objects.equals(token, "insertion")){
             load_insertion_sort_algorithm(data);
+        }else if(Objects.equals(token, "linear")){
+            load_linear_search_algorithm(data);
         }
         return myView;
+    }
+
+    private void load_linear_search_algorithm(Bundle data) {
+        if(data != null){
+            selection_title = data.getString("linear_search_title");
+            selection_description = data.getString("linear_search_description");
+
+            selection_process = data.getString("linear_search_algorithm_title");
+            selection_process_description = data.getString("linear_search_algorithm_description");
+
+            selection_in_detail = data.getString("linear_search_in_detail_title");
+            selection_in_detail_description = data.getString("linear_search_in_detail_description");
+
+            selection_performance = data.getString("linear_search_performance_title");
+            selection_performance_description = data.getString("linear_search_performance_description");
+        }
+        load_texts();
     }
 
     private void load_insertion_sort_algorithm(Bundle data) {
@@ -81,7 +100,6 @@ public class Algorithm_Fragment extends Fragment {
             selection_performance = data.getString("insertion_sort_performance_title");
             selection_performance_description = data.getString("insertion_sort_performance_description");
         }
-
         load_texts();
     }
 

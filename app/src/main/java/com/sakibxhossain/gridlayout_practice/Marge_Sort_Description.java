@@ -66,13 +66,14 @@ public class Marge_Sort_Description extends AppCompatActivity {
         });
 
     }
+
     //define a load method to feed the screen
     private void loadAlgorithm(Fragment fragment) {
         //replace the fragment
         getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
-                .replace(R.id.frameLayout,fragment, null)
+                .replace(R.id.marge_sort_frameLayout,fragment, null)
                 .commit();
     }
 
@@ -159,9 +160,9 @@ public class Marge_Sort_Description extends AppCompatActivity {
                   "\t        }\n" +
                   "\t    }\n" +
                   "\t}\n");
-          data.putString("marge_code_description","<b>Code</b>: The implementation of Marge Sort given below - ");
+          data.putString("marge_code_description","Implementation: The implementation of Marge Sort given below - ");
           fragment.setArguments(data);
-          fragmentTransaction.replace(R.id.frameLayout,fragment, null)
+          fragmentTransaction.replace(R.id.marge_sort_frameLayout,fragment, null)
                   .commit();
     }
 
@@ -171,7 +172,7 @@ public class Marge_Sort_Description extends AppCompatActivity {
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
 
-        fragmentTransaction.replace(R.id.frameLayout,fragment, null)
+        fragmentTransaction.replace(R.id.marge_sort_frameLayout,fragment, null)
                 .commit();
     }
 }
