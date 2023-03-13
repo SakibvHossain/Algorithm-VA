@@ -36,12 +36,12 @@ public class Splash_Screen extends AppCompatActivity {
         splashscreen_ImageView = findViewById(R.id.splashscreen_ImageView);
         splashscreen_textview = findViewById(R.id.splashscreen_textview);
         //Hooks for Animation Variables
-        slide_right_anim = AnimationUtils.loadAnimation(this,R.anim.slide_right_anim);
+        slide_right_anim = AnimationUtils.loadAnimation(this,R.anim.slide_from_right);
         bottom_aim = AnimationUtils.loadAnimation(this,R.anim.bottom_anim);
-        //Animation for image
-        splashscreen_ImageView.setAnimation(slide_right_anim);
-        //Animation for text
-        splashscreen_textview.setAnimation(bottom_aim);
+//        //Animation for image
+//        splashscreen_ImageView.setAnimation(slide_right_anim);
+//        //Animation for text
+//        splashscreen_textview.setAnimation(bottom_aim);
 
         //Creating Handler for Handling the time for Splash Screen
         new Handler().postDelayed(() -> {

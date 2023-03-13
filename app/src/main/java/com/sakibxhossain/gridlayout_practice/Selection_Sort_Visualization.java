@@ -215,6 +215,7 @@ public class Selection_Sort_Visualization extends AppCompatActivity {
             public void onClick(View view) {
                 Intent goBack = new Intent(Selection_Sort_Visualization.this, Selection_Sort_Description.class);
                 startActivity(goBack);
+                overridePendingTransition(R.anim.slide_from_left,R.anim.slideout_from_right);
             }
         });
 

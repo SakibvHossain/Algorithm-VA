@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Strings_Algo">
+    tools:context=".Strings_Algorithm">
 
     <RelativeLayout
         android:layout_width="match_parent"

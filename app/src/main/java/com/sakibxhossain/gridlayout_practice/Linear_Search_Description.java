@@ -23,7 +23,6 @@ public class Linear_Search_Description extends AppCompatActivity {
     MeowBottomNavigation linear_search_bottom_navigation;
     ImageView back_btn;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,9 +60,9 @@ public class Linear_Search_Description extends AppCompatActivity {
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goBack_to_Sorting = new Intent(Linear_Search_Description.this,Sorting.class);
+                Intent goBack_to_Sorting = new Intent(Linear_Search_Description.this,Searching.class);
                 startActivity(goBack_to_Sorting);
-                finish();
+                overridePendingTransition(R.anim.slide_from_left,R.anim.slideout_from_right);
             }
         });
     }

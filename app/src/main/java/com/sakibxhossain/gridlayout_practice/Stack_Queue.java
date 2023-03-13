@@ -64,6 +64,7 @@ public class Stack_Queue extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Stack_Queue.this, MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_from_left,R.anim.slideout_from_right);
             }
         });
     }

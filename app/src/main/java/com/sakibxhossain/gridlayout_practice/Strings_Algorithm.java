@@ -2,19 +2,16 @@ package com.sakibxhossain.gridlayout_practice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-import com.sakibxhossain.gridlayout_practice.helper.Greedy_Adapter;
-import com.sakibxhossain.gridlayout_practice.helper.Greedy_ClickListener;
 import com.sakibxhossain.gridlayout_practice.helper.Strings_Algo_Adapter;
 import com.sakibxhossain.gridlayout_practice.helper.Strings_Algo_ClickListener;
 
-public class Strings_Algo extends AppCompatActivity {
+public class Strings_Algorithm extends AppCompatActivity {
 
     String[] algo_title = {
             "Knuth Morris Pratt", "Boyer Moore"
@@ -28,8 +25,6 @@ public class Strings_Algo extends AppCompatActivity {
     ImageView text_ber_back_button;
     GridView sorting_gridview;
     Strings_Algo_Adapter strings_algo_adapter;
-
-    @SuppressLint("MissingInflatedId")
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +40,13 @@ public class Strings_Algo extends AppCompatActivity {
             public void onItemClicked(int position) {
                 switch (position) {
                     case 0:
-                        Intent btt = new Intent(Strings_Algo.this, KMP_Description.class);
+                        Intent btt = new Intent(Strings_Algorithm.this, KMP_Description.class);
                         startActivity(btt);
                         break;
                     case 1:
+                        Intent boyer = new Intent(Strings_Algorithm.this, Boyer_Moore_Description.class);
+                        startActivity(boyer);
+                        break;
                     case 2:
                     default:
                         System.out.println("Looking forward to the Weekend");
@@ -60,8 +58,9 @@ public class Strings_Algo extends AppCompatActivity {
         text_ber_back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Strings_Algo.this, MainActivity.class);
+                Intent intent = new Intent(Strings_Algorithm.this, MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_from_left,R.anim.slideout_from_right);
             }
         });
     }

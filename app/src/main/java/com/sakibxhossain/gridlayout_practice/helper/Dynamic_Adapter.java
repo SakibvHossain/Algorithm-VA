@@ -1,4 +1,4 @@
-package com.sakibxhossain.gridlayout_practice;
+package com.sakibxhossain.gridlayout_practice.helper;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 
+import com.sakibxhossain.gridlayout_practice.R;
 import com.sakibxhossain.gridlayout_practice.helper.Dynamic_ClickListener;
 
 import java.util.Objects;

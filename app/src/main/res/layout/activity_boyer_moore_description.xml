@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DFS_Description">
+    tools:context=".Boyer_Moore_Description">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/dfs_back_btn"
+            android:id="@+id/boyer_moore_back_btn"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="4dp"
@@ -27,25 +27,25 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/dfs_back_btn"
+            android:layout_toEndOf="@+id/boyer_moore_back_btn"
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center"
-            android:text="Depth First Search"
+            android:text="Boyer Moore"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </RelativeLayout>
 
     <FrameLayout
-        android:id="@+id/dfs_frameLayout"
+        android:id="@+id/boyer_moore_frameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/dfs_bottom_bar"
+        app:layout_constraintBottom_toTopOf="@+id/boyer_moore_bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation
-        android:id="@+id/dfs_bottom_bar"
+        android:id="@+id/boyer_moore_bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#0017DA85"

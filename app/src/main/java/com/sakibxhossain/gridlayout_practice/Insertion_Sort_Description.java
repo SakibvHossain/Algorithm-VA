@@ -23,7 +23,6 @@ public class Insertion_Sort_Description extends AppCompatActivity {
     MeowBottomNavigation insertion_bottom_navigation;
     ImageView back_btn;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +61,7 @@ public class Insertion_Sort_Description extends AppCompatActivity {
             public void onClick(View view) {
                 Intent goBack_to_Sorting = new Intent(Insertion_Sort_Description.this,Sorting.class);
                 startActivity(goBack_to_Sorting);
+                overridePendingTransition(R.anim.slide_from_left,R.anim.slideout_from_right);
             }
         });
     }

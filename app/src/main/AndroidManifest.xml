@@ -15,6 +15,27 @@
         android:theme="@style/Theme.GridLayout_Practice"
         tools:targetApi="31">
         <activity
+            android:name=".Boyer_Moore_Visualization"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Boyer_Moore_Analysis"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Boyer_Moore_Description"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".KMP_Visualization"
             android:exported="false">
             <meta-data
@@ -232,7 +253,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Strings_Algo"
+            android:name=".Strings_Algorithm"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -260,14 +281,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Graph"
+            android:name=".Graph_Algorithm"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Tree"
+            android:name=".Tree_Algorithm"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

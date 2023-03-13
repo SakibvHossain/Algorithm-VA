@@ -9,16 +9,14 @@ import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-import com.sakibxhossain.gridlayout_practice.helper.Searching_Adapter;
-import com.sakibxhossain.gridlayout_practice.helper.Searching_ClickListener;
 import com.sakibxhossain.gridlayout_practice.helper.Tree_Adapter;
 import com.sakibxhossain.gridlayout_practice.helper.Tree_ClickListener;
 
-public class Tree extends AppCompatActivity {
+public class Tree_Algorithm extends AppCompatActivity {
 
 
     String[] algo_title = {
-            "Binary Tree Traversal"
+            "Binary Tree_Algorithm Traversal"
     };
 
     String[] algo_difficulty = {
@@ -46,7 +44,7 @@ public class Tree extends AppCompatActivity {
             public void onItemClicked(int position) {
                 switch (position) {
                     case 0:
-                        Intent btt = new Intent(Tree.this, Binary_Tree_Traversal_Description.class);
+                        Intent btt = new Intent(Tree_Algorithm.this, Binary_Tree_Traversal_Description.class);
                         startActivity(btt);
                         break;
                     case 1:
@@ -61,8 +59,9 @@ public class Tree extends AppCompatActivity {
         text_ber_back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Tree.this, MainActivity.class);
+                Intent intent = new Intent(Tree_Algorithm.this, MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_from_left,R.anim.slideout_from_right);
             }
         });
     }

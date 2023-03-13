@@ -79,6 +79,7 @@ public class Sorting extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Sorting.this, MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_from_left,R.anim.slideout_from_right);
             }
         });
     }

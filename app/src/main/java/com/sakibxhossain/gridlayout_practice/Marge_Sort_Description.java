@@ -22,7 +22,6 @@ public class Marge_Sort_Description extends AppCompatActivity {
     MeowBottomNavigation marge_bottom_navigation;
     ImageView back_btn;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +60,7 @@ public class Marge_Sort_Description extends AppCompatActivity {
             public void onClick(View view) {
                 Intent goBack_to_Sorting = new Intent(Marge_Sort_Description.this,Sorting.class);
                 startActivity(goBack_to_Sorting);
-                finish();
+                overridePendingTransition(R.anim.slide_from_left,R.anim.slideout_from_right);
             }
         });
 

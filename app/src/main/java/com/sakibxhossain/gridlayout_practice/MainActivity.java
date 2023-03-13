@@ -4,19 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.sakibxhossain.gridlayout_practice.helper.ClickListener;
 import com.sakibxhossain.gridlayout_practice.helper.Main_Adapter;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -90,11 +83,11 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(stack_queue);
                         break;
                     case 3:
-                        Intent tree = new Intent(MainActivity.this, Tree.class);
+                        Intent tree = new Intent(MainActivity.this, Tree_Algorithm.class);
                         startActivity(tree);
                         break;
                     case 4:
-                        Intent graph = new Intent(MainActivity.this, Graph.class);
+                        Intent graph = new Intent(MainActivity.this, Graph_Algorithm.class);
                         startActivity(graph);
                         break;
                     case 5:
@@ -106,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(greedy);
                         break;
                     case 7:
-                        Intent string_algo = new Intent(MainActivity.this, Strings_Algo.class);
+                        Intent string_algo = new Intent(MainActivity.this, Strings_Algorithm.class);
                         startActivity(string_algo);
                         break;
                     case 8:

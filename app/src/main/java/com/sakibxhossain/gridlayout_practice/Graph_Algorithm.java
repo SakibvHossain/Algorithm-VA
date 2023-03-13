@@ -11,10 +11,8 @@ import android.widget.ImageView;
 
 import com.sakibxhossain.gridlayout_practice.helper.Graph_Adapter;
 import com.sakibxhossain.gridlayout_practice.helper.Graph_ClickListener;
-import com.sakibxhossain.gridlayout_practice.helper.Tree_Adapter;
-import com.sakibxhossain.gridlayout_practice.helper.Tree_ClickListener;
 
-public class Graph extends AppCompatActivity {
+public class Graph_Algorithm extends AppCompatActivity {
 
     String[] algo_title = {
             "Breadth First Search", "Depth First Search"
@@ -45,11 +43,11 @@ public class Graph extends AppCompatActivity {
 
                 switch (position) {
                     case 0:
-                        Intent bfs = new Intent(Graph.this, BFS_Description.class);
+                        Intent bfs = new Intent(Graph_Algorithm.this, BFS_Description.class);
                         startActivity(bfs);
                         break;
                     case 1:
-                        Intent dfs = new Intent(Graph.this, DFS_Description.class);
+                        Intent dfs = new Intent(Graph_Algorithm.this, DFS_Description.class);
                         startActivity(dfs);
                         break;
                     case 2:
@@ -64,8 +62,9 @@ public class Graph extends AppCompatActivity {
         text_ber_back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Graph.this, MainActivity.class);
+                Intent intent = new Intent(Graph_Algorithm.this, MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_from_left,R.anim.slideout_from_right);
             }
         });
 

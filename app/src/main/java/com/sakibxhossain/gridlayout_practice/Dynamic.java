@@ -9,9 +9,8 @@ import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import com.sakibxhossain.gridlayout_practice.helper.Dynamic_Adapter;
 import com.sakibxhossain.gridlayout_practice.helper.Dynamic_ClickListener;
-import com.sakibxhossain.gridlayout_practice.helper.Greedy_Adapter;
-import com.sakibxhossain.gridlayout_practice.helper.Greedy_ClickListener;
 
 public class Dynamic extends AppCompatActivity {
 
@@ -61,6 +60,7 @@ public class Dynamic extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Dynamic.this, MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_from_left,R.anim.slideout_from_right);
             }
         });
     }

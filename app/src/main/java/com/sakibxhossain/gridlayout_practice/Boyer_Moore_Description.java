@@ -7,8 +7,6 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
@@ -19,41 +17,38 @@ import com.sakibxhossain.gridlayout_practice.algorithm_helper.code_fragment;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
-public class BFS_Description extends AppCompatActivity {
+public class Boyer_Moore_Description extends AppCompatActivity {
 
-    MeowBottomNavigation bfs_bottom_navigation;
+    MeowBottomNavigation boyer_moore_bottom_navigation;
     ImageView back_btn;
-    Animation left_anim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bfs_description);
+        setContentView(R.layout.activity_boyer_moore_description);
 
-        bfs_bottom_navigation = findViewById(R.id.bfs_bottom_bar);
-        back_btn = findViewById(R.id.bfs_back_btn);
+        boyer_moore_bottom_navigation = findViewById(R.id.boyer_moore_bottom_bar);
+        back_btn = findViewById(R.id.boyer_moore_back_btn);
 
-        left_anim = AnimationUtils.loadAnimation(this,R.anim.slide_from_left);
+        boyer_moore_bottom_navigation.add(new MeowBottomNavigation.Model(0, R.drawable.algorithm_bottom_icon));
+        boyer_moore_bottom_navigation.add(new MeowBottomNavigation.Model(1, R.drawable.code_bottom_nav_icon));
+        boyer_moore_bottom_navigation.add(new MeowBottomNavigation.Model(2, R.drawable.problems_bottom_bar_icon));
+        boyer_moore_bottom_navigation.show(0,true);
 
-        bfs_bottom_navigation.add(new MeowBottomNavigation.Model(0, R.drawable.algorithm_bottom_icon));
-        bfs_bottom_navigation.add(new MeowBottomNavigation.Model(1, R.drawable.code_bottom_nav_icon));
-        bfs_bottom_navigation.add(new MeowBottomNavigation.Model(2, R.drawable.problems_bottom_bar_icon));
-        bfs_bottom_navigation.show(0,true);
-
-        bfs_bottom_navigation.setOnShowListener(new Function1<MeowBottomNavigation.Model, Unit>() {
+        boyer_moore_bottom_navigation.setOnShowListener(new Function1<MeowBottomNavigation.Model, Unit>() {
             @Override
             public Unit invoke(MeowBottomNavigation.Model model) {
                 Fragment fragment;
 
                 if(model.getId() == 0){
-                    fragment = new Algorithm_Fragment("bfs");
+                    fragment = new Algorithm_Fragment("boyer_moore");
                     loadAlgorithm(fragment);
                 }else if(model.getId() == 1){
-                    fragment = new code_fragment("bfs");
+                    fragment = new code_fragment("boyer_moore");
                     loadCode(fragment);
 
                 }else if(model.getId() == 2){
-                    fragment = new Problems_Fragment("bfs");
+                    fragment = new Problems_Fragment("boyer_moore");
                     loadProblems(fragment);
                 }
                 return null;
@@ -63,7 +58,7 @@ public class BFS_Description extends AppCompatActivity {
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goBack_to_Sorting = new Intent(BFS_Description.this,Graph_Algorithm.class);
+                Intent goBack_to_Sorting = new Intent(Boyer_Moore_Description.this, Strings_Algorithm.class);
                 startActivity(goBack_to_Sorting);
                 overridePendingTransition(R.anim.slide_from_left,R.anim.slideout_from_right);
             }
@@ -94,7 +89,7 @@ public class BFS_Description extends AppCompatActivity {
 //                "Average case complexity (Basic version) : O(n2)\n" +
 //                "Worst case space complexity : O(1) auxiliary\n");
 //        fragment.setArguments(data2);
-        fragmentTransaction.replace(R.id.bfs_frameLayout,fragment, null)
+        fragmentTransaction.replace(R.id.boyer_moore_frameLayout,fragment, null)
                 .commit();
     }
 
@@ -150,7 +145,7 @@ public class BFS_Description extends AppCompatActivity {
 //
 //        data.putString("selection_implementation","Implementation: Selection sort implementation given below - ");
 //        fragment.setArguments(data);
-        fragmentTransaction.replace(R.id.bfs_frameLayout,fragment, null)
+        fragmentTransaction.replace(R.id.boyer_moore_frameLayout,fragment, null)
                 .commit();
     }
 
@@ -168,7 +163,7 @@ public class BFS_Description extends AppCompatActivity {
 //
 //        fragment.setArguments(data2);
 
-        fragmentTransaction.replace(R.id.bfs_frameLayout,fragment, null)
+        fragmentTransaction.replace(R.id.boyer_moore_frameLayout,fragment, null)
                 .commit();
     }
 
