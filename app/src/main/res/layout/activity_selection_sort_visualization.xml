@@ -50,7 +50,7 @@ tools:context=".Selection_Sort_Visualization">
             android:layout_height="38dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/strock_border_with_color_background"
+            android:background="@drawable/output_black_strock_background"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/print_sorted_array"

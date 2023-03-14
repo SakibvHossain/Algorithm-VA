@@ -9,7 +9,6 @@
     android:padding="5dp"
     android:background="@drawable/strock_border_with_color_background"
     android:layout_margin="8dp"
-
     >
 
     <androidx.core.widget.NestedScrollView
@@ -28,209 +27,120 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_1"/>
+                android:text="@string/insertion_1"/>
             <TextView
-                android:id="@+id/Selection_line_02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_2"/>
+                android:text="@string/insertion_2"/>
             <TextView
                 android:id="@+id/Selection_line_03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_3"/>
+                android:text="@string/insertion_3"/>
             <TextView
                 android:id="@+id/Selection_line_04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_4"/>
+                android:text="@string/insertion_4"/>
             <TextView
                 android:id="@+id/Selection_line_05"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_5"/>
+                android:text="@string/insertion_5"/>
             <TextView
                 android:id="@+id/Selection_line_06"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_6"/>
+                android:text="@string/insertion_6"/>
             <TextView
                 android:id="@+id/Selection_line_07"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_7"/>
+                android:text="@string/insertion_7"/>
             <TextView
                 android:id="@+id/Selection_line_08"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_8"/>
+                android:text="@string/insertion_8"/>
             <TextView
                 android:id="@+id/Selection_line_09"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_9"/>
+                android:text="@string/insertion_9"/>
             <TextView
                 android:id="@+id/Selection_line_10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_10"/>
+                android:text="@string/insertion_10"/>
             <TextView
                 android:id="@+id/Selection_line_11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_11"/>
+                android:text="@string/insertion_11"/>
             <TextView
                 android:id="@+id/Selection_line_12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_12"/>
+                android:text="@string/insertion_12"/>
             <TextView
                 android:id="@+id/Selection_line_13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_13"/>
+                android:text="@string/insertion_13"/>
             <TextView
                 android:id="@+id/Selection_line_14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_14"/>
+                android:text="@string/insertion_14"/>
             <TextView
                 android:id="@+id/Selection_line_15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_15"/>
+                android:text="@string/insertion_15"/>
             <TextView
                 android:id="@+id/Selection_line_16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_16"/>
+                android:text="@string/insertion_16"/>
             <TextView
                 android:id="@+id/Selection_line_17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_17"/>
+                android:text="@string/insertion_17"/>
             <TextView
                 android:id="@+id/Selection_line_18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_18"/>
+                android:text="@string/insertion_18"/>
             <TextView
                 android:id="@+id/Selection_line_19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_19"/>
+                android:text="@string/insertion_19"/>
             <TextView
                 android:id="@+id/Selection_line_20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/selection_20"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_21"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_22"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_23"/>
-            <TextView
-                android:id="@+id/Selection_line_24"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_24"/>
-            <TextView
-                android:id="@+id/Selection_line_25"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_25"/>
-            <TextView
-                android:id="@+id/Selection_line_26"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_26"/>
-
-            <TextView
-                android:id="@+id/Selection_line_27"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/selection_27"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/Selection_line_28"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_28"/>
-            <TextView
-                android:id="@+id/Selection_line_29"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_29"/>
-            <TextView
-                android:id="@+id/Selection_line_30"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_30"/>
-            <TextView
-                android:id="@+id/Selection_line_31"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_31"/>
-
-            <TextView
-                android:id="@+id/Selection_line_32"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_32"/>
-
-            <TextView
-                android:id="@+id/Selection_line_33"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_33"/>
-
-            <TextView
-                android:id="@+id/Selection_line_34"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/selection_34"/>
-
-
+                android:text="@string/insertion_20"/>
 
         </LinearLayout>
 

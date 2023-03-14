@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_margin="8dp"
-            android:background="@drawable/strock_border_with_color_background"
+            android:background="@drawable/output_black_strock_background"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/print_sorted_array"

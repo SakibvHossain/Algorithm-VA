@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_margin="8dp"
-    android:background="@drawable/handler_stroke_background"
     android:weightSum="3">
 
     <com.google.android.material.button.MaterialButton

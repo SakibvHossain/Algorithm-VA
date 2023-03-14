@@ -122,5 +122,30 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="insertion_sort">Insertion Sort</string>
 
+    <!-- Insertion Sort -->
+
+    <string name="insertion_1">1&#160;import java.util.Arrays;</string>
+    <string name="insertion_2">2&#160;public class Insertion_Sort{</string>
+    <string name="insertion_3">3&#160;&#160;public static void sort(int arr[]){</string>
+    <string name="insertion_4">4&#160;&#160;&#160;int n = arr.length;</string>
+    <string name="insertion_5">5&#160;&#160;&#160;for(int i=0; i &#60;&#160; n; i++){</string>
+    <string name="insertion_6">6&#160;&#160;&#160;&#160;int key = arr[i];</string>
+    <string name="insertion_7">7&#160;&#160;&#160;&#160;int j = i - 1;</string>
+    <string name="insertion_8">8&#160;&#160;&#160;&#160;while(j >=0 &amp;&amp; arr[j] > key)</string>
+    <string name="insertion_9">9&#160;&#160;&#160;&#160;&#160;arr[j+1] = arr[j];</string>
+    <string name="insertion_10">10&#160;&#160;&#160;&#160;&#160;j = j - 1;</string>
+    <string name="insertion_11">11&#160;&#160;&#160;&#160;}</string>
+    <string name="insertion_12">12&#160;&#160;&#160;&#160;arr[j+1] = key;</string>
+    <string name="insertion_13">13&#160;&#160;&#160;}</string>
+    <string name="insertion_14">14&#160;&#160;}</string>
+    <string name="insertion_15">15&#160;&#160;public static void main(String[] args){</string>
+    <string name="insertion_16">16&#160;&#160;&#160;int[] array = {2,8,5,9,1};</string>
+    <string name="insertion_17">17&#160;&#160;&#160;sort(array)</string>
+    <string name="insertion_18">18&#160;&#160;&#160;System.out.println(Arrays.toString(arrays));</string>
+    <string name="insertion_19">19&#160;&#160;}</string>
+    <string name="insertion_20">20&#160;}</string>
+
+    <!-- Merge Sort -->
+
 
 </resources>

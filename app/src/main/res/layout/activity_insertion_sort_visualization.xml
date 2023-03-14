@@ -41,14 +41,14 @@
             android:orientation="vertical"
             >
 
-            <include layout="@layout/code_section"/>
+            <include layout="@layout/insertion_code_section"/>
             <include layout="@layout/handler_section"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@drawable/strock_border_with_color_background"
+                android:background="@drawable/output_black_strock_background"
                 android:orientation="vertical">
                 <TextView
                     android:id="@+id/print_sorted_array"
@@ -67,7 +67,7 @@
                     tools:ignore="RtlHardcoded" />
 
             </LinearLayout>
-            <include layout="@layout/visuzlization_section"/>
+            <include layout="@layout/insertion_visualize_section"/>
 
         </LinearLayout>
 
