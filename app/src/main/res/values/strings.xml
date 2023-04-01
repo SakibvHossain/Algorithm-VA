@@ -8,17 +8,22 @@
     <!-- Strings for On Boarding Screen -->
 
     <!--Titles-->
-    <string name="first_slide_title">Search Your Location</string>
-    <string name="second_slide_title">Make A Call</string>
-    <string name="third_slide_title">Add Missing Place</string>
-    <string name="fourth_slide_title">Sit Back And Enjoy</string>
+    <string name="first_slide_title">Algorithm &amp; Data Structure</string>
+    <string name="second_slide_title">Grow Analytical Skill</string>
+    <string name="third_slide_title">Analyze Algorithm</string>
+    <string name="fourth_slide_title">Visualize Algorithm</string>
+    <string name="f_th_slide_title">Well Structured</string>
 
     <!--Descriptions-->
-    <string name="first_slide_desc">You can search any place nearby or with-in the specified city. We will display specific or all related shops to match your search. </string>
-    <string name="second_slide_desc">We provide almost all the numbers of all departments and shops registered with us. You can perform bookings as well.</string>
-    <string name="third_slide_desc">If you have a shop or somethings and want to be a part of our growing industry then add your place by follwing simple steps.</string>
-    <string name="fourth_slide_desc">We will handle everything for you. As you have the app in your pocket then you dont have to worry about anything.  </string>
-
+    <string name="first_slide_desc">Learning algorithms and data structures is essential for anyone interested in computer science or programming. These enable us to solve complex problems efficiently, efficient programs.</string>
+    <string name="second_slide_desc">Our Algorithm application is designed with a well-structured approach to optimize your coding experience!.</string>
+    <string name="third_slide_desc">Maximize your coding potential with Algorithm Analysis. Optimize your coding skills </string>
+    <string name="fourth_slide_desc">Our interactive visualizations will help you understand complex algorithms, step-by-step. Boost your problem-solving abilities with ease.</string>
+    <string name="f_th_slide_desc">Boost your analytical skills and improve your coding with our Algorithm VA application. Unlock your full potential!</string>
+    <!--  With a user-friendly interface you can easily navigate through complex algorithms and data structures -->
+    <!-- With in-depth analysis of algorithm you can easily identify and address bottlenecks in your code. Our Algorithm Analysis is the perfect solution for anyone looking to take their coding skills to the next level. -->
+    <!-- Optimize your coding skills with our Algorithm application!  -->
+    <!-- Our interactive visualizations and step-by-step breakdowns make it easy to understand and optimize complex algorithms. -->
     <!--Buttons-->
     <string name="skip_btn">Skip</string>
     <string name="next_btn">Next</string>
@@ -103,7 +108,7 @@
     <string name="memory">Analyzing View</string>
     <string name="array_name">array</string>
     <string name="_1">1</string>
-    <string name="main_section_executed">main: 17</string>
+    <string name="main_section_executed">main: 27</string>
     <string name="sort_method_called">sort: 3</string>
     <string name="isSorted_method_called">isSorted: 17</string>
     <string name="initial_condition">&#160;</string>
@@ -123,7 +128,6 @@
     <string name="insertion_sort">Insertion Sort</string>
 
     <!-- Insertion Sort -->
-
     <string name="insertion_1">1&#160;import java.util.Arrays;</string>
     <string name="insertion_2">2&#160;public class Insertion_Sort{</string>
     <string name="insertion_3">3&#160;&#160;public static void sort(int arr[]){</string>
@@ -145,7 +149,57 @@
     <string name="insertion_19">19&#160;&#160;}</string>
     <string name="insertion_20">20&#160;}</string>
 
+
     <!-- Merge Sort -->
+    <string name="marge_1">1&#160;import java.util.Arrays;</string>
+    <string name="marge_2">2&#160;public class Merge_Sort{</string>
+    <string name="marge_3">3&#160;&#160;public static void merge(int[] arr, int[] aux, int low, int mid, int high){</string>
+    <string name="marge_4">4&#160;&#160;&#160;int k = low, i = low, j = mid + 1;</string>
+    <string name="marge_5">5&#160;&#160;&#160;while(i&#60;&#160;=mid &amp;&amp; j&#60;&#160;=high){</string>
+    <string name="marge_6">6&#160;&#160;&#160;&#160;if(arr[i]&#60;=arr[j]){</string>
+    <string name="marge_7">7&#160;&#160;&#160;&#160;&#160;aux[k++] == arr[i++];</string>
+    <string name="marge_8">8&#160;&#160;&#160;&#160;}</string>
+    <string name="marge_9">9&#160;&#160;&#160;&#160;else{</string>
+    <string name="marge_10">10&#160;&#160;&#160;&#160;&#160;aux[k++]=arr[j++]</string>
+    <string name="marge_11">11&#160;&#160;&#160;&#160;}</string>
+    <string name="marge_12">12&#160;&#160;&#160;}</string>
+    <string name="marge_13">13&#160;&#160;&#160;while(i&#60;=mid){</string>
+    <string name="marge_14">14&#160;&#160;&#160;&#160;aux[k++]=arr[i++];</string>
+    <string name="marge_15">15&#160;&#160;&#160;}</string>
+    <string name="marge_16">16&#160;&#160;&#160;for(i=low;i&#60;=high;i++){</string>
+    <string name="marge_17">17&#160;&#160;&#160;&#160;arr[i]=aux[i]</string>
+    <string name="marge_18">18&#160;&#160;&#160;}</string>
+    <string name="marge_19">19&#160;&#160;}</string>
+    <string name="marge_20">20&#160;&#160;public static void mergeSort(int[] arr, int[]aux, int low, int high){</string>
+    <string name="marge_21">21&#160;&#160;&#160;if(high==low){</string>
+    <string name="marge_22">22&#160;&#160;&#160;&#160;return;</string>
+    <string name="marge_23">23&#160;&#160;&#160;}</string>
+    <string name="marge_24">24&#160;&#160;&#160;int mid=(low+((high-low)>>1));</string>
+    <string name="marge_25">25&#160;&#160;&#160;mergeSort(arr,aux,low,mid);</string>
+    <string name="marge_26">26&#160;&#160;&#160;mergeSort(arr,aux,low,mid+1,high);</string>
+    <string name="marge_27">27&#160;&#160;&#160;merge(arr,aux,low,mid,high);</string>
+    <string name="marge_28">28&#160;&#160;}</string>
+    <string name="marge_29">29&#160;&#160;public static void main(String[] args){</string>
+    <string name="marge_30">30&#160;&#160;&#160;int[] arr={6,4,3,9};</string>
+    <string name="marge_31">31&#160;&#160;&#160;int[] aux=Arrays.copyOf(arr,arr.length);</string>
+    <string name="marge_32">32&#160;&#160;&#160;mergeSort(arr,aux,0,arr.length-1);</string>
+    <string name="marge_33">33&#160;&#160;&#160;System.out.println(Arrays.toString(arr));</string>
+    <string name="marge_34">34&#160;&#160;}</string>
+    <string name="marge_35">35&#160;}</string>
+    <string name="visualization_s">Visualization</string>
+    <string name="analysis_s">Analysis</string>
+
+    <!-- Ternary Search -->
+
+    <!-- Linear Search -->
+
+    <!-- Binary Search -->
+
+    <!-- Stack -->
+
+    <!-- Queue -->
+
+    <!-- Binary Tree Traverse -->
 
 
 </resources>

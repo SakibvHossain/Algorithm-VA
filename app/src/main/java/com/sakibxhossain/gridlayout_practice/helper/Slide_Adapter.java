@@ -23,24 +23,28 @@ public class Slide_Adapter extends PagerAdapter {
     }
 
     int[] images = {
-            R.drawable.search_place,
-            R.drawable.make_a_call,
-            R.drawable.search_place,
-            R.drawable.sit_back_and_relax
+            R.drawable.onboarding_1st,
+            R.drawable.well_structured_onboarding,
+            R.drawable.analyze_code_onboarding,
+            R.drawable.visualization,
+            R.drawable.onboarding_incrase_your_analytical_skills
+
     };
 
     int[] description = {
             R.string.first_slide_desc,
             R.string.second_slide_desc,
             R.string.third_slide_desc,
-            R.string.fourth_slide_desc
+            R.string.fourth_slide_desc,
+            R.string.f_th_slide_desc
     };
 
     int[] title = {
             R.string.first_slide_title,
-            R.string.second_slide_title,
+            R.string.f_th_slide_title,
             R.string.third_slide_title,
-            R.string.fourth_slide_title
+            R.string.fourth_slide_title,
+            R.string.second_slide_title
     };
 
     @Override

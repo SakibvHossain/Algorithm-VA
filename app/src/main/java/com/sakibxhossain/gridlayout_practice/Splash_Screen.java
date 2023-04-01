@@ -30,14 +30,13 @@ public class Splash_Screen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash_screen);
         //Hooks for Variables
         splashscreen_ImageView = findViewById(R.id.splashscreen_ImageView);
-        splashscreen_textview = findViewById(R.id.splashscreen_textview);
         //Hooks for Animation Variables
-        slide_right_anim = AnimationUtils.loadAnimation(this,R.anim.slide_from_right);
-        bottom_aim = AnimationUtils.loadAnimation(this,R.anim.bottom_anim);
+        slide_right_anim = AnimationUtils.loadAnimation(this,R.anim.fade_in);
+//        bottom_aim = AnimationUtils.loadAnimation(this,R.anim.bottom_anim);
 //        //Animation for image
 //        splashscreen_ImageView.setAnimation(slide_right_anim);
 //        //Animation for text
@@ -55,10 +54,12 @@ public class Splash_Screen extends AppCompatActivity {
 
                 Intent mainActivity = new Intent(getApplicationContext(), Onboarding_Screen.class);
                 startActivity(mainActivity);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 finish();
             }else{
                 Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(mainActivity);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 finish();
             }
         },SPLASH_TIMER);

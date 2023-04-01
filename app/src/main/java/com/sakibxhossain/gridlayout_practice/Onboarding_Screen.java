@@ -3,6 +3,7 @@ package com.sakibxhossain.gridlayout_practice;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -12,10 +13,14 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.sakibxhossain.gridlayout_practice.helper.Slide_Adapter;
 
 public class Onboarding_Screen extends AppCompatActivity {
+
+    CollapsingToolbarLayout toolbarLayout;
 
     ViewPager viewPager2;
     //Dots portion
@@ -27,11 +32,13 @@ public class Onboarding_Screen extends AppCompatActivity {
     Animation OnboardingAnimation;
     private int current_Position;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding_screen);
 
+        toolbarLayout = findViewById(R.id.collapsingToolbar);
         //hooks
         viewPager2 = findViewById(R.id.onboarding_ViewPager);
         dots_layout = findViewById(R.id.onboarding_linearlayout_dots);
@@ -43,6 +50,14 @@ public class Onboarding_Screen extends AppCompatActivity {
         //adding dots
         addDots(0);
         viewPager2.addOnPageChangeListener(changeListener);
+        lets_get_started.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Onboarding_Screen.this, MainActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+            }
+        });
     }
 
     //Next Button
@@ -57,7 +72,7 @@ public class Onboarding_Screen extends AppCompatActivity {
 
     private void addDots(int position){
         current_Position = position;
-        dots = new TextView[4];
+        dots = new TextView[5];
         dots_layout.removeAllViews();
 
         for(int i=0; i<dots.length; i++){
@@ -82,13 +97,7 @@ public class Onboarding_Screen extends AppCompatActivity {
         public void onPageSelected(int position) {
             addDots(position);
             //Condition when button will be shown
-            if(position==0){
-                lets_get_started.setVisibility(View.INVISIBLE);
-            }else if(position==1){
-                lets_get_started.setVisibility(View.INVISIBLE);
-            }else if(position==2){
-//                OnboardingAnimation = AnimationUtils.loadAnimation(OnboardingActivity.this,R.anim.bottom_anim_for_onboarding);
-//                lets_get_started.setAnimation(OnboardingAnimation);
+            if(position>=0 && position<=3){
                 lets_get_started.setVisibility(View.INVISIBLE);
             }else{
                 OnboardingAnimation = AnimationUtils.loadAnimation(Onboarding_Screen.this,R.anim.bottom_anim_for_onboarding);

@@ -73,11 +73,77 @@ public class Selection_Sort_Description extends AppCompatActivity {
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
 
         Bundle data2 = new Bundle();
-        data2.putString("selection_problem_title","Problem 1");
-        data2.putString("selection_problem_description","Problems not assigned yet\n");
+        data2.putString("selection_problem_title","Selection Sort");
+        data2.putString("selection_problem_description","Given an unsorted array of size N, use selection sort to sort arr[] in increasing order.\n" +
+                "\n" +
+                "\n" +
+                "Example 1:\n" +
+                "\n" +
+                "Input:\n" +
+                "N = 5\n" +
+                "arr[] = {4, 1, 3, 9, 7}\n" +
+                "Output:\n" +
+                "1 3 4 7 9\n" +
+                "Explanation:\n" +
+                "Maintain sorted (in bold) and unsorted subarrays.\n" +
+                "Select 1. Array becomes 1 4 3 9 7.\n" +
+                "Select 3. Array becomes 1 3 4 9 7.\n" +
+                "Select 4. Array becomes 1 3 4 9 7.\n" +
+                "Select 7. Array becomes 1 3 4 7 9.\n" +
+                "Select 9. Array becomes 1 3 4 7 9.\n" +
+                "\n\nExample 2:\n" +
+                "\n" +
+                "Input:\n" +
+                "N = 10\n" +
+                "arr[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}\n" +
+                "Output:\n" +
+                "1 2 3 4 5 6 7 8 9 10\n" +
+                "\n" +
+                "Your Task:  \n" +
+                "You dont need to read input or print anything. Complete the functions select() and selectionSort() ,where select() takes arr[] and starting point of unsorted array i as input parameters and returns the selected element for each iteration in selection sort, and selectionSort() takes the array and it's size and sorts the array.\n" +
+                "\n" +
+                "\n" +
+                "Expected Time Complexity: O(N2)\n" +
+                "Expected Auxiliary Space: O(1)\n" +
+                "\n" +
+                "\n" +
+                "Constraints:\n" +
+                "1 ≤ N ≤ 10^3\n\n" +
+                "Company Tags\n" +
+                "Microsoft\t\tMedlife");
 
-        data2.putString("selection_problem2_title","Problem 2");
-        data2.putString("selection_problem2_description","Problems not assigned yet\n");
+        data2.putString("selection_problem2_title","Minimum Integer");
+        data2.putString("selection_problem2_description","You are given an array A of size N. Let us denote S as the sum of all integers present in the array. Among all integers present in the array, find the minimum integer X such that S ≤ N*X.\n" +
+                "\n" +
+                "Example 1:\n" +
+                "\n" +
+                "Input:\n" +
+                "N = 3,\n" +
+                "A = { 1, 3, 2}\n" +
+                "Output:\n" +
+                "2\n" +
+                "Explanation:\n" +
+                "Sum of integers in the array is 6.\n" +
+                "since 6 ≤ 3*2, therefore 2 is the answer.\n" +
+                "Example 2:\n" +
+                "\n" +
+                "Input:\n" +
+                "N = 1,\n" +
+                "A = { 3 }\n" +
+                "Output:\n" +
+                "3\n" +
+                "Explanation:\n" +
+                "3 is the only possible answer\n" +
+                "Your Task:\n" +
+                "The task is to complete the function minimumInteger() which takes an integer N and an integer array A as input parameters and returns the minimum integer which satisfies the condition.\n" +
+                "\n" +
+                "Expected Time Complexity: O(N)\n" +
+                "Expected Auxiliary Space: O(1)\n" +
+                "\n" +
+                "Constraints:\n" +
+                "1 ≤  N ≤ 105\n" +
+                "1 ≤  Ai ≤ 109\n\n"+"Topic Tags\n" +
+                "Mathematical\tArrays");
 
         fragment.setArguments(data2);
         fragmentTransaction.replace(R.id.selection_frame_layout,fragment, null)
@@ -157,7 +223,37 @@ public class Selection_Sort_Description extends AppCompatActivity {
                 "3. Repeat this process for all the elements until the entire array is sorted\n\nThis algorithm is called selection sort since it repeatedly selects the smallest element.\n");
 
         data2.putString("selection_in_detail_title","Selection Sort in Detail");
-        data2.putString("selection_sort_in_detail_description","Description will be added later");
+        data2.putString("selection_sort_in_detail_description","Lets consider the following array as an example: arr[] = {4, 8, 2, 9, 5}\n" +
+                "\n" +
+                "First pass:\n" +
+                "\n" +
+                "For the first position in the sorted array, the whole array is traversed from index 0 to 4 sequentially. The first position where 4 is stored presently, after traversing whole array it is clear that 2 is the lowest value.\n" +
+                "   4   \t   8   \t   2   \t   9   \t   5   \n" +
+                "Thus, replace 4 with 2. After one iteration 2, which happens to be the least value in the array, tends to appear in the first position of the sorted list.\n" +
+                "   2   \t   8   \t   4   \t   9   \t   5   \n" +
+                "Second Pass:\n" +
+                "\n" +
+                "For the second position, where 8 is present, again traverse the rest of the array in a sequential manner.\n" +
+                "   2   \t   8   \t   4   \t   9   \t   5   \n" +
+                "After traversing, we found that 4 is the second lowest value in the array and it should appear at the second place in the array, thus swap these values.\n" +
+                "   2   \t   4   \t   8   \t   9   \t   5   \n" +
+                "Third Pass:\n" +
+                "\n" +
+                "Now, for third place, where 8 is present again traverse the rest of the array and find the third least value present in the array.\n" +
+                "   2   \t   4   \t   8   \t   9   \t   5   \n" +
+                "While traversing, 5 came out to be the third least value and it should appear at the third place in the array, thus swap 5 with element present at third position.\n" +
+                "   2   \t   4   \t   5   \t   9   \t   8   \n" +
+                "Fourth pass:\n" +
+                "\n" +
+                "Similarly, for fourth place, where 9 is present to traverse the rest of the array and find the fourth least value present in the array.\n" +
+                "   2   \t   4   \t   5   \t   9   \t   8   \n" +
+                "While traversing, 8 came out to be the fourth least value and it should appear at the fourth place in the array, thus swap 9 with element present at fourth position.\n" +
+                "   2   \t   4   \t   5   \t   8   \t   9   \n" +
+                "Fifth Pass:\n" +
+                "\n" +
+                "At last the largest value present in the array automatically get placed at the last position in the array\n" +
+                "The resulted array is the sorted array.\n" +
+                "   2   \t   4   \t   5   \t   8   \t   9 ");
 
         data2.putString("selection_sort_performance_title","Performance");
         data2.putString("selection_sort_performance_description","Worst case complexity : O(n2)\n" +

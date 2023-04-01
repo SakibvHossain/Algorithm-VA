@@ -21,6 +21,8 @@ import com.sakibxhossain.gridlayout_practice.Marge_Sort_Visualization;
 import com.sakibxhossain.gridlayout_practice.R;
 import com.sakibxhossain.gridlayout_practice.Selection_Sort_Analysis;
 import com.sakibxhossain.gridlayout_practice.Selection_Sort_Visualization;
+import com.sakibxhossain.gridlayout_practice.Ternary_Search_Analysis;
+import com.sakibxhossain.gridlayout_practice.Ternary_Search_Visualization;
 
 import java.util.Objects;
 
@@ -173,9 +175,61 @@ public class code_fragment extends Fragment {
             });
 
             load_Linear_Search_Code(data);
+        }else if(Objects.equals(token, "ternary_search")){
+            analysis_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Analysis = new Intent(getContext(), Ternary_Search_Analysis.class);
+                    startActivity(go_for_Analysis);
+                }
+            });
+
+            visualize_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Visualize = new Intent(getContext(), Ternary_Search_Visualization.class);
+                    startActivity(go_for_Visualize);
+                }
+            });
+
+            load_ternary_Search_Code(data);
+        }else if(Objects.equals(token, "binary_search")){
+            analysis_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Analysis = new Intent(getContext(), Ternary_Search_Analysis.class);
+                    startActivity(go_for_Analysis);
+                }
+            });
+
+            visualize_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Visualize = new Intent(getContext(), Ternary_Search_Visualization.class);
+                    startActivity(go_for_Visualize);
+                }
+            });
+
+            load_binary_Search_Code(data);
         }
 
         return myView;
+    }
+
+    private void load_binary_Search_Code(Bundle data) {
+        if(data != null){
+            codeString = data.getString("binary_search_code");
+            code_Implementation_String = data.getString("binary_search_implementation");
+        }
+        loadCode();
+    }
+
+    private void load_ternary_Search_Code(Bundle data) {
+        if(data != null){
+            codeString = data.getString("ternary_search_code");
+            code_Implementation_String = data.getString("ternary_implementation");
+        }
+        loadCode();
     }
 
     private void load_Linear_Search_Code(Bundle data) {
@@ -183,8 +237,7 @@ public class code_fragment extends Fragment {
             codeString = data.getString("linear_search_code");
             code_Implementation_String = data.getString("linear_search_description");
         }
-        codeView.showCode(codeString);
-        marge_des.setText(code_Implementation_String);
+        loadCode();
     }
 
     ////////////////////////////////////// todo:: Insertion Sort //////////////////////////////
@@ -193,8 +246,7 @@ public class code_fragment extends Fragment {
             codeString = data.getString("insertion_sort_code");
             code_Implementation_String = data.getString("insertion_implementation");
         }
-        codeView.showCode(codeString);
-        marge_des.setText(code_Implementation_String);
+        loadCode();
     }
 
     ////////////////////////////////////// todo:: Selection Sort //////////////////////////////
@@ -203,8 +255,7 @@ public class code_fragment extends Fragment {
             codeString = data.getString("selection_sort_code");
             code_Implementation_String = data.getString("selection_implementation");
         }
-        codeView.showCode(codeString);
-        marge_des.setText(code_Implementation_String);
+        loadCode();
     }
 
     ////////////////////////////////////// todo:: Marge Sort //////////////////////////////
@@ -213,6 +264,10 @@ public class code_fragment extends Fragment {
             codeString = data.getString("marge_sort_code");
             code_Implementation_String = data.getString("marge_code_description");
         }
+        loadCode();
+    }
+
+    private void loadCode() {
         codeView.showCode(codeString);
         marge_des.setText(code_Implementation_String);
     }

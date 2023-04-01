@@ -31,7 +31,7 @@
                 android:scaleType="centerCrop"
                 android:layout_marginBottom="8dp"
                 android:layout_gravity="center"
-                android:background="@drawable/logo"
+                android:background="@drawable/logo_mainava"
                 android:contentDescription="@string/todo" />
 
 

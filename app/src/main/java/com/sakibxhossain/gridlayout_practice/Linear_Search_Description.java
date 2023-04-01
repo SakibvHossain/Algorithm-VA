@@ -67,102 +67,6 @@ public class Linear_Search_Description extends AppCompatActivity {
         });
     }
 
-    private void loadProblems(Fragment fragment) {
-        //replace the fragment
-        getSupportFragmentManager()
-                .beginTransaction()
-                .setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
-                .replace(R.id.linear_search_frameLayout,fragment, null)
-                .commit();
-    }
-
-    private void loadCode(Fragment fragment) {
-        //replace the fragment
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager()
-                .beginTransaction()
-                .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-
-        Bundle data = new Bundle();
-        data.putString("linear_search_code","  \timport java.util.Arrays;\n" +
-                "  \t\n" +
-                "  \tpublic class Marge_Sort\n" +
-                "  \t{\n" +
-                "  \t    public static void merge(int[] arr, int[] aux, int low, int mid, int high)\n" +
-                "  \t    {\n" +
-                "  \t        int k = low, i = low, j = mid + 1;\n" +
-                "  \t\n" +
-                "  \t        while (i <= mid && j <= high)\n" +
-                "  \t        {\n" +
-                "  \t            if (arr[i] <= arr[j]) {\n" +
-                "  \t                aux[k++] = arr[i++];\n" +
-                "  \t            }\n" +
-                "  \t            else {\n" +
-                "  \t                aux[k++] = arr[j++];\n" +
-                "  \t            }\n" +
-                "  \t        }\n" +
-                "  \t        while (i <= mid) {\n" +
-                "  \t            aux[k++] = arr[i++];\n" +
-                "  \t        }\n" +
-                "  \t\n" +
-                "  \t        for (i = low; i <= high; i++) {\n" +
-                "  \t            arr[i] = aux[i];\n" +
-                "  \t        }\n" +
-                "  \t    }\n" +
-                "  \t\n" +
-                "  \t    // Sort array arr [low..high] using auxiliary array aux\n" +
-                "  \t    public static void mergeSort(int[] arr, int[] aux, int low, int high)\n" +
-                "  \t    {\n" +
-                "  \t        // Base case\n" +
-                "  \t        if (high == low) {    // if run size == 1\n" +
-                "  \t            return;\n" +
-                "  \t        }\n" +
-                "  \t\n" +
-                "  \t        // find mid point\n" +
-                "  \t        int mid = (low + ((high - low) >> 1));\n" +
-                "  \t\n" +
-                "  \t        // recursively split runs into two halves until run size == 1,\n" +
-                "  \t        // then merge them and return back up the call chain\n" +
-                "  \t\n" +
-                "  \t        mergeSort(arr, aux, low, mid);      // split / merge left  half\n" +
-                "  \t        mergeSort(arr, aux, mid + 1, high); // split / merge right half\n" +
-                "  \t\n" +
-                "  \t        merge(arr, aux, low, mid, high);    // merge the two half runs\n" +
-                "  \t    }\n" +
-                "  \t\n" +
-                "  \t    // Function to check if arr is sorted in ascending order or not\n" +
-                "  \t    public static boolean isSorted(int[] arr)\n" +
-                "  \t    {\n" +
-                "  \t        int prev = arr[0];\n" +
-                "  \t        for (int i = 1; i < arr.length; i++) {\n" +
-                "  \t            if (prev > arr[i]) {\n" +
-                "  \t                System.out.println(\"MergeSort Fails!!\");\n" +
-                "  \t                return false;\n" +
-                "  \t            }\n" +
-                "  \t            prev = arr[i];\n" +
-                "  \t        }\n" +
-                "  \t\n" +
-                "  \t        return true;\n" +
-                "  \t    }\n" +
-                "  \t\n" +
-                "  \t    \n" +
-                "  \t    public static void main(String[] args)\n" +
-                "  \t    {\n" +
-                "  \t        int[] arr = {8,4,3,12};\n" +
-                "  \t        int[] aux = Arrays.copyOf(arr, arr.length);\n" +
-                "  \t\n" +
-                "  \t        // sort array 'arr' using auxiliary array 'aux'\n" +
-                "\t        mergeSort(arr, aux, 0, arr.length - 1);\n" +
-                "\t\n" +
-                "\t        if (isSorted(arr)) {\n" +
-                "\t            System.out.println(Arrays.toString(arr));\n" +
-                "\t        }\n" +
-                "\t    }\n" +
-                "\t}\n");
-        data.putString("linear_search_description","Implementation: The implementation of Marge Sort given below - ");
-        fragment.setArguments(data);
-        fragmentTransaction.replace(R.id.linear_search_frameLayout,fragment, null)
-                .commit();
-    }
 
     private void loadAlgorithm(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager()
@@ -193,4 +97,55 @@ public class Linear_Search_Description extends AppCompatActivity {
         fragmentTransaction.replace(R.id.linear_search_frameLayout,fragment, null)
                 .commit();
     }
+
+    private void loadCode(Fragment fragment) {
+        //replace the fragment
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager()
+                .beginTransaction()
+                .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
+
+        Bundle data = new Bundle();
+        data.putString("linear_search_code","class Linear_Search {\n" +
+                "\tpublic static int search(int arr[], int x){\n" +
+                "\t\tint N = arr.length;\n" +
+                "\t\tfor (int i = 0; i < N; i++) {\n" +
+                "\t\t\tif (arr[i] == x)\n" +
+                "\t\t\t\treturn i;\n" +
+                "\t\t}\n" +
+                "\t\treturn -1;\n" +
+                "\t}\n" +
+                "\tpublic static void main(String args[]){\n" +
+                "\t\tint arr[] = { 2, 3, 4, 10, 40 };\n" +
+                "\t\tint x = 10;\n" +
+                "\t\tint result = search(arr, x);// Function call\n" +
+                "\t\tif (result == -1)\n" +
+                "\t\t\tSystem.out.print(\"Element is not present in array\");\n" +
+                "\t\telse\n" +
+                "\t\t\tSystem.out.print(\"Element is present at index \"+ result);\n" +
+                "\t}\n" +
+                "}");
+        data.putString("linear_search_description","Implementation: Linear Search implementation given below - ");
+        fragment.setArguments(data);
+        fragmentTransaction.replace(R.id.linear_search_frameLayout,fragment, null)
+                .commit();
+    }
+
+    private void loadProblems(Fragment fragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager()
+                .beginTransaction()
+                .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
+
+        Bundle data2 = new Bundle();
+        data2.putString("linear_problem_title","Problem 1");
+        data2.putString("linear_problem_description","Problems not assigned yet\n");
+
+        data2.putString("linear_problem2_title","Problem 2");
+        data2.putString("linear_problem2_description","Problems not assigned yet\n");
+
+        fragment.setArguments(data2);
+
+        fragmentTransaction.replace(R.id.linear_search_frameLayout,fragment, null)
+                .commit();
+    }
+
 }

@@ -8,26 +8,29 @@
     tools:context=".Selection_Sort_Analysis">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#673AB7">
+        android:layout_height="40dp"
+        android:background="@color/splash_screen_background">
         <ImageView
             android:id="@+id/selection_sort_analysis_back_btn"
             android:layout_width="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="4dp"
             android:layout_height="30dp"
             android:backgroundTint="#ffffff"
-            android:background="@drawable/ic_baseline_arrow_back_24"/>
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/selection_sort_analysis_back_btn"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="10dp"
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center"
-            android:text="@string/selection_sort"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:text="@string/analysis_s"
+            android:layout_toEndOf="@+id/selection_sort_analysis_back_btn"
+            />
     </RelativeLayout>
 
     <ScrollView

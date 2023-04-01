@@ -127,9 +127,64 @@ public class Problems_Fragment extends Fragment {
             load_selection_problems(data);
         }else if(Objects.equals(token, "insertion")){
             load_insertion_problems(data);
+        }else if(Objects.equals(token, "marge")){
+            load_merge_problems(data);
+        }else if(Objects.equals(token, "ternary_search")){
+            load_ternary_problems(data);
+        }else if(Objects.equals(token, "linear")){
+            load_linear_problems(data);
+        }else if(Objects.equals(token, "binary_search")){
+            load_binary_search_problems(data);
         }
 
         return myView;
+    }
+
+    private void load_binary_search_problems(Bundle data) {
+        if(data != null){
+            problem_1 = data.getString("binary_search_problem_title");
+            problem_1_description = data.getString("binary_search_problem_description");
+
+            problem_2 = data.getString("binary_search_problem2_title");
+            problem_2_description = data.getString("binary_search_problem2_description");
+        }
+        load_problems();
+    }
+
+    private void load_linear_problems(Bundle data) {
+        if(data != null){
+            problem_1 = data.getString("linear_problem_title");
+            problem_1_description = data.getString("linear_problem_description");
+
+            problem_2 = data.getString("linear_problem2_title");
+            problem_2_description = data.getString("linear_problem2_description");
+        }
+
+        load_problems();
+    }
+
+    private void load_ternary_problems(Bundle data) {
+        if(data != null){
+            problem_1 = data.getString("ternary_problem_title");
+            problem_1_description = data.getString("ternary_problem_description");
+
+            problem_2 = data.getString("ternary_problem2_title");
+            problem_2_description = data.getString("ternary_problem2_description");
+        }
+
+        load_problems();
+    }
+
+    private void load_merge_problems(Bundle data) {
+        if(data != null){
+            problem_1 = data.getString("marge_sort_problem_title");
+            problem_1_description = data.getString("marge_sort_problem_description");
+
+            problem_2 = data.getString("marge_sort_problem2_title");
+            problem_2_description = data.getString("marge_sort_problem2_description");
+        }
+
+        load_problems();
     }
 
     private void load_insertion_problems(Bundle data) {
@@ -141,11 +196,7 @@ public class Problems_Fragment extends Fragment {
             problem_2_description = data.getString("insertion_problem2_description");
         }
 
-        card_Text_problem.setText(problem_1);
-        card_des_text.setText(problem_1_description);
-
-        card_Text_problem2.setText(problem_2);
-        card_des_text2.setText(problem_2_description);
+        load_problems();
     }
 
     private void load_selection_problems(Bundle data) {
@@ -156,7 +207,10 @@ public class Problems_Fragment extends Fragment {
             problem_2 = data.getString("selection_problem2_title");
             problem_2_description = data.getString("selection_problem2_description");
         }
+        load_problems();
+    }
 
+    private void load_problems() {
         card_Text_problem.setText(problem_1);
         card_des_text.setText(problem_1_description);
 
