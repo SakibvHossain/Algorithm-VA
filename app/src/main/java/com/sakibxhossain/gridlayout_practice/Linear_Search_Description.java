@@ -85,10 +85,48 @@ public class Linear_Search_Description extends AppCompatActivity {
                 "Step 5: In this step, repeat steps 3 and 4 until the search (Target) element is compared with the \n" +
                 "last element of the array.\n" +
                 "Step 6 – If the last element in the list does not match, the Linear Search Function will be \n" +
-                "terminated, and the message “Element is not found” will be displayed.\n");
+                "terminated, and the message “Element is not found” will be displayed.\n\n\nPseudo Code:\nLinearSearch(array, target):\n" +
+                "    for i = 0 to length(array) - 1\n" +
+                "        if array[i] == target:\n" +
+                "            return i\n" +
+                "    return -1 // Target not found in array\n\n\nIn this algorithm, array is the array to be searched, and target is the value being searched for. The algorithm works by sequentially searching the elements of the array from the first element to the last element until the target value is found or the end of the array is reached.\n" +
+                "\n" +
+                "The algorithm starts by initializing a loop that iterates through each element of the array, from i = 0 to i = length(array) - 1. At each iteration, it compares the current element of the array with the target value. If the current element is equal to the target value, it returns the index of that element. If the end of the array is reached and the target value has not been found, it returns -1 to indicate that the target value is not in the array.");
 
         data2.putString("linear_search_in_detail_title","Linear Search in Detail");
-        data2.putString("linear_search_in_detail_description","Description will be added later");
+        data2.putString("linear_search_in_detail_description","Suppose we have an array A with the following elements: A = [7, 2, 9, 3, 6, 4]. We want to search for the value 6 in the array.\n" +
+                "\n" +
+                "Step 1: Initialize the loop\n" +
+                "We start by initializing a loop that iterates through each element of the array from the first element to the last element:\n" +
+                "\n" +
+                "for i = 0 to 5 do\n" +
+                "Step 2: Compare the current element with the target value\n" +
+                "At each iteration of the loop, we compare the current element A[i] with the target value 6:\n" +
+                "\n" +
+                "if A[i] == 6 then\n" +
+                "On the first iteration of the loop, i = 0 and A[0] = 7, so the condition is false.\n" +
+                "\n" +
+                "On the second iteration of the loop, i = 1 and A[1] = 2, so the condition is false.\n" +
+                "\n" +
+                "On the third iteration of the loop, i = 2 and A[2] = 9, so the condition is false.\n" +
+                "\n" +
+                "On the fourth iteration of the loop, i = 3 and A[3] = 3, so the condition is false.\n" +
+                "\n" +
+                "On the fifth iteration of the loop, i = 4 and A[4] = 6, so the condition is true.\n" +
+                "\n" +
+                "Step 3: Target value found\n" +
+                "If the current element A[i] is equal to the target value, we return the index i:\n" +
+                "\n" +
+                "return i\n" +
+                "In this case, the target value 6 is found at index 4, so we return 4.\n" +
+                "\n" +
+                "Step 4: Target value not found\n" +
+                "If the loop completes without finding the target value, we return -1:\n" +
+                "\n" +
+                "return -1\n" +
+                "In this example, we found the target value 6 at index 4, so we do not need to return -1.\n" +
+                "\n" +
+                "Therefore, the linear search algorithm for searching for the value 6 in the array A returns the index 4.");
 
         data2.putString("linear_search_performance_title","Performance");
         data2.putString("linear_search_performance_description","Time complexity: O(N)\n" +
@@ -136,10 +174,38 @@ public class Linear_Search_Description extends AppCompatActivity {
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
 
         Bundle data2 = new Bundle();
-        data2.putString("linear_problem_title","Problem 1");
-        data2.putString("linear_problem_description","Problems not assigned yet\n");
+        data2.putString("linear_problem_title","Kth Missing Positive Number");
+        data2.putString("linear_problem_description","Given an array arr of positive integers sorted in a strictly increasing order, and an integer k.\n" +
+                "\n" +
+                "Return the kth positive integer that is missing from this array.\n" +
+                "\n" +
+                " \n" +
+                "\n" +
+                "Example 1:\n" +
+                "\n" +
+                "Input: arr = [2,3,4,7,11], k = 5\n" +
+                "Output: 9\n" +
+                "Explanation: The missing positive integers are [1,5,6,8,9,10,12,13,...]. The 5th missing positive integer is 9.\n" +
+                "Example 2:\n" +
+                "\n" +
+                "Input: arr = [1,2,3,4], k = 2\n" +
+                "Output: 6\n" +
+                "Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing positive integer is 6.\n" +
+                " \n" +
+                "\n" +
+                "Constraints:\n" +
+                "\n" +
+                "1 <= arr.length <= 1000\n" +
+                "1 <= arr[i] <= 1000\n" +
+                "1 <= k <= 1000\n" +
+                "arr[i] < arr[j] for 1 <= i < j <= arr.length\n" +
+                " \n" +
+                "\n" +
+                "Follow up:\n" +
+                "\n" +
+                "Could you solve this problem in less than O(n) complexity?");
 
-        data2.putString("linear_problem2_title","Problem 2");
+        data2.putString("linear_problem2_title","Problems Not Assigned Yet");
         data2.putString("linear_problem2_description","Problems not assigned yet\n");
 
         fragment.setArguments(data2);

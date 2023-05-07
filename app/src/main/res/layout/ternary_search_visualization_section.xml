@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/handler_stroke_background"
+    android:contentDescription="@string/visualization"
+    android:scrollbars="horizontal"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="56dp"
+                android:layout_marginBottom="158dp"
+                android:src="@drawable/array_element_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/placeholder_5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="202dp"
+                android:layout_marginBottom="118dp"
+                app:layout_constraintEnd_toEndOf="@+id/image_2"
+                app:layout_constraintStart_toStartOf="@+id/image_2"
+                app:layout_constraintTop_toBottomOf="@+id/image_2" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/placeholder_4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="153dp"
+                android:layout_marginBottom="118dp"
+                app:layout_constraintEnd_toEndOf="@+id/image_1"
+                app:layout_constraintStart_toStartOf="@+id/image_1"
+                app:layout_constraintTop_toBottomOf="@+id/image_1" />
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/placeholder_4_2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="153dp"
+                android:layout_marginBottom="118dp"
+                app:layout_constraintEnd_toEndOf="@+id/image_1"
+                app:layout_constraintStart_toStartOf="@+id/image_1"
+                app:layout_constraintTop_toBottomOf="@+id/image_1" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/placeholder_3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="105dp"
+                android:layout_marginBottom="118dp"
+                app:layout_constraintEnd_toEndOf="@+id/image_3"
+                app:layout_constraintStart_toStartOf="@+id/image_3"
+                app:layout_constraintTop_toBottomOf="@+id/image_3" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/placeholder_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="118dp"
+                app:layout_constraintEnd_toEndOf="@+id/image_4"
+                app:layout_constraintStart_toStartOf="@+id/image_4"
+                app:layout_constraintTop_toBottomOf="@+id/image_4" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/placeholder_2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="57dp"
+                android:layout_marginBottom="118dp"
+                app:layout_constraintEnd_toEndOf="@+id/image_5"
+                app:layout_constraintStart_toStartOf="@+id/image_5"
+                app:layout_constraintTop_toBottomOf="@+id/image_5" />
+
+            <ImageView
+                android:id="@+id/image_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="158dp"
+                android:src="@drawable/array_element_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="105dp"
+                android:layout_marginBottom="158dp"
+                android:src="@drawable/array_element_3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="153dp"
+                android:layout_marginBottom="158dp"
+                android:src="@drawable/array_element_4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="202dp"
+                android:layout_marginBottom="158dp"
+                android:src="@drawable/array_element_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mid_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="57dp"
+                android:layout_marginBottom="78dp"
+                android:src="@drawable/mid_1"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mid_2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="202dp"
+                android:layout_marginBottom="78dp"
+                android:src="@drawable/mid_2"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="250dp"
+                android:layout_marginBottom="158dp"
+                android:src="@drawable/array_element_6" />
+
+            <ImageView
+                android:id="@+id/image_7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="298dp"
+                android:layout_marginBottom="158dp"
+                android:src="@drawable/array_element_7" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -11,4 +11,5 @@
     <color name="transparentWhite">#9AFFFFFF</color>
     <color name="completeTransparent">#00FFFFFF</color>
     <color name="splash_screen_background">#00AEEF</color>
+    <color name="green">#4BBB05</color>
 </resources>

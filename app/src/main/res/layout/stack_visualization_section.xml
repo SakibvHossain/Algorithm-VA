@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/handler_stroke_background"
+    android:contentDescription="@string/visualization"
+    android:scrollbars="horizontal"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="170dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="139dp"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/stack_border"
+                android:backgroundTint="#673AB7" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/item_10_placeholder"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="172dp"
+                android:layout_marginBottom="29dp" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/item_20_placeholder"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="172dp"
+                android:layout_marginBottom="80dp" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/item_30_placeholder"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="172dp"
+                android:layout_marginBottom="131dp" />
+
+            <ImageView
+                android:id="@+id/item_10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="invisible"
+                android:background="@drawable/array_element_10"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="71dp"
+                android:layout_marginBottom="191dp" />
+            <ImageView
+                android:id="@+id/item_20"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="invisible"
+                android:background="@drawable/array_element_20"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="71dp"
+                android:layout_marginBottom="191dp" />
+            <ImageView
+                android:id="@+id/item_30"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="invisible"
+                android:background="@drawable/array_element_30"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="71dp"
+                android:layout_marginBottom="191dp" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/place_item_30_to_stack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="171dp"
+                android:layout_marginBottom="191dp"/>
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/place_item_20_to_stack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="171dp"
+                android:layout_marginBottom="191dp"/>
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/place_item_10_to_stack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="171dp"
+                android:layout_marginBottom="191dp"/>
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/pop_item_30_from_stack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="271dp"
+                android:layout_marginBottom="191dp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

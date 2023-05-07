@@ -14,9 +14,6 @@ import android.widget.TextView;
 
 public class Splash_Screen extends AppCompatActivity {
 
-    //Timer for Splash Screen
-    private static final int SPLASH_TIMER = 5000;
-
     //Variables
     ImageView splashscreen_ImageView;
     TextView splashscreen_textview;
@@ -31,19 +28,11 @@ public class Splash_Screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_splash_screen);
         //Hooks for Variables
         splashscreen_ImageView = findViewById(R.id.splashscreen_ImageView);
         //Hooks for Animation Variables
         slide_right_anim = AnimationUtils.loadAnimation(this,R.anim.fade_in);
-//        bottom_aim = AnimationUtils.loadAnimation(this,R.anim.bottom_anim);
-//        //Animation for image
-//        splashscreen_ImageView.setAnimation(slide_right_anim);
-//        //Animation for text
-//        splashscreen_textview.setAnimation(bottom_aim);
 
-        //Creating Handler for Handling the time for Splash Screen
-        new Handler().postDelayed(() -> {
             onBoarding = getSharedPreferences("OnboardingScreen",MODE_PRIVATE);
             boolean firstTime = onBoarding.getBoolean("FirstTime",true);
 
@@ -51,17 +40,14 @@ public class Splash_Screen extends AppCompatActivity {
                 SharedPreferences.Editor editor = onBoarding.edit();
                 editor.putBoolean("FirstTime",false);
                 editor.apply();
-
-                Intent mainActivity = new Intent(getApplicationContext(), Onboarding_Screen.class);
-                startActivity(mainActivity);
-                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                startActivity(new Intent(Splash_Screen.this, Onboarding_Screen.class));
                 finish();
+                //overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
             }else{
-                Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(mainActivity);
-                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                startActivity(new Intent(Splash_Screen.this, MainActivity.class));
                 finish();
+               // overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
             }
-        },SPLASH_TIMER);
+
     }
 }

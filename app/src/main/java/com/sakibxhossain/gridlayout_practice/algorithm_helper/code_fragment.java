@@ -12,16 +12,22 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
+import com.sakibxhossain.gridlayout_practice.Binary_Search_Analysis;
+import com.sakibxhossain.gridlayout_practice.Binary_Search_Visualization_Action;
 import com.sakibxhossain.gridlayout_practice.Insertion_Sort_Analysis;
 import com.sakibxhossain.gridlayout_practice.Insertion_Sort_Visualization;
 import com.sakibxhossain.gridlayout_practice.Linear_Search_Analysis;
 import com.sakibxhossain.gridlayout_practice.Linear_Search_Visualization;
 import com.sakibxhossain.gridlayout_practice.Marge_Sort_Analysis;
 import com.sakibxhossain.gridlayout_practice.Marge_Sort_Visualization;
+import com.sakibxhossain.gridlayout_practice.Queue_Algo_Analysis;
+import com.sakibxhossain.gridlayout_practice.Queue_Algo_Visualization;
 import com.sakibxhossain.gridlayout_practice.R;
 import com.sakibxhossain.gridlayout_practice.Selection_Sort_Analysis;
 import com.sakibxhossain.gridlayout_practice.Selection_Sort_Visualization;
-import com.sakibxhossain.gridlayout_practice.Ternary_Search_Analysis;
+import com.sakibxhossain.gridlayout_practice.Stack_algo_Analysis;
+import com.sakibxhossain.gridlayout_practice.Stack_algo_Visualization;
+import com.sakibxhossain.gridlayout_practice.Ternary_Search_Analysis_Action;
 import com.sakibxhossain.gridlayout_practice.Ternary_Search_Visualization;
 
 import java.util.Objects;
@@ -112,7 +118,6 @@ public class code_fragment extends Fragment {
                     startActivity(go_for_Analysis);
                 }
             });
-
             visualize_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -121,7 +126,8 @@ public class code_fragment extends Fragment {
                 }
             });
             loadSelectionSort_Code(data);
-        }else if(Objects.equals(token, "marge")){
+        }
+        else if(Objects.equals(token, "marge")){
             analysis_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -129,7 +135,6 @@ public class code_fragment extends Fragment {
                     startActivity(go_for_Analysis);
                 }
             });
-
             visualize_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -137,9 +142,9 @@ public class code_fragment extends Fragment {
                     startActivity(go_for_Visualize);
                 }
             });
-
             loadMargeSort_Code(data);
-        }else if(Objects.equals(token, "insertion")){
+        }
+        else if(Objects.equals(token, "insertion")){
             analysis_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -147,7 +152,6 @@ public class code_fragment extends Fragment {
                     startActivity(go_for_Analysis);
                 }
             });
-
             visualize_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -155,9 +159,9 @@ public class code_fragment extends Fragment {
                     startActivity(go_for_Visualize);
                 }
             });
-
             load_Insertion_Sort_Code(data);
-        }else if(Objects.equals(token, "linear")){
+        }
+        else if(Objects.equals(token, "linear")){
             analysis_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -165,7 +169,6 @@ public class code_fragment extends Fragment {
                     startActivity(go_for_Analysis);
                 }
             });
-
             visualize_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -173,47 +176,94 @@ public class code_fragment extends Fragment {
                     startActivity(go_for_Visualize);
                 }
             });
-
             load_Linear_Search_Code(data);
-        }else if(Objects.equals(token, "ternary_search")){
+        }
+        else if(Objects.equals(token, "binary_search")){
             analysis_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent go_for_Analysis = new Intent(getContext(), Ternary_Search_Analysis.class);
+                    Intent go_for_Analysis = new Intent(getContext(), Binary_Search_Analysis.class);
                     startActivity(go_for_Analysis);
                 }
             });
-
             visualize_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent go_for_Visualize = new Intent(getContext(), Ternary_Search_Visualization.class);
+                    Intent go_for_Visualize = new Intent(getContext(), Binary_Search_Visualization_Action.class);
                     startActivity(go_for_Visualize);
                 }
             });
-
-            load_ternary_Search_Code(data);
-        }else if(Objects.equals(token, "binary_search")){
-            analysis_btn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent go_for_Analysis = new Intent(getContext(), Ternary_Search_Analysis.class);
-                    startActivity(go_for_Analysis);
-                }
-            });
-
-            visualize_btn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent go_for_Visualize = new Intent(getContext(), Ternary_Search_Visualization.class);
-                    startActivity(go_for_Visualize);
-                }
-            });
-
             load_binary_Search_Code(data);
+        }
+        else if(Objects.equals(token, "stack")){
+            analysis_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Analysis = new Intent(getContext(), Stack_algo_Analysis.class);
+                    startActivity(go_for_Analysis);
+                }
+            });
+            visualize_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Visualize = new Intent(getContext(), Stack_algo_Visualization.class);
+                    startActivity(go_for_Visualize);
+                }
+            });
+            load_stack_Code(data);
+        }
+        else if(Objects.equals(token, "ternary")){
+            analysis_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Analysis = new Intent(getContext(), Ternary_Search_Analysis_Action.class);
+                    startActivity(go_for_Analysis);
+                }
+            });
+            visualize_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Visualize = new Intent(getContext(), Ternary_Search_Visualization.class);
+                    startActivity(go_for_Visualize);
+                }
+            });
+            load_ternary_Search_Code(data);
+        }
+        else if(Objects.equals(token, "queue")){
+            analysis_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Analysis = new Intent(getContext(), Queue_Algo_Analysis.class);
+                    startActivity(go_for_Analysis);
+                }
+            });
+            visualize_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Visualize = new Intent(getContext(), Queue_Algo_Visualization.class);
+                    startActivity(go_for_Visualize);
+                }
+            });
+            load_queue_Code(data);
         }
 
         return myView;
+    }
+
+    private void load_queue_Code(Bundle data) {
+        if(data != null){
+            codeString = data.getString("queue_code");
+            code_Implementation_String = data.getString("queue_implementation");
+        }
+        loadCode();
+    }
+
+    private void load_stack_Code(Bundle data) {
+        if(data != null){
+            codeString = data.getString("stack_code");
+            code_Implementation_String = data.getString("stack_implementation");
+        }
+        loadCode();
     }
 
     private void load_binary_Search_Code(Bundle data) {
@@ -240,7 +290,6 @@ public class code_fragment extends Fragment {
         loadCode();
     }
 
-    ////////////////////////////////////// todo:: Insertion Sort //////////////////////////////
     private void load_Insertion_Sort_Code(Bundle data) {
         if(data != null){
             codeString = data.getString("insertion_sort_code");
@@ -249,7 +298,6 @@ public class code_fragment extends Fragment {
         loadCode();
     }
 
-    ////////////////////////////////////// todo:: Selection Sort //////////////////////////////
     private void loadSelectionSort_Code(Bundle data) {
         if(data != null){
             codeString = data.getString("selection_sort_code");
@@ -258,7 +306,6 @@ public class code_fragment extends Fragment {
         loadCode();
     }
 
-    ////////////////////////////////////// todo:: Marge Sort //////////////////////////////
     private void loadMargeSort_Code(Bundle data){
         if(data != null){
             codeString = data.getString("marge_sort_code");

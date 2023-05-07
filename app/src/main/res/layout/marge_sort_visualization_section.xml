@@ -1,6 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="300dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/handler_stroke_background"
+    android:contentDescription="@string/visualization"
+    android:scrollbars="horizontal"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+<!--            6,4,3,9-->
+
+            <ImageView
+                android:id="@+id/array_item_6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="invisible"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="112.3dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/array_element_6" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/array_item_6_go_to_level_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="112dp"
+                android:layout_marginBottom="195dp"
+                android:background="@drawable/array_element_6"
+                android:visibility="invisible" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/array_item_4_go_to_level_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="154dp"
+                android:layout_marginBottom="195dp"
+                android:background="@drawable/array_element_6"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/array_item_4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="invisible"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="154dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/array_element_4" />
+
+
+            <ImageView
+                android:id="@+id/level_2_item_4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="140dp"
+                android:layout_marginBottom="140dp"
+                android:background="@drawable/array_element_4"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/array_item_3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="invisible"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="195dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/array_element_3" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/array_item_3_go_to_level_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="195dp"
+                android:layout_marginBottom="195dp"
+                android:background="@drawable/array_element_3"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/array_item_9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="invisible"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="235.7dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/array_element_9" />
+
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/array_item_9_go_to_level_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="236dp"
+                android:layout_marginBottom="195dp"
+                android:background="@drawable/array_element_9"
+                android:visibility="invisible" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/level_1_item_6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="80dp"
+                android:layout_marginBottom="195dp" />
+
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/level_1_item_4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="122dp"
+                android:layout_marginBottom="195dp" />
+
+            <ImageView
+                android:id="@+id/level_2_item_6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/array_element_6"
+                android:visibility="invisible"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="59dp"
+                android:layout_marginBottom="140dp" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/level_1_item_3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="220dp"
+                android:layout_marginBottom="195dp" />
+
+            <androidx.constraintlayout.widget.Placeholder
+                android:id="@+id/level_1_item_9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="262dp"
+                android:layout_marginBottom="195dp" />
+
+            <ImageView
+                android:id="@+id/level_2_item_3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/array_element_3"
+                android:visibility="invisible"
+                android:layout_marginStart="199dp"
+                android:layout_marginBottom="140dp" />
+
+            <ImageView
+                android:id="@+id/level_2_item_9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/array_element_9"
+                android:visibility="invisible"
+                android:layout_marginStart="283dp"
+                android:layout_marginBottom="140dp" />
+
+            <ImageView
+                android:id="@+id/level_3_item_4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/array_element_4"
+                android:visibility="invisible"
+                android:layout_marginStart="80dp"
+                android:layout_marginBottom="88dp" />
+
+            <ImageView
+                android:id="@+id/level_3_item_6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/array_element_6"
+                android:visibility="invisible"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="122dp"
+                android:layout_marginBottom="88dp" />
+
+            <ImageView
+                android:id="@+id/level_3_item_3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/array_element_3"
+                android:visibility="invisible"
+                android:layout_marginStart="220dp"
+                android:layout_marginBottom="88dp" />
+
+            <ImageView
+                android:id="@+id/level_3_item_9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/array_element_9"
+                android:visibility="invisible"
+                android:layout_marginStart="262dp"
+                android:layout_marginBottom="88dp" />
+
+            <ImageView
+                android:id="@+id/level_4_item_3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/array_element_3"
+                android:visibility="invisible"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="112dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:id="@+id/level_4_item_4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/array_element_4"
+                android:visibility="invisible"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="154dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:id="@+id/level_4_item_6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/array_element_6"
+                android:visibility="invisible"
+                android:layout_marginStart="195dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:id="@+id/level_4_item_9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/array_element_9"
+                android:visibility="invisible"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="236dp"
+                android:layout_marginBottom="15dp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

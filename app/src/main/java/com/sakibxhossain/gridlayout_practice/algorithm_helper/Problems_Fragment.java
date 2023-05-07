@@ -129,15 +129,41 @@ public class Problems_Fragment extends Fragment {
             load_insertion_problems(data);
         }else if(Objects.equals(token, "marge")){
             load_merge_problems(data);
-        }else if(Objects.equals(token, "ternary_search")){
+        }else if(Objects.equals(token, "ternary")){
             load_ternary_problems(data);
         }else if(Objects.equals(token, "linear")){
             load_linear_problems(data);
         }else if(Objects.equals(token, "binary_search")){
             load_binary_search_problems(data);
+        }else if(Objects.equals(token, "stack")){
+            load_stack_problems(data);
+        }else if(Objects.equals(token, "queue")){
+            load_queue_problems(data);
         }
 
         return myView;
+    }
+
+    private void load_queue_problems(Bundle data) {
+        if(data != null){
+            problem_1 = data.getString("queue_problem_title");
+            problem_1_description = data.getString("queue_problem_description");
+
+            problem_2 = data.getString("queue_problem2_title");
+            problem_2_description = data.getString("queue_problem2_description");
+        }
+        load_problems();
+    }
+
+    private void load_stack_problems(Bundle data) {
+        if(data != null){
+            problem_1 = data.getString("stack_problem_title");
+            problem_1_description = data.getString("stack_problem_description");
+
+            problem_2 = data.getString("stack_problem2_title");
+            problem_2_description = data.getString("stack_problem2_description");
+        }
+        load_problems();
     }
 
     private void load_binary_search_problems(Bundle data) {

@@ -15,6 +15,27 @@
         android:theme="@style/Theme.GridLayout_Practice"
         tools:targetApi="31">
         <activity
+            android:name=".Separate_Chaining_Description"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Binary_Search_Visualization_Action"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Ternary_Search_Analysis_Action"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Boyer_Moore_Visualization"
             android:exported="false">
             <meta-data
@@ -408,9 +429,11 @@
         </activity>
         <activity
             android:name=".Splash_Screen"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

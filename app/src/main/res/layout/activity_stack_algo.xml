@@ -9,8 +9,8 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#673AB7"
+        android:layout_height="40dp"
+        android:background="@color/splash_screen_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,21 +18,25 @@
         <ImageView
             android:id="@+id/stack_back_btn"
             android:layout_width="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="4dp"
             android:layout_height="30dp"
-            android:layout_marginStart="4dp"
-            android:background="@drawable/ic_baseline_arrow_back_24"
-            android:backgroundTint="#ffffff" />
+            android:backgroundTint="#ffffff"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"/>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/stack_back_btn"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="10dp"
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center"
-            android:text="Stack"
+            android:text="@string/stack"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:layout_toEndOf="@+id/stack_back_btn"
+            />
     </RelativeLayout>
 
     <FrameLayout
@@ -50,14 +54,14 @@
         android:layout_height="wrap_content"
         android:background="#0017DA85"
         app:mbn_circleColor="#ffffff"
-        app:mbn_backgroundBottomColor="#813BE4"
+        app:mbn_backgroundBottomColor="@color/splash_screen_background"
         app:mbn_countBackgroundColor="#ff6f00"
         app:mbn_defaultIconColor="#FFFFFF"
         app:mbn_rippleColor="#2f424242"
-        app:mbn_selectedIconColor="#813BE4"
+        app:mbn_selectedIconColor="@color/splash_screen_background"
         app:mbn_shadowColor="#1f212121"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

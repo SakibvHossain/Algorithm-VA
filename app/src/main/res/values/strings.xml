@@ -167,7 +167,7 @@
     <string name="marge_14">14&#160;&#160;&#160;&#160;aux[k++]=arr[i++];</string>
     <string name="marge_15">15&#160;&#160;&#160;}</string>
     <string name="marge_16">16&#160;&#160;&#160;for(i=low;i&#60;=high;i++){</string>
-    <string name="marge_17">17&#160;&#160;&#160;&#160;arr[i]=aux[i]</string>
+    <string name="marge_17">17&#160;&#160;&#160;&#160;arr[i]=aux[i];</string>
     <string name="marge_18">18&#160;&#160;&#160;}</string>
     <string name="marge_19">19&#160;&#160;}</string>
     <string name="marge_20">20&#160;&#160;public static void mergeSort(int[] arr, int[]aux, int low, int high){</string>
@@ -190,16 +190,317 @@
     <string name="analysis_s">Analysis</string>
 
     <!-- Ternary Search -->
+    <string name="ternary_1">1&#160;package Searching;</string>
+    <string name="ternary_2">2&#160;class Ternary_Search{</string>
+    <string name="ternary_3">3&#160;&#160;static int ternarySearch(int starting_index, int ar_length, int key, int ar[]){</string>
+    <string name="ternary_4">4&#160;&#160;&#160;if(ar_length>=starting_index){</string>
+    <string name="ternary_5">5&#160;&#160;&#160;&#160;int mid1 = starting_index + (ar_length - starting_index)/3;</string>
+    <string name="ternary_6">6&#160;&#160;&#160;&#160;int mid2 = ar_length - (ar_length - starting_index)/3;</string>
+    <string name="ternary_7">7&#160;&#160;&#160;&#160;if (ar[mid1]==key){</string>
+    <string name="ternary_8">8&#160;&#160;&#160;&#160;&#160;return mid1;</string>
+    <string name="ternary_9">9&#160;&#160;&#160;&#160;}</string>
+    <string name="ternary_10">10&#160;&#160;&#160;&#160;if (ar[mid2] == key) {</string>
+    <string name="ternary_11">11&#160;&#160;&#160;&#160;&#160;return mid2;</string>
+    <string name="ternary_12">12&#160;&#160;&#160;&#160;}</string>
+    <string name="ternary_13">13&#160;&#160;&#160;&#160;if (key &#60; ar[mid1]) {</string>
+    <string name="ternary_14">14&#160;&#160;&#160;&#160;&#160;return ternarySearch(starting_index,mid1 – 1,key,ar);</string>
+    <string name="ternary_15">15&#160;&#160;&#160;&#160;}</string>
+    <string name="ternary_16">16&#160;&#160;&#160;&#160;else if (key > ar[mid2]) {</string>
+    <string name="ternary_17">17&#160;&#160;&#160;&#160;&#160;return ternarySearch(mid2 + 1, ar_length, key, ar);</string>
+    <string name="ternary_18">18&#160;&#160;&#160;&#160;}</string>
+    <string name="ternary_19">19&#160;&#160;&#160;&#160;else {</string>
+    <string name="ternary_20">20&#160;&#160;&#160;&#160;&#160;return ternarySearch(mid1 + 1, mid2 – 1, key, ar);</string>
+    <string name="ternary_21">21&#160;&#160;&#160;&#160;}</string>
+    <string name="ternary_22">22&#160;&#160;&#160;}</string>
+    <string name="ternary_23">23&#160;&#160;&#160;return -1;</string>
+    <string name="ternary_24">24&#160;&#160;}</string>
+    <string name="ternary_25">25&#160;&#160;public static void main(String args[]){</string>
+    <string name="ternary_26">26&#160;&#160;&#160;int ar[] = { 1, 2, 3, 4, 5, 6, 7};</string>
+    <string name="ternary_27">27&#160;&#160;&#160;int starting_index = 0, ar_length = ar.length-1, search_for = 4, result;</string>
+    <string name="ternary_28">28&#160;&#160;&#160;result = ternarySearch(starting_index, ar_length, search_for, ar);</string>
+    <string name="ternary_29">29&#160;&#160;&#160;System.out.println("Result Found At index " + result);</string>
+    <string name="ternary_30">30&#160;&#160;}</string>
+    <string name="ternary_31">31&#160;}</string>
 
     <!-- Linear Search -->
+    <string name="linear_1">1&#160;package Searching;</string>
+    <string name="linear_2">2&#160;class Linear_Search{</string>
+    <string name="linear_3">3&#160;&#160;public static int search(int arr[], int x){</string>
+    <string name="linear_4">4&#160;&#160;&#160;int N = arr.length;</string>
+    <string name="linear_5">5&#160;&#160;&#160;for (int i = 0; i &#60; N; i++){</string>
+    <string name="linear_6">6&#160;&#160;&#160;&#160;if (arr[i] == x)</string>
+    <string name="linear_7">7&#160;&#160;&#160;&#160;&#160;return i;</string>
+    <string name="linear_8">8&#160;&#160;&#160;}</string>
+    <string name="linear_9">9&#160;&#160;&#160;return-1;</string>
+    <string name="linear_10">10&#160;&#160;}</string>
+    <string name="linear_11">11&#160;&#160;public static void main(String args[]){</string>
+    <string name="linear_12">12&#160;&#160;&#160;int arr[] = { 2, 3, 4, 10, 40 };</string>
+    <string name="linear_13">13&#160;&#160;&#160;int x = 10;</string>
+    <string name="linear_14">14&#160;&#160;&#160;int result = search(arr, x);</string>
+    <string name="linear_15">15&#160;&#160;&#160;if (result == -1)</string>
+    <string name="linear_16">16&#160;&#160;&#160;&#160;System.out.print("Element is not present in array");</string>
+    <string name="linear_17">17&#160;&#160;&#160;else</string>
+    <string name="linear_18">18&#160;&#160;&#160;&#160;System.out.print("Element is present at index "+ result);</string>
+    <string name="linear_19">19&#160;&#160;}</string>
+    <string name="linear_20">20&#160;}</string>
+    <string name="found">Element is present at index 3</string>
 
     <!-- Binary Search -->
+    <string name="binary_1">1&#160;package Searching;</string>
+    <string name="binary_2">2&#160;class Binary_Search {</string>
+    <string name="binary_3">3&#160;&#160;static void binarySearch(int v[], int To_Find){</string>
+    <string name="binary_4">4&#160;&#160;&#160;int lo = 0, hi = v.length - 1;</string>
+    <string name="binary_5">5&#160;&#160;&#160;while (hi - lo > 1) {</string>
+    <string name="binary_6">6&#160;&#160;&#160;&#160;int mid = (hi + lo) / 2;</string>
+    <string name="binary_7">7&#160;&#160;&#160;&#160;if (v[mid] &#60; To_Find) {</string>
+    <string name="binary_8">8&#160;&#160;&#160;&#160;&#160;lo = mid + 1;</string>
+    <string name="binary_9">9&#160;&#160;&#160;&#160;}</string>
+    <string name="binary_10">10&#160;&#160;&#160;&#160;else {</string>
+    <string name="binary_11">11&#160;&#160;&#160;&#160;&#160;hi = mid;</string>
+    <string name="binary_12">12&#160;&#160;&#160;&#160;}</string>
+    <string name="binary_13">13&#160;&#160;&#160;}</string>
+    <string name="binary_14">14&#160;&#160;&#160;if (v[lo] == To_Find) {</string>
+    <string name="binary_15">15&#160;&#160;&#160;&#160;System.out.println("Found At Index " + lo );</string>
+    <string name="binary_16">16&#160;&#160;&#160;}</string>
+    <string name="binary_17">17&#160;&#160;&#160;else if (v[hi] == To_Find) {</string>
+    <string name="binary_18">18&#160;&#160;&#160;&#160;System.out.println("Found At Index " + hi );</string>
+    <string name="binary_19">19&#160;&#160;&#160;}</string>
+    <string name="binary_20">20&#160;&#160;&#160;else{</string>
+    <string name="binary_21">21&#160;&#160;&#160;&#160;System.out.println("Not Found" );</string>
+    <string name="binary_22">22&#160;&#160;&#160;}</string>
+    <string name="binary_23">23&#160;&#160;}</string>
+    <string name="binary_24">24&#160;&#160;public static void main (String[] args) {</string>
+    <string name="binary_25">25&#160;&#160;&#160;int v[]={1, 3, 4, 5, 6};</string>
+    <string name="binary_26">26&#160;&#160;&#160;int To_Find = 4;</string>
+    <string name="binary_27">27&#160;&#160;&#160;binarySearch(v, To_Find);</string>
+    <string name="binary_28">28&#160;&#160;}</string>
+    <string name="binary_29">29&#160;}</string>
+
 
     <!-- Stack -->
+    <string name="stack_1">1&#160;package StackQueue;</string>
+    <string name="stack_2">2&#160;class Stack {</string>
+    <string name="stack_3">3&#160;&#160;static final int MAX = 10;</string>
+    <string name="stack_4">4&#160;&#160;int top;</string>
+    <string name="stack_5">5&#160;&#160;int a[] = new int[MAX];</string>
+    <string name="stack_6">6&#160;&#160;boolean isEmpty(){</string>
+    <string name="stack_7">7&#160;&#160;&#160;return (top &#60; 0);</string>
+    <string name="stack_8">8&#160;&#160;}</string>
+    <string name="stack_9">9&#160;&#160;Stack(){</string>
+    <string name="stack_10">10&#160;&#160;&#160;top = -1;</string>
+    <string name="stack_11">11&#160;&#160;}</string>
+    <string name="stack_12">12&#160;&#160;boolean push(int x){</string>
+    <string name="stack_13">13&#160;&#160;&#160;if (top >= (MAX - 1)) {</string>
+    <string name="stack_14">14&#160;&#160;&#160;&#160;System.out.println("Stack Overflow");</string>
+    <string name="stack_15">15&#160;&#160;&#160;&#160;return false;</string>
+    <string name="stack_16">16&#160;&#160;&#160;}</string>
+    <string name="stack_17">17&#160;&#160;&#160;else {</string>
+    <string name="stack_18">18&#160;&#160;&#160;&#160;a[++top] = x;</string>
+    <string name="stack_19">19&#160;&#160;&#160;&#160;System.out.println(x + " pushed into stack");</string>
+    <string name="stack_20">20&#160;&#160;&#160;&#160;return true;</string>
+    <string name="stack_21">21&#160;&#160;&#160;}</string>
+    <string name="stack_22">22&#160;&#160;}</string>
+    <string name="stack_23">23&#160;&#160;int pop(){</string>
+    <string name="stack_24">24&#160;&#160;&#160;if (top &#60; 0) {</string>
+    <string name="stack_25">25&#160;&#160;&#160;&#160;System.out.println("Stack Underflow");</string>
+    <string name="stack_26">26&#160;&#160;&#160;&#160;return 0;</string>
+    <string name="stack_27">27&#160;&#160;&#160;}</string>
+    <string name="stack_28">28&#160;&#160;&#160;else {</string>
+    <string name="stack_29">29&#160;&#160;&#160;&#160;int x = a[top--];</string>
+    <string name="stack_30">30&#160;&#160;&#160;&#160;return x;</string>
+    <string name="stack_31">31&#160;&#160;&#160;}</string>
+    <string name="stack_32">32&#160;&#160;}</string>
+    <string name="stack_33">33&#160;&#160;</string>
+    <string name="stack_34">33&#160;&#160;int peek(){</string>
+    <string name="stack_35">34&#160;&#160;&#160;if (top &#60; 0) {</string>
+    <string name="stack_36">35&#160;&#160;&#160;&#160;System.out.println("Stack Underflow");</string>
+    <string name="stack_37">36&#160;&#160;&#160;&#160;return 0;</string>
+    <string name="stack_38">37&#160;&#160;&#160;}</string>
+    <string name="stack_39">38&#160;&#160;&#160;else {</string>
+    <string name="stack_40">39&#160;&#160;&#160;&#160;int x = a[top];</string>
+    <string name="stack_41">40&#160;&#160;&#160;&#160;return x;</string>
+    <string name="stack_42">41&#160;&#160;&#160;}</string>
+    <string name="stack_43">42&#160;&#160;}</string>
+    <string name="stack_44">43&#160;&#160;void print(){</string>
+    <string name="stack_45">33&#160;&#160;</string>
+    <string name="stack_46">44&#160;&#160;&#160;for(int i = top;i>-1;i--){</string>
+    <string name="stack_47">45&#160;&#160;&#160;&#160;System.out.print(" "+ a[i]);</string>
+    <string name="stack_48">46&#160;&#160;&#160;}</string>
+    <string name="stack_49">47&#160;&#160;}</string>
+    <string name="stack_50">48&#160;}</string>
+    <string name="stack_51">49&#160;class Main { </string>
+    <string name="stack_52">50&#160;&#160;public static void main(String args[]){</string>
+    <string name="stack_53">51&#160;&#160;&#160;Stack s = new Stack();</string>
+    <string name="stack_54">52&#160;&#160;&#160;s.push(10);</string>
+    <string name="stack_55">53&#160;&#160;&#160;s.push(20);</string>
+    <string name="stack_56">54&#160;&#160;&#160;s.push(30);</string>
+    <string name="stack_57">55&#160;&#160;&#160;System.out.println(s.pop() + " Popped from stack");</string>
+    <string name="stack_58">56&#160;&#160;&#160;System.out.println(s.peek() + "Is the top element");</string>
+    <string name="stack_59">57&#160;&#160;&#160;System.out.print("Elements present in stack :");</string>
+    <string name="stack_60">58&#160;&#160;&#160;s.print();</string>
+    <string name="stack_61">59&#160;&#160;}</string>
+    <string name="stack_62">60&#160;}</string>
+
 
     <!-- Queue -->
+    <string name="queue_1">1&#160;package StackQueue;</string>
+    <string name="queue_2">2&#160;class Queue {</string>
+    <string name="queue_3">3&#160;&#160;int front, rear, size;</string>
+    <string name="queue_4">4&#160;&#160;int capacity;</string>
+    <string name="queue_5">5&#160;&#160;int array[];</string>
+    <string name="queue_6">6&#160;&#160;public Queue(int capacity){</string>
+    <string name="queue_7">7&#160;&#160;&#160;this.capacity = capacity;</string>
+    <string name="queue_8">8&#160;&#160;&#160;front = this.size = 0;</string>
+    <string name="queue_9">9&#160;&#160;&#160;rear = capacity - 1;</string>
+    <string name="queue_10">10&#160;&#160;&#160;array = new int[this.capacity];</string>
+    <string name="queue_11">11&#160;&#160;}</string>
+    <string name="queue_12">12&#160;&#160;boolean isFull(Queue queue){</string>
+    <string name="queue_13">13&#160;&#160;&#160;return (queue.size == queue.capacity);</string>
+    <string name="queue_14">14&#160;&#160;}</string>
+    <string name="queue_15">15&#160;&#160;boolean isEmpty(Queue queue){</string>
+    <string name="queue_16">16&#160;&#160;&#160;return (queue.size == 0);</string>
+    <string name="queue_17">17&#160;&#160;}</string>
+    <string name="queue_18">18&#160;&#160;void enqueue(int item){</string>
+    <string name="queue_19">19&#160;&#160;&#160;if (isFull(this))</string>
+    <string name="queue_20">20&#160;&#160;&#160;&#160;return;</string>
+    <string name="queue_21">21&#160;&#160;&#160;this.rear = (this.rear + 1) % this.capacity;</string>
+    <string name="queue_22">22&#160;&#160;&#160;this.array[this.rear] = item;</string>
+    <string name="queue_23">23&#160;&#160;&#160;this.size = this.size + 1;</string>
+    <string name="queue_24">24&#160;&#160;&#160;System.out.println(item + " enqueued to queue");</string>
+    <string name="queue_25">25&#160;&#160;}</string>
+    <string name="queue_26">26&#160;&#160;int dequeue(){</string>
+    <string name="queue_27">27&#160;&#160;&#160;if (isEmpty(this))</string>
+    <string name="queue_28">28&#160;&#160;&#160;&#160;return Integer.MIN_VALUE;</string>
+    <string name="queue_29">29&#160;&#160;&#160;&#160;</string>
+    <string name="queue_30">30&#160;&#160;&#160;int item = this.array[this.front];</string>
+    <string name="queue_31">31&#160;&#160;&#160;this.front = (this.front + 1) % this.capacity;</string>
+    <string name="queue_32">32&#160;&#160;&#160;this.size = this.size - 1;</string>
+    <string name="queue_33">33&#160;&#160;&#160;return item;</string>
+    <string name="queue_34">34&#160;&#160;}</string>
+    <string name="queue_35">35&#160;&#160;int front(){</string>
+    <string name="queue_36">36&#160;&#160;&#160;if (isEmpty(this))</string>
+    <string name="queue_37">37&#160;&#160;&#160;&#160;return Integer.MIN_VALUE;</string>
+    <string name="queue_38">38&#160;&#160;&#160;&#160;</string>
+    <string name="queue_39">39&#160;&#160;&#160;return this.array[this.front];</string>
+    <string name="queue_40">40&#160;&#160;}</string>
+    <string name="queue_41">41&#160;&#160;int rear(){</string>
+    <string name="queue_42">42&#160;&#160;&#160;if (isEmpty(this))</string>
+    <string name="queue_43">43&#160;&#160;&#160;&#160;return Integer.MIN_VALUE;</string>
+    <string name="queue_44">44&#160;</string>
+    <string name="queue_45">45&#160;&#160;&#160;return this.array[this.rear];</string>
+    <string name="queue_46">46&#160;&#160;}</string>
+    <string name="queue_47">47&#160;}</string>
+    <string name="queue_48">48&#160;public class Queue_Algo {</string>
+    <string name="queue_49">49&#160;&#160;public static void main(String[] args){</string>
+    <string name="queue_50">50&#160;&#160;&#160;Queue queue = new Queue(10);</string>
+    <string name="queue_51">51&#160;&#160;&#160;queue.enqueue(10);</string>
+    <string name="queue_52">52&#160;&#160;&#160;queue.enqueue(20);</string>
+    <string name="queue_53">53&#160;&#160;&#160;queue.enqueue(30);</string>
+    <string name="queue_54">54&#160;&#160;&#160;System.out.println(queue.dequeue() + " Dequeued from queue");</string>
+    <string name="queue_55">55&#160;&#160;&#160;System.out.println(queue.front()+ " Is the Front item");</string>
+    <string name="queue_56">56&#160;&#160;&#160;System.out.println(queue.rear()+ " Is the Rear item");</string>
+    <string name="queue_57">57&#160;&#160;}</string>
+    <string name="queue_58">58&#160;}</string>
 
     <!-- Binary Tree Traverse -->
+    <string name="binray_tree_traverse_1">1&#160;package Tree;</string>
+    <string name="binray_tree_traverse_2">2&#160;public class Binary_Tree_Traversal{</string>
+    <string name="binray_tree_traverse_3">3&#160;&#160;static class Node {</string>
+    <string name="binray_tree_traverse_4">4&#160;&#160;&#160;int key;</string>
+    <string name="binray_tree_traverse_5">5&#160;&#160;&#160;Node left, right;</string>
+    <string name="binray_tree_traverse_6">6&#160;&#160;&#160;public Node(int item) {</string>
+    <string name="binray_tree_traverse_7">7&#160;&#160;&#160;&#160;key = item;</string>
+    <string name="binray_tree_traverse_8">8&#160;&#160;&#160;&#160;left = right = null;</string>
+    <string name="binray_tree_traverse_9">9&#160;&#160;&#160;}</string>
+    <string name="binray_tree_traverse_10">10&#160;&#160;}</string>
+    <string name="binray_tree_traverse_11">11&#160;&#160;Node root;</string>
+    <string name="binray_tree_traverse_12">12&#160;&#160;Binary_Tree_Traversal() {</string>
+    <string name="binray_tree_traverse_13">13&#160;&#160;&#160;root = null;</string>
+    <string name="binray_tree_traverse_14">14&#160;&#160;}</string>
+    <string name="binray_tree_traverse_15">15&#160;&#160;void postOrder(Node node) {</string>
+    <string name="binray_tree_traverse_16">16&#160;&#160;&#160;if (node == null)</string>
+    <string name="binray_tree_traverse_17">17&#160;&#160;&#160;&#160;return;</string>
+    <string name="binray_tree_traverse_18">18&#160;&#160;&#160;postOrder(node.left);</string>
+    <string name="binray_tree_traverse_19">19&#160;&#160;&#160;postOrder(node.right);</string>
+    <string name="binray_tree_traverse_20">20&#160;&#160;&#160;System.out.print(node.key + " ");</string>
+    <string name="binray_tree_traverse_21">21&#160;&#160;}</string>
+    <string name="binray_tree_traverse_22">22&#160;&#160;void InOrder(Node node) {</string>
+    <string name="binray_tree_traverse_23">23&#160;&#160;&#160;if (node == null)</string>
+    <string name="binray_tree_traverse_24">24&#160;&#160;&#160;&#160;return;</string>
+    <string name="binray_tree_traverse_25">25&#160;&#160;&#160;InOrder(node.left);</string>
+    <string name="binray_tree_traverse_26">26&#160;&#160;&#160;System.out.print(node.key + " ");</string>
+    <string name="binray_tree_traverse_27">27&#160;&#160;&#160;InOrder(node.right);</string>
+    <string name="binray_tree_traverse_28">28&#160;&#160;}</string>
+    <string name="binray_tree_traverse_29">29&#160;&#160;void PreOrder(Node node) {</string>
+    <string name="binray_tree_traverse_30">30&#160;&#160;&#160;if (node == null)</string>
+    <string name="binray_tree_traverse_31">31&#160;&#160;&#160;&#160;return;</string>
+    <string name="binray_tree_traverse_32">32&#160;&#160;&#160;System.out.print(node.key + " ");</string>
+    <string name="binray_tree_traverse_33">33&#160;&#160;&#160;PreOrder(node.left);</string>
+    <string name="binray_tree_traverse_34">34&#160;&#160;&#160;PreOrder(node.right);</string>
+    <string name="binray_tree_traverse_35">35&#160;&#160;}</string>
+    <string name="binray_tree_traverse_36">36&#160;&#160;void postOrder(){</string>
+    <string name="binray_tree_traverse_37">37&#160;&#160;&#160;postOrder(root);</string>
+    <string name="binray_tree_traverse_38">38&#160;&#160;}</string>
+    <string name="binray_tree_traverse_39">39&#160;&#160;void InOrder(){</string>
+    <string name="binray_tree_traverse_40">40&#160;&#160;&#160;InOrder(root);</string>
+    <string name="binray_tree_traverse_41">41&#160;&#160;}</string>
+    <string name="binray_tree_traverse_42">42&#160;&#160;void PreOrder(){</string>
+    <string name="binray_tree_traverse_43">43&#160;&#160;&#160;PreOrder(root);</string>
+    <string name="binray_tree_traverse_44">44&#160;&#160;}</string>
+    <string name="binray_tree_traverse_45">45&#160;&#160;public static void main(String[] args) {</string>
+    <string name="binray_tree_traverse_46">46&#160;&#160;&#160;Binary_Tree_Traversal tree = new Binary_Tree_Traversal();</string>
+    <string name="binray_tree_traverse_47">47&#160;&#160;&#160;tree.root = new Node(1);</string>
+    <string name="binray_tree_traverse_48">48&#160;&#160;&#160;tree.root.left = new Node(2);</string>
+    <string name="binray_tree_traverse_49">49&#160;&#160;&#160;tree.root.right = new Node(3);</string>
+    <string name="binray_tree_traverse_50">50&#160;&#160;&#160;tree.root.left.left = new Node(4);</string>
+    <string name="binray_tree_traverse_51">51&#160;&#160;&#160;tree.root.left.right = new Node(5);</string>
+    <string name="binray_tree_traverse_52">52&#160;&#160;&#160;tree.PreOrder();</string>
+    <string name="binray_tree_traverse_53">53&#160;&#160;&#160;System.out.println();</string>
+    <string name="binray_tree_traverse_54">54&#160;&#160;&#160;tree.InOrder();</string>
+    <string name="binray_tree_traverse_55">55&#160;&#160;&#160;System.out.println();</string>
+    <string name="binray_tree_traverse_56">55&#160;&#160;&#160; tree.postOrder();</string>
+    <string name="binray_tree_traverse_57">55&#160;&#160;}</string>
+    <string name="binray_tree_traverse_58">55&#160;}</string>
+    <string name="insertion_sort_main_15">main:15</string>
+    <string name="main_11">main:11</string>
+    <string name="search_3">search:3</string>
+    <string name="binarysearch_3">binarySearch:3</string>
+    <string name="main_29">main:29</string>
+    <string name="mergesort_20">mergeSort:20</string>
+    <string name="marge_section_3">marge:3</string>
+    <string name="main_49">main:49</string>
+    <string name="queue_execution_line_6">Queue:6</string>
+    <string name="stack_execution_line_9">Stack:9</string>
+    <string name="found_value_lo">Found At Index 2</string>
+    <string name="arr_">arr</string>
+    <string name="ternary_result">Result Found At index 3</string>
+    <string name="ternarysearch_3">ternarySearch:3</string>
+    <string name="element_present">Elements present in stack : </string>
+    <string name="pushed_20">20 pushed into stack</string>
+    <string name="linear_search">Linear Search</string>
+    <string name="searching">Searching</string>
+    <string name="ternary_search">Ternary Search</string>
+    <string name="binary_search">Binary Search</string>
+    <string name="stack_queue">Stack_Queue</string>
+    <string name="stack">Stack</string>
+    <string name="queue">Queue</string>
+    <string name="tree">Tree</string>
+    <string name="graph">Graph</string>
+    <string name="dynamic">Dynamic</string>
+    <string name="greedy">Greedy</string>
+    <string name="strings">Strings</string>
+    <string name="hashing">Hashing</string>
+    <string name="separate_chaining">Separate Chaining</string>
+    <string name="binary_tree_traversal">Binary Tree Traversal</string>
+    <string name="depth_first_search">Depth First Search</string>
+    <string name="breadth_first_search">Breadth First Search</string>
+    <string name="knuth_morris_pratt">Knuth Morris Pratt</string>
+    <string name="haffman_coding">Haffman Coding</string>
+    <string name="longest_common_subsequence">Longest Common Subsequence</string>
+    <string name="boyer_moore">Boyer Moore</string>
 
+    <!-- bfs -->
+
+    <!-- dfs -->
 
 </resources>

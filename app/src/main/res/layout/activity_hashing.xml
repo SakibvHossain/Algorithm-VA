@@ -9,25 +9,27 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#673AB7"
+        android:layout_height="40dp"
+        android:background="@color/splash_screen_background"
         >
         <ImageView
             android:id="@+id/hashing_bar_button"
             android:layout_width="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="4dp"
             android:layout_height="30dp"
             android:backgroundTint="#ffffff"
-            android:background="@drawable/ic_baseline_arrow_back_24"/>
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="10dp"
             android:layout_toEndOf="@+id/hashing_bar_button"
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center"
-            android:text="Hashing"
+            android:text="@string/hashing"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </RelativeLayout>

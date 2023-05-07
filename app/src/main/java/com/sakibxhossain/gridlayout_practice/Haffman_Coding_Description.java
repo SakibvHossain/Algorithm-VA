@@ -41,14 +41,14 @@ public class Haffman_Coding_Description extends AppCompatActivity {
                 Fragment fragment;
 
                 if(model.getId() == 0){
-                    fragment = new Algorithm_Fragment("binary_search");
+                    fragment = new Algorithm_Fragment("haffman_coding");
                     loadAlgorithm(fragment);
                 }else if(model.getId() == 1){
-                    fragment = new code_fragment("binary_search");
+                    fragment = new code_fragment("haffman_coding");
                     loadCode(fragment);
 
                 }else if(model.getId() == 2){
-                    fragment = new Problems_Fragment("binary_search");
+                    fragment = new Problems_Fragment("haffman_coding");
                     loadProblems(fragment);
                 }
                 return null;

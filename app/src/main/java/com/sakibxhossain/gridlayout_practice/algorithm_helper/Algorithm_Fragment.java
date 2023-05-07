@@ -63,14 +63,76 @@ public class Algorithm_Fragment extends Fragment {
             load_selection_sort_algorithm(data);
         }else if(Objects.equals(token, "insertion")){
             load_insertion_sort_algorithm(data);
+        }else if(Objects.equals(token,"marge")){
+            load_marge_sort_algorithm(data);
         }else if(Objects.equals(token, "linear")){
             load_linear_search_algorithm(data);
-        }else if(Objects.equals(token,"ternary_search")){
+        }else if(Objects.equals(token,"ternary")){
             load_ternary_search_algorithm(data);
         }else if(Objects.equals(token,"binary_search")){
             load_binary_search_algorithm(data);
+        }else if(Objects.equals(token,"stack")){
+            load_stack_algorithm(data);
+        }else if(Objects.equals(token,"queue")){
+            load_queue_algorithm(data);
+        }else if(Objects.equals(token,"btt")){
+            load_binary_tree_traverse_algorithm(data);
         }
         return myView;
+    }
+
+    private void load_binary_tree_traverse_algorithm(Bundle data) {
+    }
+
+    private void load_queue_algorithm(Bundle data) {
+        if(data != null){
+            selection_title = data.getString("queue_title");
+            selection_description = data.getString("queue_description");
+
+            selection_process = data.getString("queue_algorithm_title");
+            selection_process_description = data.getString("queue_algorithm_description");
+
+            selection_in_detail = data.getString("queue_in_detail_title");
+            selection_in_detail_description = data.getString("queue_in_detail_description");
+
+            selection_performance = data.getString("queue_performance_title");
+            selection_performance_description = data.getString("queue_performance_description");
+        }
+        load_texts();
+    }
+
+    private void load_stack_algorithm(Bundle data) {
+        if(data != null){
+            selection_title = data.getString("stack_title");
+            selection_description = data.getString("stack_description");
+
+            selection_process = data.getString("stack_algorithm_title");
+            selection_process_description = data.getString("stack_algorithm_description");
+
+            selection_in_detail = data.getString("stack_in_detail_title");
+            selection_in_detail_description = data.getString("stack_in_detail_description");
+
+            selection_performance = data.getString("stack_performance_title");
+            selection_performance_description = data.getString("stack_performance_description");
+        }
+        load_texts();
+    }
+
+    private void load_marge_sort_algorithm(Bundle data) {
+        if(data != null){
+            selection_title = data.getString("marge_sort_title");
+            selection_description = data.getString("marge_sort_description");
+
+            selection_process = data.getString("marge_sort_algorithm_title");
+            selection_process_description = data.getString("marge_sort_algorithm_description");
+
+            selection_in_detail = data.getString("marge_sort_in_detail_title");
+            selection_in_detail_description = data.getString("marge_sort_in_detail_description");
+
+            selection_performance = data.getString("marge_sort_performance_title");
+            selection_performance_description = data.getString("marge_sort_performance_description");
+        }
+        load_texts();
     }
 
     private void load_binary_search_algorithm(Bundle data) {

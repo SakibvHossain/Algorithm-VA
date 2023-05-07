@@ -44,12 +44,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <include layout="@layout/marge_code_section"/>
             <include layout="@layout/handler_section"/>
-            <include layout="@layout/analysis_section"/>
+            <include layout="@layout/marge_sort_analysis_section"/>
 
         </LinearLayout>
 

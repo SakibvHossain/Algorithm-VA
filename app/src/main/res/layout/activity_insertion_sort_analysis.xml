@@ -47,31 +47,7 @@
 
             <include layout="@layout/insertion_code_section"/>
             <include layout="@layout/handler_section"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/output_black_strock_background"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/print_sorted_array"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="11dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginEnd="12dp"
-                    android:gravity="left"
-                    android:text="@string/array_demo"
-                    android:visibility="invisible"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:textColor="@color/white"
-                    tools:ignore="RtlHardcoded" />
-
-            </LinearLayout>
-            <include layout="@layout/insertion_analysis_section"/>
+            <include layout="@layout/insertion_sort_analysis_section"/>
 
         </LinearLayout>
 

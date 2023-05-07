@@ -1,15 +1,19 @@
 package com.sakibxhossain.gridlayout_practice;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.Placeholder;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
+
+import java.util.Arrays;
 
 public class Insertion_Sort_Visualization extends AppCompatActivity {
 
@@ -44,11 +48,14 @@ public class Insertion_Sort_Visualization extends AppCompatActivity {
     //counting algo operations
     int algo_operations = 1;
     //counting algo operations
+    public int[] array = {2,8,5,9,1};
 
     // array elements to be visualize
-    ImageView img1, img2, img3, img4, img5;
+    ImageView img2, img8, img5, img9, img1;
+    Placeholder placeholder_2, placeholder_8, placeholder_5, placeholder_9, placeholder_1;
     // array elements to be visualize
 
+    boolean dont_give_access_43_to_access = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,7 +142,41 @@ public class Insertion_Sort_Visualization extends AppCompatActivity {
                 if(count > 0){
                     count--;
                     back_track = count + 1;
-
+                    if(count == 6){
+                        select_8_animation();
+                    }else if(count == 9){
+                        select_8_animation();
+                    }else if(count == 11){
+                        select_5_animation();
+                    }else if(count == 14){
+                        change_5_and_8_animation();
+                        change_8_and_5_animation();
+                    }else if(count == 17){
+                        select_5_animation();
+                    }else if(count == 19){
+                        select_9_animation();
+                    }else if(count == 22){
+                        select_9_animation();
+                    }else if(count == 24){
+                        select_1_animation();
+                    }else if(count == 27){
+                        change_1_and_9_animation();
+                        change_9_and_1_animation();
+                    }else if(count == 30){
+                        change_1_and_8_animation();
+                        change_8_and_1_animation();
+                    }else if(count == 33){
+                        change_1_and_5_animation();
+                        change_5_and_1_animation();
+                    }else if(count == 36){
+                        change_1_and_2_animation();
+                        change_2_and_1_animation();
+                    }else if(count == 39){
+                        select_1_animation();
+                    }else if(count == 42){
+                        dont_give_access_43_to_access = false;
+                        print_array.setVisibility(View.INVISIBLE);
+                    }
                     initial_Count.setText(String.valueOf(count+algo_operations));
                     list_of_views[count].setBackgroundColor(getColor(R.color.transparentWhite));
                     list_of_views[back_track].setBackgroundColor(getColor(R.color.completeTransparent));
@@ -157,6 +198,44 @@ public class Insertion_Sort_Visualization extends AppCompatActivity {
                         list_of_views[count].setBackgroundColor(getColor(R.color.transparentWhite));
                     }else {
                         forward_track = count - 1;
+                        if(count == 7){
+                            select_8_animation();
+                        }else if(count == 10){
+                            select_8_animation();
+                        }else if(count == 12){
+                            select_5_animation();
+                        }else if(count == 15){
+                            change_5_and_8_animation();
+                            change_8_and_5_animation();
+                        }else if(count == 18){
+                            select_5_animation();
+                        }else if(count == 20){
+                            select_9_animation();
+                        }else if(count == 23){
+                            select_9_animation();
+                        }else if(count == 25){
+                            select_1_animation();
+                        }else if(count == 28){
+                            change_1_and_9_animation();
+                            change_9_and_1_animation();
+                        }else if(count == 31){
+                            change_1_and_8_animation();
+                            change_8_and_1_animation();
+                        }else if(count == 34){
+                            change_1_and_5_animation();
+                            change_5_and_1_animation();
+                        }else if(count == 37){
+                            change_1_and_2_animation();
+                            change_2_and_1_animation();
+                        }else if(count == 40){
+                            select_1_animation();
+                        }else if(count == 43){
+                            if(dont_give_access_43_to_access){
+                                sort_insertion(array);
+                            }
+                            print_array.setVisibility(View.VISIBLE);
+                            print_array.setText(Arrays.toString(array));
+                        }
                         //initial_Count.setText(String.valueOf(count));
                         list_of_views[forward_track].setBackgroundColor(getColor(R.color.completeTransparent));
                         list_of_views[count].setBackgroundColor(getColor(R.color.transparentWhite));
@@ -167,5 +246,367 @@ public class Insertion_Sort_Visualization extends AppCompatActivity {
         });
         //forward operations
         //Visualization operations
+    }
+
+    private void change_2_and_1_animation() {
+        img2 = findViewById(R.id.image_2);
+        placeholder_1 = findViewById(R.id.placeholder_5);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_1.getX();
+        float startX2 = img2.getX();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_1, "x", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img2, "x", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void change_1_and_2_animation() {
+        img1 = findViewById(R.id.image_5);
+        placeholder_2 = findViewById(R.id.placeholder_2);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_2.getX();
+        float startX2 = img1.getX();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_2, "x", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img1, "x", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void change_8_and_1_animation() {
+        img8 = findViewById(R.id.image_1);
+        placeholder_1 = findViewById(R.id.placeholder_5);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_1.getX();
+        float startX2 = img8.getX();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_1, "x", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img8, "x", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void change_1_and_8_animation() {
+        img1 = findViewById(R.id.image_5);
+        placeholder_8 = findViewById(R.id.placeholder_1);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_8.getX();
+        float startX2 = img1.getX();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_8, "x", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img1, "x", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void change_5_and_1_animation() {
+        img5 = findViewById(R.id.image_3);
+        placeholder_1 = findViewById(R.id.placeholder_5);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_1.getX();
+        float startX2 = img5.getX();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_1, "x", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img5, "x", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void change_1_and_5_animation() {
+        img1 = findViewById(R.id.image_5);
+        placeholder_5 = findViewById(R.id.placeholder_3);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_5.getX();
+        float startX2 = img1.getX();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_5, "x", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img1, "x", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void change_9_and_1_animation() {
+        img9 = findViewById(R.id.image_4);
+        placeholder_1 = findViewById(R.id.placeholder_5);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_1.getX();
+        float startX2 = img9.getX();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_1, "x", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img9, "x", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void change_1_and_9_animation() {
+        img1 = findViewById(R.id.image_5);
+        placeholder_9 = findViewById(R.id.placeholder_4);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_9.getX();
+        float startX2 = img1.getX();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_9, "x", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img1, "x", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void select_1_animation() {
+        img1 = findViewById(R.id.image_5);
+        placeholder_1 = findViewById(R.id.placeholder_5);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_1.getY();
+        float startX2 = img1.getY();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_1, "y", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img1, "y", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void select_9_animation() {
+        img9 = findViewById(R.id.image_4);
+        placeholder_9 = findViewById(R.id.placeholder_4);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_9.getY();
+        float startX2 = img9.getY();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_9, "y", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img9, "y", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void change_8_and_5_animation() {
+        img5 = findViewById(R.id.image_3);
+        placeholder_8 = findViewById(R.id.placeholder_1);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_8.getX();
+        float startX2 = img5.getX();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_8, "x", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img5, "x", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void change_5_and_8_animation() {
+        img8 = findViewById(R.id.image_1);
+        placeholder_5 = findViewById(R.id.placeholder_3);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_5.getX();
+        float startX2 = img8.getX();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_5, "x", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img8, "x", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void select_5_animation() {
+        img5 = findViewById(R.id.image_3);
+        placeholder_5 = findViewById(R.id.placeholder_3);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_5.getY();
+        float startX2 = img5.getY();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_5, "y", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img5, "y", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+
+    private void select_8_animation() {
+        img8 = findViewById(R.id.image_1);
+        placeholder_8 = findViewById(R.id.placeholder_1);
+        //element handling hooks
+
+        float temp = 0f;
+        float startX = placeholder_8.getY();
+        float startX2 = img8.getY();
+        float endX = startX + 0;
+        float endX2 = startX2 - 0;
+
+        temp = endX;
+        endX = endX2;
+        endX2 = temp;
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(placeholder_8, "y", startX, endX);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(img8, "y", startX2, endX2);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator2.setInterpolator(new AccelerateInterpolator());
+        animator2.setDuration(1000);
+        animator.setDuration(1000);
+        animator2.start();
+        animator.start();
+    }
+    private void sort_insertion(int[] arr) {
+        int n = arr.length;
+        for (int i = 1; i < n; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = key;
+        }
     }
 }

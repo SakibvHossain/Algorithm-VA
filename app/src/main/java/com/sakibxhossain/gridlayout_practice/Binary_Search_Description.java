@@ -71,18 +71,28 @@ public class Binary_Search_Description extends AppCompatActivity {
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
         Bundle data2 = new Bundle();
-        data2.putString("binary_search_title","Selection Sort");
-        data2.putString("binary_search_description","Selection sort is an in-place sorting algorithm. Selection sort works well for small files. It is used\n" +
-                "for sorting the files with very large values and small keys. \n\nThis is because selection is made" +
-                "based on keys and swaps are made only when required.\n");
+        data2.putString("binary_search_title","Binary Search");
+        data2.putString("binary_search_description","In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array.");
 
         data2.putString("binary_search_algorithm_title","Algorithm");
-        data2.putString("binary_search_algorithm_description","1. Find the minimum value in the list\n" +
-                "2. Swap it with the value in the current position\n" +
-                "3. Repeat this process for all the elements until the entire array is sorted\n\nThis algorithm is called selection sort since it repeatedly selects the smallest element.\n");
+        data2.putString("binary_search_algorithm_description","The basic steps to perform Binary Search are:\n" +
+                "\n" +
+                "Sort the array in ascending order.\n" +
+                "Set the low index to the first element of the array and the high index to the last element.\n" +
+                "Set the middle index to the average of the low and high indices.\n" +
+                "If the element at the middle index is the target element, return the middle index.\n" +
+                "If the target element is less than the element at the middle index, set the high index to the middle index – 1.\n" +
+                "If the target element is greater than the element at the middle index, set the low index to the middle index + 1.\n" +
+                "Repeat steps 3-6 until the element is found or it is clear that the element is not present in the array.");
 
-        data2.putString("binary_search_in_detail_title","Selection Sort in Detail");
-        data2.putString("binary_search_in_detail_description","Description will be added later");
+        data2.putString("binary_search_in_detail_title","Binary Sort in Detail");
+        data2.putString("binary_search_in_detail_description","We basically ignore half of the elements just after one comparison.\n" +
+                "\n" +
+                "\n" +
+                "Compare x with the middle element.\n" +
+                "If x matches with the middle element, we return the mid index.\n" +
+                "Else If x is greater than the mid element, then x can only lie in the right half subarray after the mid element. So we recur for the right half.\n" +
+                "Else (x is smaller) recur for the left half.");
 
         data2.putString("binary_search_performance_title","Performance");
         data2.putString("binary_search_performance_description","Worst case complexity : O(n2)\n" +
@@ -140,10 +150,40 @@ public class Binary_Search_Description extends AppCompatActivity {
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
 
         Bundle data2 = new Bundle();
-        data2.putString("binary_search_problem_title","Problem 1");
-        data2.putString("binary_search_problem_description","Problems not assigned yet\n");
+        data2.putString("binary_search_problem_title","Search in Rotated Sorted Array");
+        data2.putString("binary_search_problem_description","There is an integer array nums sorted in ascending order (with distinct values).\n" +
+                "\n" +
+                "Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].\n" +
+                "\n" +
+                "Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.\n" +
+                "\n" +
+                "You must write an algorithm with O(log n) runtime complexity.\n" +
+                "\n" +
+                " \n" +
+                "\n" +
+                "Example 1:\n" +
+                "\n" +
+                "Input: nums = [4,5,6,7,0,1,2], target = 0\n" +
+                "Output: 4\n" +
+                "Example 2:\n" +
+                "\n" +
+                "Input: nums = [4,5,6,7,0,1,2], target = 3\n" +
+                "Output: -1\n" +
+                "Example 3:\n" +
+                "\n" +
+                "Input: nums = [1], target = 0\n" +
+                "Output: -1\n" +
+                " \n" +
+                "\n" +
+                "Constraints:\n" +
+                "\n" +
+                "1 <= nums.length <= 5000\n" +
+                "-104 <= nums[i] <= 104\n" +
+                "All values of nums are unique.\n" +
+                "nums is an ascending array that is possibly rotated.\n" +
+                "-104 <= target <= 104");
 
-        data2.putString("binary_search_problem2_title","Problem 2");
+        data2.putString("binary_search_problem2_title","Problem Not Assigned Yet");
         data2.putString("binary_search_problem2_description","Problems not assigned yet\n");
 
         fragment.setArguments(data2);

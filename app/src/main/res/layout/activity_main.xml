@@ -23,8 +23,8 @@
                     app:layout_scrollFlags="scroll|exitUntilCollapsed"
                     android:fitsSystemWindows="true"
                     app:contentScrim="@color/splash_screen_background"
-                    app:expandedTitleMarginStart="12dp"
-                    app:expandedTitleMarginEnd="12dp"
+                    app:expandedTitleMarginStart="2dp"
+                    app:expandedTitleMarginEnd="2dp"
                     app:collapsedTitleGravity="center"
                     app:title="Algorithm VA"
                     >

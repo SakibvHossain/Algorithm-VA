@@ -57,7 +57,7 @@
                 android:background="@drawable/output_black_strock_background"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/print_sorted_array"
+                    android:id="@+id/print_marge_visualized_sorted_array"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="11dp"
@@ -73,7 +73,7 @@
                     tools:ignore="RtlHardcoded" />
 
             </LinearLayout>
-            <include layout="@layout/visuzlization_section"/>
+            <include layout="@layout/marge_sort_visualization_section"/>
 
         </LinearLayout>
 
