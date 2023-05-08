@@ -75,13 +75,27 @@ public class Algorithm_Fragment extends Fragment {
             load_stack_algorithm(data);
         }else if(Objects.equals(token,"queue")){
             load_queue_algorithm(data);
-        }else if(Objects.equals(token,"btt")){
+        }else if(Objects.equals(token,"binary_tt")){
             load_binary_tree_traverse_algorithm(data);
         }
         return myView;
     }
 
     private void load_binary_tree_traverse_algorithm(Bundle data) {
+        if(data != null){
+            selection_title = data.getString("binary_tt_title");
+            selection_description = data.getString("binary_tt_description");
+
+            selection_process = data.getString("binary_tt_algorithm_title");
+            selection_process_description = data.getString("binary_tt_algorithm_description");
+
+            selection_in_detail = data.getString("binary_tt_in_detail_title");
+            selection_in_detail_description = data.getString("binary_tt_in_detail_description");
+
+            selection_performance = data.getString("binary_tt_performance_title");
+            selection_performance_description = data.getString("binary_tt_performance_description");
+        }
+        load_texts();
     }
 
     private void load_queue_algorithm(Bundle data) {

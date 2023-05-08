@@ -139,9 +139,22 @@ public class Problems_Fragment extends Fragment {
             load_stack_problems(data);
         }else if(Objects.equals(token, "queue")){
             load_queue_problems(data);
+        }else if(Objects.equals(token, "binary_tt")){
+            load_binary_tt_problems(data);
         }
 
         return myView;
+    }
+
+    private void load_binary_tt_problems(Bundle data) {
+        if(data != null){
+            problem_1 = data.getString("binary_tt_problem_title");
+            problem_1_description = data.getString("binary_tt_problem_description");
+
+            problem_2 = data.getString("binary_tt_problem2_title");
+            problem_2_description = data.getString("binary_tt_problem2_description");
+        }
+        load_problems();
     }
 
     private void load_queue_problems(Bundle data) {

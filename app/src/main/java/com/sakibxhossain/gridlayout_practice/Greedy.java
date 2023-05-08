@@ -11,19 +11,16 @@ import android.widget.ImageView;
 
 import com.sakibxhossain.gridlayout_practice.helper.Greedy_Adapter;
 import com.sakibxhossain.gridlayout_practice.helper.Greedy_ClickListener;
-import com.sakibxhossain.gridlayout_practice.helper.Tree_Adapter;
-import com.sakibxhossain.gridlayout_practice.helper.Tree_ClickListener;
 
 public class Greedy extends AppCompatActivity {
 
     String[] algo_title = {
-            "Haffman Coding"
+            "Huffman Coding"
     };
 
     String[] algo_difficulty = {
             "Hard"
     };
-
 
     ImageView text_ber_back_button;
     GridView sorting_gridview;
@@ -44,7 +41,7 @@ public class Greedy extends AppCompatActivity {
             public void onItemClicked(int position) {
                 switch (position) {
                     case 0:
-                        Intent btt = new Intent(Greedy.this, Haffman_Coding_Description.class);
+                        Intent btt = new Intent(Greedy.this, Huffman_Coding_Description.class);
                         startActivity(btt);
                         break;
                     case 1:

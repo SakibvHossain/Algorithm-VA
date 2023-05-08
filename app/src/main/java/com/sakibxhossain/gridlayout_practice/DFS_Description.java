@@ -99,54 +99,42 @@ public class DFS_Description extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-//        Bundle data = new Bundle();
-//        data.putString("selection_sort_code","import java.util.Arrays;\n" +
-//                "\n" +
-//                "public class Selection_Sort{\n" +
-//                "\n" +
-//                "    public static void sort(int arr[])\n" +
-//                "    {\n" +
-//                "        int n = arr.length;\n" +
-//                "\n" +
-//                "        for (int i = 0; i < n-1; i++)\n" +
-//                "        {\n" +
-//                "            int min_idx = i;\n" +
-//                "            for (int j = i+1; j < n; j++) {\n" +
-//                "                if (arr[j] < arr[min_idx]) {\n" +
-//                "                    min_idx = j;\n" +
-//                "                }\n" +
-//                "            }\n" +
-//                "            int temp = arr[min_idx];\n" +
-//                "            arr[min_idx] = arr[i];\n" +
-//                "            arr[i] = temp;\n" +
-//                "        }\n" +
-//                "    }\n" +
-//                "\n" +
-//                "     public static boolean isSorted(int[] arr){\n" +
-//                "        int prev = arr[0];\n" +
-//                "       \n" +
-//                "        for (int i = 1; i < arr.length; i++) {\n" +
-//                "            if (prev > arr[i]) {\n" +
-//                "                System.out.println(\"Selection Sort Fails!!\");\n" +
-//                "                return false;\n" +
-//                "            }\n" +
-//                "            prev = arr[i];\n" +
-//                "        }\n" +
-//                "         \n" +
-//                "        return true;\n" +
-//                "    }\n" +
-//                "\n" +
-//                "    public static void main(String[] args) {\n" +
-//                "        int[] arr = {4, 8, 2, 9, 5};\n" +
-//                "\t    \tsort(arr);\n" +
-//                "\t    \tif(isSorted(arr)) {\n" +
-//                "\t    \t\tSystem.out.println(Arrays.toString(arr));\n" +
-//                "\t    \t}\n" +
-//                "    }\n" +
-//                "}");
-//
-//        data.putString("selection_implementation","Implementation: Selection sort implementation given below - ");
-//        fragment.setArguments(data);
+        Bundle data = new Bundle();
+        data.putString("dfs_code","class Graph {\n" +
+                "    private int V;\n" +
+                "    private LinkedList<Integer>[] adj;\n" +
+                " \n" +
+                "    Graph(int v) {\n" +
+                "        V = v;\n" +
+                "        adj = new LinkedList[v];\n" +
+                "        for (int i=0; i<v; ++i)\n" +
+                "            adj[i] = new LinkedList();\n" +
+                "    }\n" +
+                " \n" +
+                "    void addEdge(int v, int w) {\n" +
+                "        adj[v].add(w);\n" +
+                "    }\n" +
+                " \n" +
+                "    void DFSUtil(int v, boolean[] visited) {\n" +
+                "        visited[v] = true;\n" +
+                "        System.out.print(v + \" \");\n" +
+                " \n" +
+                "        Iterator<Integer> i = adj[v].listIterator();\n" +
+                "        while (i.hasNext()) {\n" +
+                "            int n = i.next();\n" +
+                "            if (!visited[n])\n" +
+                "                DFSUtil(n, visited);\n" +
+                "        }\n" +
+                "    }\n" +
+                " \n" +
+                "    void DFS(int v) {\n" +
+                "        boolean[] visited = new boolean[V];\n" +
+                "        DFSUtil(v, visited);\n" +
+                "    }\n" +
+                "}\n");
+
+        data.putString("dfs_implementation","Implementation: Depth First Search implementation given below using recursion - In this code, we first create a Graph class that contains an adjacency list representation of the graph, as well as methods to add edges and perform DFS. The DFSUtil method performs the recursive DFS traversal, marking visited nodes and printing them as it goes. Finally, the DFS method initializes the visited array and calls DFSUtil on the starting node.");
+        fragment.setArguments(data);
         fragmentTransaction.replace(R.id.dfs_frameLayout,fragment, null)
         .commit();
     }
@@ -156,14 +144,14 @@ public class DFS_Description extends AppCompatActivity {
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
 
-//        Bundle data2 = new Bundle();
-//        data2.putString("selection_problem_title","Problem 1");
-//        data2.putString("selection_problem_description","Problems not assigned yet\n");
-//
-//        data2.putString("selection_problem2_title","Problem 2");
-//        data2.putString("selection_problem2_description","Problems not assigned yet\n");
-//
-//        fragment.setArguments(data2);
+        Bundle data2 = new Bundle();
+        data2.putString("selection_problem_title","Problem 1");
+        data2.putString("selection_problem_description","Problems not assigned yet\n");
+
+        data2.putString("selection_problem2_title","Problem 2");
+        data2.putString("selection_problem2_description","Problems not assigned yet\n");
+
+        fragment.setArguments(data2);
 
         fragmentTransaction.replace(R.id.dfs_frameLayout,fragment, null)
                 .commit();

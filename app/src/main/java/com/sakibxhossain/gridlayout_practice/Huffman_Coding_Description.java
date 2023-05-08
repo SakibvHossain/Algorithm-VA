@@ -17,7 +17,7 @@ import com.sakibxhossain.gridlayout_practice.algorithm_helper.code_fragment;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
-public class Haffman_Coding_Description extends AppCompatActivity {
+public class Huffman_Coding_Description extends AppCompatActivity {
 
     MeowBottomNavigation haffman_coding_bottom_navigation;
     ImageView back_btn;
@@ -58,7 +58,7 @@ public class Haffman_Coding_Description extends AppCompatActivity {
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goBack_to_Sorting = new Intent(Haffman_Coding_Description.this,Greedy.class);
+                Intent goBack_to_Sorting = new Intent(Huffman_Coding_Description.this,Greedy.class);
                 startActivity(goBack_to_Sorting);
                 overridePendingTransition(R.anim.slide_from_left,R.anim.slideout_from_right);
             }

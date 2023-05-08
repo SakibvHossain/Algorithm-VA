@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Haffman_Coding_Analysis extends AppCompatActivity {
+public class Huffman_Coding_Analysis extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

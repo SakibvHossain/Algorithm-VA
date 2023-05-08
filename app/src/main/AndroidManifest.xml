@@ -78,21 +78,21 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Haffman_Coding_Visualization"
+            android:name=".Huffman_Coding_Visualization"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Haffman_Coding_Analysis"
+            android:name=".Huffman_Coding_Analysis"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Haffman_Coding_Description"
+            android:name=".Huffman_Coding_Description"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

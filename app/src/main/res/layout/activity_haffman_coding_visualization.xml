@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Haffman_Coding_Visualization">
+    tools:context=".Huffman_Coding_Visualization">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
