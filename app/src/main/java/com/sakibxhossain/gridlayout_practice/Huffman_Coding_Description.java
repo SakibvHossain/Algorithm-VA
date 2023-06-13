@@ -41,14 +41,14 @@ public class Huffman_Coding_Description extends AppCompatActivity {
                 Fragment fragment;
 
                 if(model.getId() == 0){
-                    fragment = new Algorithm_Fragment("haffman_coding");
+                    fragment = new Algorithm_Fragment("huffman_coding");
                     loadAlgorithm(fragment);
                 }else if(model.getId() == 1){
-                    fragment = new code_fragment("haffman_coding");
+                    fragment = new code_fragment("huffman_coding");
                     loadCode(fragment);
 
                 }else if(model.getId() == 2){
-                    fragment = new Problems_Fragment("haffman_coding");
+                    fragment = new Problems_Fragment("huffman_coding");
                     loadProblems(fragment);
                 }
                 return null;
@@ -69,26 +69,26 @@ public class Huffman_Coding_Description extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-//        Bundle data2 = new Bundle();
-//        data2.putString("selection_sort_title","Selection Sort");
-//        data2.putString("selection_sort_description","Selection sort is an in-place sorting algorithm. Selection sort works well for small files. It is used\n" +
-//                "for sorting the files with very large values and small keys. \n\nThis is because selection is made" +
-//                "based on keys and swaps are made only when required.\n");
-//
-//        data2.putString("selection_algorithm_title","Algorithm");
-//        data2.putString("selection_sort_algorithm_description","1. Find the minimum value in the list\n" +
-//                "2. Swap it with the value in the current position\n" +
-//                "3. Repeat this process for all the elements until the entire array is sorted\n\nThis algorithm is called selection sort since it repeatedly selects the smallest element.\n");
-//
-//        data2.putString("selection_in_detail_title","Selection Sort in Detail");
-//        data2.putString("selection_sort_in_detail_description","Description will be added later");
-//
-//        data2.putString("selection_sort_performance_title","Performance");
-//        data2.putString("selection_sort_performance_description","Worst case complexity : O(n2)\n" +
-//                "Best case complexity (Improved version) : O(n)\n" +
-//                "Average case complexity (Basic version) : O(n2)\n" +
-//                "Worst case space complexity : O(1) auxiliary\n");
-//        fragment.setArguments(data2);
+        Bundle data2 = new Bundle();
+        data2.putString("huffman_coding_title","Huffman Coding");
+        data2.putString("huffman_coding_description","Huffman Coding is an in-place sorting algorithm. Selection sort works well for small files. It is used\n" +
+                "for sorting the files with very large values and small keys. \n\nThis is because selection is made" +
+                "based on keys and swaps are made only when required.\n");
+
+        data2.putString("huffman_coding_algorithm_title","Algorithm");
+        data2.putString("huffman_coding_algorithm_description","1. Find the minimum value in the list\n" +
+                "2. Swap it with the value in the current position\n" +
+                "3. Repeat this process for all the elements until the entire array is sorted\n\nThis algorithm is called selection sort since it repeatedly selects the smallest element.\n");
+
+        data2.putString("huffman_coding_in_detail_title","Huffman Coding in Detail");
+        data2.putString("huffman_coding_in_detail_description","Description will be added later");
+
+        data2.putString("huffman_coding_performance_title","Performance");
+        data2.putString("huffman_coding_performance_description","Worst case complexity : O(n2)\n" +
+                "Best case complexity (Improved version) : O(n)\n" +
+                "Average case complexity (Basic version) : O(n2)\n" +
+                "Worst case space complexity : O(1) auxiliary\n");
+        fragment.setArguments(data2);
         fragmentTransaction.replace(R.id.haffman_coding_frameLayout,fragment, null)
                 .commit();
     }
@@ -97,54 +97,11 @@ public class Huffman_Coding_Description extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-//        Bundle data = new Bundle();
-//        data.putString("selection_sort_code","import java.util.Arrays;\n" +
-//                "\n" +
-//                "public class Selection_Sort{\n" +
-//                "\n" +
-//                "    public static void sort(int arr[])\n" +
-//                "    {\n" +
-//                "        int n = arr.length;\n" +
-//                "\n" +
-//                "        for (int i = 0; i < n-1; i++)\n" +
-//                "        {\n" +
-//                "            int min_idx = i;\n" +
-//                "            for (int j = i+1; j < n; j++) {\n" +
-//                "                if (arr[j] < arr[min_idx]) {\n" +
-//                "                    min_idx = j;\n" +
-//                "                }\n" +
-//                "            }\n" +
-//                "            int temp = arr[min_idx];\n" +
-//                "            arr[min_idx] = arr[i];\n" +
-//                "            arr[i] = temp;\n" +
-//                "        }\n" +
-//                "    }\n" +
-//                "\n" +
-//                "     public static boolean isSorted(int[] arr){\n" +
-//                "        int prev = arr[0];\n" +
-//                "       \n" +
-//                "        for (int i = 1; i < arr.length; i++) {\n" +
-//                "            if (prev > arr[i]) {\n" +
-//                "                System.out.println(\"Selection Sort Fails!!\");\n" +
-//                "                return false;\n" +
-//                "            }\n" +
-//                "            prev = arr[i];\n" +
-//                "        }\n" +
-//                "         \n" +
-//                "        return true;\n" +
-//                "    }\n" +
-//                "\n" +
-//                "    public static void main(String[] args) {\n" +
-//                "        int[] arr = {4, 8, 2, 9, 5};\n" +
-//                "\t    \tsort(arr);\n" +
-//                "\t    \tif(isSorted(arr)) {\n" +
-//                "\t    \t\tSystem.out.println(Arrays.toString(arr));\n" +
-//                "\t    \t}\n" +
-//                "    }\n" +
-//                "}");
-//
-//        data.putString("selection_implementation","Implementation: Selection sort implementation given below - ");
-//        fragment.setArguments(data);
+        Bundle data = new Bundle();
+        data.putString("huffman_coding_code","//Code not implemented yet");
+
+        data.putString("huffman_coding_implementation","Implementation: Huffman Coding implementation given below - ");
+        fragment.setArguments(data);
         fragmentTransaction.replace(R.id.haffman_coding_frameLayout,fragment, null)
                 .commit();
     }

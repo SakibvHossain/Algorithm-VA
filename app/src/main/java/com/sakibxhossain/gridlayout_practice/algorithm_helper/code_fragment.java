@@ -12,16 +12,22 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
+import com.sakibxhossain.gridlayout_practice.BFS_Analysis;
+import com.sakibxhossain.gridlayout_practice.BFS_Visualization;
 import com.sakibxhossain.gridlayout_practice.Binary_Search_Analysis;
 import com.sakibxhossain.gridlayout_practice.Binary_Search_Visualization_Action;
 import com.sakibxhossain.gridlayout_practice.Binary_Tree_Traversal_Analysis;
 import com.sakibxhossain.gridlayout_practice.Binary_Tree_Traversal_Visualization;
 import com.sakibxhossain.gridlayout_practice.DFS_Analysis;
 import com.sakibxhossain.gridlayout_practice.DFS_Visualization;
+import com.sakibxhossain.gridlayout_practice.Huffman_Coding_Analysis;
+import com.sakibxhossain.gridlayout_practice.Huffman_Coding_Visualization;
 import com.sakibxhossain.gridlayout_practice.Insertion_Sort_Analysis;
 import com.sakibxhossain.gridlayout_practice.Insertion_Sort_Visualization;
 import com.sakibxhossain.gridlayout_practice.Linear_Search_Analysis;
 import com.sakibxhossain.gridlayout_practice.Linear_Search_Visualization;
+import com.sakibxhossain.gridlayout_practice.Longest_Common_Subsequence_Analysis;
+import com.sakibxhossain.gridlayout_practice.Longest_Common_Subsequence_Visualization;
 import com.sakibxhossain.gridlayout_practice.Marge_Sort_Analysis;
 import com.sakibxhossain.gridlayout_practice.Marge_Sort_Visualization;
 import com.sakibxhossain.gridlayout_practice.Queue_Algo_Analysis;
@@ -281,8 +287,80 @@ public class code_fragment extends Fragment {
                 }
             });
             load_dfs_Code(data);
+        }else if(Objects.equals(token, "bfs")){
+            analysis_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Analysis = new Intent(getContext(), BFS_Analysis.class);
+                    startActivity(go_for_Analysis);
+                }
+            });
+            visualize_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Visualize = new Intent(getContext(), BFS_Visualization.class);
+                    startActivity(go_for_Visualize);
+                }
+            });
+            load_bfs_Code(data);
+        }else if(Objects.equals(token, "lcs")){
+            analysis_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Analysis = new Intent(getContext(), Longest_Common_Subsequence_Analysis.class);
+                    startActivity(go_for_Analysis);
+                }
+            });
+            visualize_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Visualize = new Intent(getContext(), Longest_Common_Subsequence_Visualization.class);
+                    startActivity(go_for_Visualize);
+                }
+            });
+            load_lcs_Code(data);
+        }else if(Objects.equals(token, "huffman_coding")){
+            analysis_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Analysis = new Intent(getContext(), Huffman_Coding_Analysis.class);
+                    startActivity(go_for_Analysis);
+                }
+            });
+            visualize_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent go_for_Visualize = new Intent(getContext(), Huffman_Coding_Visualization.class);
+                    startActivity(go_for_Visualize);
+                }
+            });
+            load_huffman_coding_Code(data);
         }
         return myView;
+    }
+
+    private void load_huffman_coding_Code(Bundle data) {
+        if(data != null){
+            codeString = data.getString("huffman_coding_code");
+            code_Implementation_String = data.getString("huffman_coding_implementation");
+        }
+        loadCode();
+    }
+
+    private void load_lcs_Code(Bundle data) {
+        if(data != null){
+            codeString = data.getString("lcs_code");
+            code_Implementation_String = data.getString("lcs_implementation");
+        }
+        loadCode();
+    }
+
+    private void load_bfs_Code(Bundle data) {
+        if(data != null){
+            codeString = data.getString("bfs_code");
+            code_Implementation_String = data.getString("bfs_implementation");
+        }
+        loadCode();
     }
 
     private void load_dfs_Code(Bundle data) {

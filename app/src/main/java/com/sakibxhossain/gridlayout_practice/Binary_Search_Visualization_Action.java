@@ -62,6 +62,9 @@ public class Binary_Search_Visualization_Action extends AppCompatActivity {
     //animation
     Animation fade_in, fade_out;
 
+    //Git pull
+    //New branch
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

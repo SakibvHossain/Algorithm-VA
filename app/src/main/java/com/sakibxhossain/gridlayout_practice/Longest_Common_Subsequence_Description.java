@@ -70,26 +70,86 @@ public class Longest_Common_Subsequence_Description extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-//        Bundle data2 = new Bundle();
-//        data2.putString("selection_sort_title","Selection Sort");
-//        data2.putString("selection_sort_description","Selection sort is an in-place sorting algorithm. Selection sort works well for small files. It is used\n" +
-//                "for sorting the files with very large values and small keys. \n\nThis is because selection is made" +
-//                "based on keys and swaps are made only when required.\n");
-//
-//        data2.putString("selection_algorithm_title","Algorithm");
-//        data2.putString("selection_sort_algorithm_description","1. Find the minimum value in the list\n" +
-//                "2. Swap it with the value in the current position\n" +
-//                "3. Repeat this process for all the elements until the entire array is sorted\n\nThis algorithm is called selection sort since it repeatedly selects the smallest element.\n");
-//
-//        data2.putString("selection_in_detail_title","Selection Sort in Detail");
-//        data2.putString("selection_sort_in_detail_description","Description will be added later");
-//
-//        data2.putString("selection_sort_performance_title","Performance");
-//        data2.putString("selection_sort_performance_description","Worst case complexity : O(n2)\n" +
-//                "Best case complexity (Improved version) : O(n)\n" +
-//                "Average case complexity (Basic version) : O(n2)\n" +
-//                "Worst case space complexity : O(1) auxiliary\n");
-//        fragment.setArguments(data2);
+        Bundle data2 = new Bundle();
+        data2.putString("lcs_title","Longest Common Subsequence");
+        data2.putString("lcs_description","The Longest Common Subsequence (LCS) is a problem in computer science where the goal is to find the longest subsequence that is common to two given sequences. A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.");
+
+        data2.putString("lcs_algorithm_title","Algorithm");
+        data2.putString("lcs_algorithm_description","function lcs(X[1..m], Y[1..n])\n" +
+                "    L[0..m, 0..n]\n" +
+                "    for i := 0..m\n" +
+                "        L[i,0] = 0\n" +
+                "    for j := 0..n\n" +
+                "        L[0,j] = 0\n" +
+                "\n" +
+                "    for i := 1..m\n" +
+                "        for j := 1..n\n" +
+                "            if X[i] = Y[j]\n" +
+                "                L[i,j] := L[i-1,j-1] + 1\n" +
+                "            else\n" +
+                "                L[i,j] := max(L[i-1,j], L[i,j-1])\n" +
+                "\n" +
+                "    LCS := \"\"\n" +
+                "    i := m, j := n\n" +
+                "    while i > 0 and j > 0\n" +
+                "        if X[i] = Y[j]\n" +
+                "            LCS := X[i] + LCS\n" +
+                "            i := i - 1\n" +
+                "            j := j - 1\n" +
+                "        else if L[i-1,j] >= L[i,j-1]\n" +
+                "            i := i - 1\n" +
+                "        else\n" +
+                "            j := j - 1\n" +
+                "\n" +
+                "    return LCS\n\n\nThe function lcs takes two sequences, X and Y, as input and returns the longest common subsequence of X and Y. The function initializes a 2D array L with dimensions (m+1) x (n+1), where m and n are the lengths of X and Y respectively. The algorithm fills in the L array using dynamic programming, computing the length of the LCS for all subproblems of X and Y by comparing the characters at each position.\n" +
+                "\n" +
+                "After computing the L array, the algorithm constructs the LCS by tracing back through the array, starting from the bottom right corner. The LCS is constructed by adding each matching character to a string LCS and moving diagonally to the left and up in the array when the characters match, otherwise moving to the left or up in the array, depending on which direction yields a larger LCS length.");
+
+        data2.putString("lcs_in_detail_title","Longest Common Subsequence in Detail");
+        data2.putString("lcs_in_detail_description","The Longest Common Subsequence (LCS) problem is a classic problem in computer science. It is a problem of finding the longest subsequence that is common to two given sequences. A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.\n" +
+                "\n" +
+                "Let's take an example of two sequences, X and Y, and find the LCS of these two sequences. Suppose X is \"ABCBDAB\" and Y is \"BDCABA\". We can use the LCS algorithm to find the LCS of X and Y.\n" +
+                "\n" +
+                "Step 1: Initialize a 2D array L with dimensions (m+1) x (n+1), where m and n are the lengths of X and Y, respectively. Fill the first row and the first column of the array with zeros.\n" +
+                "\n" +
+
+                "    X = \"ABCBDAB\"\n" +
+                "    Y = \"BDCABA\"\n" +
+                "    L = [\n" +
+                "            [0, 0, 0, 0, 0, 0, 0],\n" +
+                "            [0, 0, 0, 0, 0, 0, 0],\n" +
+                "            [0, 0, 0, 0, 0, 0, 0],\n" +
+                "            [0, 0, 0, 0, 0, 0, 0],\n" +
+                "            [0, 0, 0, 0, 0, 0, 0],\n" +
+                "            [0, 0, 0, 0, 0, 0, 0],\n" +
+                "            [0, 0, 0, 0, 0, 0, 0],\n" +
+                "            [0, 0, 0, 0, 0, 0, 0]\n" +
+                "        ]\n" +
+                "Step 2: Iterate through each element of X and Y, and fill in the L array using dynamic programming. At each position (i,j) in the array, if X[i] is equal to Y[j], set L[i][j] to L[i-1][j-1] + 1. Otherwise, set L[i][j] to the maximum of L[i-1][j] and L[i][j-1].\n" +
+                "\n" +
+
+                "    for i := 1..m\n" +
+                "        for j := 1..n\n" +
+                "            if X[i] = Y[j]\n" +
+                "                L[i,j] := L[i-1,j-1] + 1\n" +
+                "            else\n" +
+                "                L[i,j] := max(L[i-1,j], L[i,j-1])\n" +
+                "After filling in the L array, it looks like this:\n" +
+                "\n" +
+
+                "    L = [\n" +
+                "            [0, 0, 0, 0, 0, 0, 0],\n" +
+                "            [0, 0, 0, 1, 1, 1, 1],\n" +
+                "            [0, 1, 1, 1, 2, 2, 2],\n" +
+                "            [0, 1, 1, 2, 2, 2, 2],\n" +
+                "            [0, 1, 2, 2, 2, 3, 3],\n" +
+                "            [0, 1, 2, 2, 3, 3, 3],\n" +
+                "            [0, 1, 2, 2, 3, 4, 4],\n" +
+                "            [0, 1, 2, 3, 3, 4, 5]");
+
+        data2.putString("lcs_performance_title","Performance");
+        data2.putString("lcs_performance_description","\"Note that this algorithm has a time complexity of O(mn) and a space complexity of O(mn), where m and n are the lengths of s1 and s2 respectively.\"");
+        fragment.setArguments(data2);
         fragmentTransaction.replace(R.id.longest_common_subsequence_frameLayout,fragment, null)
                 .commit();
     }
@@ -98,54 +158,45 @@ public class Longest_Common_Subsequence_Description extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-//        Bundle data = new Bundle();
-//        data.putString("selection_sort_code","import java.util.Arrays;\n" +
-//                "\n" +
-//                "public class Selection_Sort{\n" +
-//                "\n" +
-//                "    public static void sort(int arr[])\n" +
-//                "    {\n" +
-//                "        int n = arr.length;\n" +
-//                "\n" +
-//                "        for (int i = 0; i < n-1; i++)\n" +
-//                "        {\n" +
-//                "            int min_idx = i;\n" +
-//                "            for (int j = i+1; j < n; j++) {\n" +
-//                "                if (arr[j] < arr[min_idx]) {\n" +
-//                "                    min_idx = j;\n" +
-//                "                }\n" +
-//                "            }\n" +
-//                "            int temp = arr[min_idx];\n" +
-//                "            arr[min_idx] = arr[i];\n" +
-//                "            arr[i] = temp;\n" +
-//                "        }\n" +
-//                "    }\n" +
-//                "\n" +
-//                "     public static boolean isSorted(int[] arr){\n" +
-//                "        int prev = arr[0];\n" +
-//                "       \n" +
-//                "        for (int i = 1; i < arr.length; i++) {\n" +
-//                "            if (prev > arr[i]) {\n" +
-//                "                System.out.println(\"Selection Sort Fails!!\");\n" +
-//                "                return false;\n" +
-//                "            }\n" +
-//                "            prev = arr[i];\n" +
-//                "        }\n" +
-//                "         \n" +
-//                "        return true;\n" +
-//                "    }\n" +
-//                "\n" +
-//                "    public static void main(String[] args) {\n" +
-//                "        int[] arr = {4, 8, 2, 9, 5};\n" +
-//                "\t    \tsort(arr);\n" +
-//                "\t    \tif(isSorted(arr)) {\n" +
-//                "\t    \t\tSystem.out.println(Arrays.toString(arr));\n" +
-//                "\t    \t}\n" +
-//                "    }\n" +
-//                "}");
-//
-//        data.putString("selection_implementation","Implementation: Selection sort implementation given below - ");
-//        fragment.setArguments(data);
+        Bundle data = new Bundle();
+        data.putString("lcs_code","public static String lcs(String s1, String s2) {\n" +
+                "    int m = s1.length();\n" +
+                "    int n = s2.length();\n" +
+                "    int[][] dp = new int[m+1][n+1];\n" +
+                "    for (int i = 0; i <= m; i++) {\n" +
+                "        for (int j = 0; j <= n; j++) {\n" +
+                "            if (i == 0 || j == 0) {\n" +
+                "                dp[i][j] = 0;\n" +
+                "            } else if (s1.charAt(i-1) == s2.charAt(j-1)) {\n" +
+                "                dp[i][j] = dp[i-1][j-1] + 1;\n" +
+                "            } else {\n" +
+                "                dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);\n" +
+                "            }\n" +
+                "        }\n" +
+                "    }\n" +
+                "    StringBuilder sb = new StringBuilder();\n" +
+                "    int i = m, j = n;\n" +
+                "    while (i > 0 && j > 0) {\n" +
+                "        if (s1.charAt(i-1) == s2.charAt(j-1)) {\n" +
+                "            sb.append(s1.charAt(i-1));\n" +
+                "            i--;\n" +
+                "            j--;\n" +
+                "        } else if (dp[i-1][j] > dp[i][j-1]) {\n" +
+                "            i--;\n" +
+                "        } else {\n" +
+                "            j--;\n" +
+                "        }\n" +
+                "    }\n" +
+                "    return sb.reverse().toString();\n" +
+                "}\n");
+
+        data.putString("lcs_implementation","Implementation: Longest Common Subsequence implementation given below - This algorithm takes two strings s1 and s2 as input and returns the longest common subsequence between them as a string. It works by first creating a 2D array dp of size (m+1) x (n+1) where m and n are the lengths of s1 and s2 respectively. The dp[i][j] represents the length of the LCS between the first i characters of s1 and the first j characters of s2.\n" +
+                "\n" +
+                "The algorithm then fills in the dp array using dynamic programming. If the last characters of s1 and s2 are the same, then the LCS length is equal to dp[i-1][j-1] + 1. Otherwise, the LCS length is either dp[i-1][j] or dp[i][j-1], whichever is larger.\n" +
+                "\n" +
+                "Finally, the algorithm constructs the LCS by tracing back through the dp array. Starting from the bottom right corner, the algorithm checks if the current characters in s1 and s2 match. If they do, the character is part of the LCS and is added to a StringBuilder. Otherwise, the algorithm moves either up or left in the dp array, depending on which direction yields a larger LCS length.\n" +
+                "\n");
+        fragment.setArguments(data);
         fragmentTransaction.replace(R.id.longest_common_subsequence_frameLayout,fragment, null)
                 .commit();
     }

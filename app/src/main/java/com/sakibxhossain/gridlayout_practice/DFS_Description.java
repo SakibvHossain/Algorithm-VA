@@ -71,26 +71,101 @@ public class DFS_Description extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-//        Bundle data2 = new Bundle();
-//        data2.putString("selection_sort_title","Selection Sort");
-//        data2.putString("selection_sort_description","Selection sort is an in-place sorting algorithm. Selection sort works well for small files. It is used\n" +
-//                "for sorting the files with very large values and small keys. \n\nThis is because selection is made" +
-//                "based on keys and swaps are made only when required.\n");
-//
-//        data2.putString("selection_algorithm_title","Algorithm");
-//        data2.putString("selection_sort_algorithm_description","1. Find the minimum value in the list\n" +
-//                "2. Swap it with the value in the current position\n" +
-//                "3. Repeat this process for all the elements until the entire array is sorted\n\nThis algorithm is called selection sort since it repeatedly selects the smallest element.\n");
-//
-//        data2.putString("selection_in_detail_title","Selection Sort in Detail");
-//        data2.putString("selection_sort_in_detail_description","Description will be added later");
-//
-//        data2.putString("selection_sort_performance_title","Performance");
-//        data2.putString("selection_sort_performance_description","Worst case complexity : O(n2)\n" +
-//                "Best case complexity (Improved version) : O(n)\n" +
-//                "Average case complexity (Basic version) : O(n2)\n" +
-//                "Worst case space complexity : O(1) auxiliary\n");
-//        fragment.setArguments(data2);
+        Bundle data2 = new Bundle();
+        data2.putString("dfs_title","Depth First Search");
+        data2.putString("dfs_description","Depth-First Search, which is a graph traversal algorithm that starts at a particular vertex and explores as far as possible along each branch before backtracking. In other words, DFS visits vertices in a graph by going down a path until it reaches a dead end, and then backtracking to explore other paths.\n" +
+                "\n" +
+                "The basic idea behind DFS is to maintain a stack of vertices to be visited, starting with the initial vertex. At each step, the algorithm pops a vertex from the stack, visits it if it has not been visited before, and then pushes its unvisited neighbors onto the stack. This process is repeated until all vertices have been visited, or until a specific condition is met.\n" +
+                "\n" +
+                "DFS is often used to solve problems that involve exploring all possible paths in a graph, such as finding connected components, detecting cycles, and determining whether a path exists between two vertices. It can be implemented recursively or iteratively using a stack.");
+
+        data2.putString("dfs_algorithm_title","Algorithm");
+        data2.putString("dfs_sort_algorithm_description","1. Initialize an empty stack and an empty set of visited vertices.\n" +
+                "2. Push the starting vertex onto the stack and add it to the set of visited vertices.\n" +
+                "3. While the stack is not empty:\n" +
+                "      a. Pop a vertex from the top of the stack.\n" +
+                "      b. Visit the vertex if it has not been visited before.\n" +
+                "      c. Add all of its unvisited neighbors to the stack and mark them as visited.\n" +
+                "4. When the stack is empty, the DFS is complete.\n\nThis pseudo code assumes that the graph is represented as an adjacency list or matrix, and that the starting vertex is known. The DFS can be implemented using either recursion or iteration.");
+
+        data2.putString("dfs_in_detail_title","Selection Sort in Detail");
+        data2.putString("dfs_sort_in_detail_description","Suppose we have the following graph:\n" +
+                "\n" +
+                "A -- B -- C\n" +
+                "|         |\n" +
+                "D -- E -- F\n" +
+                "where the letters represent vertices and the lines represent edges.\n" +
+                "\n" +
+                "Starting from vertex A, the DFS algorithm would proceed as follows:\n" +
+                "\n" +
+                "Initialize an empty stack and an empty set of visited vertices.\n" +
+
+                "stack: []\n" +
+                "visited: {}\n" +
+                "Push vertex A onto the stack and add it to the set of visited vertices.\n" +
+
+                "stack: [A]\n" +
+                "visited: {A}\n" +
+                "While the stack is not empty:\n" +
+                "a. Pop a vertex from the top of the stack, starting with vertex A.\n" +
+
+                "stack: []\n" +
+                "visited: {A}\n" +
+                "current: A\n" +
+                "b. Visit the vertex if it has not been visited before. In this case, print \"Visited vertex A\".\n" +
+
+                "Visited vertex A\n" +
+                "c. Add all of its unvisited neighbors to the stack and mark them as visited. In this case, the unvisited neighbors of A are vertices B and D. We add them to the stack and mark them as visited.\n" +
+
+                "stack: [B, D]\n" +
+                "visited: {A, B, D}\n" +
+                "d. Pop vertex D from the top of the stack.\n" +
+
+                "stack: [B]\n" +
+                "visited: {A, B, D}\n" +
+                "current: D\n" +
+                "e. Visit vertex D and print \"Visited vertex D\".\n" +
+
+                "Visited vertex D\n" +
+                "f. Add all of its unvisited neighbors to the stack and mark them as visited. In this case, the unvisited neighbor of D is vertex A, but we have already visited A, so there are no neighbors to add.\n" +
+
+                "stack: [B]\n" +
+                "visited: {A, B, D}\n" +
+                "g. Pop vertex B from the top of the stack.\n" +
+
+                "stack: []\n" +
+                "visited: {A, B, D}\n" +
+                "current: B\n" +
+                "h. Visit vertex B and print \"Visited vertex B\".\n" +
+
+                "Visited vertex B\n" +
+                "i. Add all of its unvisited neighbors to the stack and mark them as visited. In this case, the unvisited neighbors of B are vertices A, C, and E. However, we have already visited A, so we only add vertices C and E to the stack and mark them as visited.\n" +
+
+                "stack: [C, E]\n" +
+                "visited: {A, B, C, D, E}\n" +
+                "j. Pop vertex E from the top of the stack.\n" +
+
+                "stack: [C]\n" +
+                "visited: {A, B, C, D, E}\n" +
+                "current: E\n" +
+                "k. Visit vertex E and print \"Visited vertex E\".\n" +
+
+                "Visited vertex E\n" +
+                "l. Add all of its unvisited neighbors to the stack and mark them as visited. In this case, the unvisited neighbors of E are vertices B and F. However, we have already visited B, so we only add vertex F to the stack and mark it as visited.\n" +
+
+                "stack: [C, F]\n" +
+                "visited: {A, B, C, D, E, F}\n" +
+                "m. Pop vertex F from the top of the stack.\n" +
+
+                "stack: [C]\n" +
+                "visited: {A, B, C, D, E, F}\n" +
+                "current: F");
+
+        data2.putString("dfs_performance_title","Performance");
+        data2.putString("dfs_performance_description","The time complexity of DFS (Depth-First Search) algorithm is O(V + E), where V is the number of vertices and E is the number of edges in the graph. This is because the algorithm visits every vertex and every edge at most once.\n" +
+                "\n" +
+                "The space complexity of DFS depends on the data structure used to implement the algorithm. If we use an adjacency matrix to represent the graph and a stack to implement the DFS algorithm, then the space complexity is O(V^2 + V) = O(V^2), where V is the number of vertices. This is because the adjacency matrix takes up O(V^2) space and the stack can contain at most V vertices.");
+        fragment.setArguments(data2);
         fragmentTransaction.replace(R.id.dfs_frameLayout,fragment, null)
                 .commit();
     }

@@ -74,26 +74,120 @@ public class BFS_Description extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-//        Bundle data2 = new Bundle();
-//        data2.putString("selection_sort_title","Selection Sort");
-//        data2.putString("selection_sort_description","Selection sort is an in-place sorting algorithm. Selection sort works well for small files. It is used\n" +
-//                "for sorting the files with very large values and small keys. \n\nThis is because selection is made" +
-//                "based on keys and swaps are made only when required.\n");
-//
-//        data2.putString("selection_algorithm_title","Algorithm");
-//        data2.putString("selection_sort_algorithm_description","1. Find the minimum value in the list\n" +
-//                "2. Swap it with the value in the current position\n" +
-//                "3. Repeat this process for all the elements until the entire array is sorted\n\nThis algorithm is called selection sort since it repeatedly selects the smallest element.\n");
-//
-//        data2.putString("selection_in_detail_title","Selection Sort in Detail");
-//        data2.putString("selection_sort_in_detail_description","Description will be added later");
-//
-//        data2.putString("selection_sort_performance_title","Performance");
-//        data2.putString("selection_sort_performance_description","Worst case complexity : O(n2)\n" +
-//                "Best case complexity (Improved version) : O(n)\n" +
-//                "Average case complexity (Basic version) : O(n2)\n" +
-//                "Worst case space complexity : O(1) auxiliary\n");
-//        fragment.setArguments(data2);
+        Bundle data2 = new Bundle();
+        data2.putString("bfs_title","Breadth-First Search");
+        data2.putString("bfs_description","Breadth-First Search, which is a graph traversal algorithm that visits all the nodes of a graph in breadth-first order, i.e., it visits all the nodes at the current level before moving on to the nodes at the next level.");
+
+        data2.putString("bfs_algorithm_title","Algorithm");
+        data2.putString("bfs_algorithm_description","BFS(G, s):\n" +
+                "    for each vertex u in G:\n" +
+                "        color[u] = WHITE  // Initialize all vertices as unvisited\n" +
+                "        d[u] = INFINITY   // Initialize the distance from the source to all vertices as infinity\n" +
+                "        p[u] = NULL       // Initialize the parent of all vertices as NULL\n" +
+                "    color[s] = GRAY      // Mark the source vertex as visited and enqueue it\n" +
+                "    d[s] = 0\n" +
+                "    p[s] = NULL\n" +
+                "    Q = empty queue\n" +
+                "    enqueue(Q, s)\n" +
+                "    while Q is not empty:   // Main BFS loop\n" +
+                "        u = dequeue(Q)     // Dequeue a vertex from the queue\n" +
+                "        for each neighbor v of u:\n" +
+                "            if color[v] == WHITE:   // If the neighbor is unvisited\n" +
+                "                color[v] = GRAY     // Mark the neighbor as visited and enqueue it\n" +
+                "                d[v] = d[u] + 1     // Update the distance from the source to the neighbor\n" +
+                "                p[v] = u            // Set the parent of the neighbor to u\n" +
+                "                enqueue(Q, v)\n" +
+                "        color[u] = BLACK   // Mark u as finished\n\nIn this pseudocode, G is the graph, s is the source vertex, color[u] represents the color of vertex u (either WHITE, GRAY, or BLACK), d[u] represents the distance from the source vertex s to vertex u, and p[u] represents the parent of vertex u in the BFS tree. The algorithm starts by initializing all vertices as unvisited, with infinite distance and null parent. Then, it marks the source vertex as visited (coloring it as GRAY) and enqueues it. The main loop of the algorithm dequeues a vertex u from the queue and visits all its unvisited neighbors, marking them as visited and enqueuing them. It also updates their distance and parent information in the BFS tree. Finally, it marks u as finished (coloring it as BLACK). The algorithm continues until the queue is empty, which means that all vertices have been visited.\n" +
+                "\n");
+
+        data2.putString("bfs_in_detail_title","Breadth-First Search in Detail");
+        data2.putString("bfs_in_detail_description","Here's an example of how BFS algorithm works step by step:\n" +
+                "\n" +
+                "Suppose we have the following undirected graph:\n" +
+                "\n" +
+
+                "       1 -- 2 -- 3\n" +
+                "       |    |    |\n" +
+                "       4 -- 5 -- 6\n" +
+                "We want to perform a BFS traversal starting from vertex 1. Here's how the algorithm works:\n" +
+                "\n" +
+                "Initialize all vertices as unvisited, with infinite distance and null parent:\n" +
+                "\n" +
+
+                "color = [WHITE, WHITE, WHITE, WHITE, WHITE, WHITE]\n" +
+                "d = [INF, INF, INF, INF, INF, INF]\n" +
+                "p = [NULL, NULL, NULL, NULL, NULL, NULL]\n" +
+                "Mark the source vertex as visited (coloring it as GRAY) and enqueue it:\n" +
+                "\n" +
+
+                "color = [GRAY, WHITE, WHITE, WHITE, WHITE, WHITE]\n" +
+                "d = [0, INF, INF, INF, INF, INF]\n" +
+                "p = [NULL, NULL, NULL, NULL, NULL, NULL]\n" +
+                "Q = [1]\n" +
+                "Dequeue vertex 1 and visit all its unvisited neighbors (coloring them as GRAY) and enqueue them:\n" +
+                "\n" +
+
+                "color = [BLACK, GRAY, GRAY, WHITE, WHITE, WHITE]\n" +
+                "d = [0, 1, 1, INF, INF, INF]\n" +
+                "p = [NULL, 1, 1, NULL, NULL, NULL]\n" +
+                "Q = []\n" +
+                "The BFS tree so far is:\n" +
+                "\n" +
+
+                "    1 -- 2 -- 3\n" +
+                "         |\n" +
+                "         4 -- 5 -- 6\n" +
+                "Dequeue vertex 2 and visit all its unvisited neighbors (coloring them as GRAY) and enqueue them:\n" +
+                "\n" +
+
+                "color = [BLACK, BLACK, GRAY, WHITE, WHITE, WHITE]\n" +
+                "d = [0, 1, 1, 2, 2, INF]\n" +
+                "p = [NULL, 1, 1, 2, 2, NULL]\n" +
+                "Q = [3]\n" +
+                "The BFS tree so far is:\n" +
+                "\n" +
+
+                "    1 -- 2 -- 3\n" +
+                "         |\n" +
+                "         4 -- 5 -- 6\n" +
+                "              |\n" +
+                "              3\n" +
+                "Dequeue vertex 3 and visit all its unvisited neighbors (coloring them as GRAY) and enqueue them:\n" +
+                "\n" +
+
+                "color = [BLACK, BLACK, BLACK, WHITE, WHITE, GRAY]\n" +
+                "d = [0, 1, 1, 2, 2, 3]\n" +
+                "p = [NULL, 1, 1, 2, 2, 5]\n" +
+                "Q = [4]\n" +
+                "The BFS tree so far is:\n" +
+                "\n" +
+
+                "    1 -- 2 -- 3\n" +
+                "         |\n" +
+                "         4 -- 5 -- 6\n" +
+                "              |\n" +
+                "              3 -- 4\n" +
+                "Dequeue vertex 4 and visit all its unvisited neighbors (coloring them as GRAY) and enqueue them:\n" +
+                "\n" +
+
+                "color = [BLACK, BLACK, BLACK, BLACK, GRAY, GRAY]\n" +
+                "d = [0, 1, 1, 2, 2, 3]\n" +
+                "p = [NULL, 1, 1, 2, 5, 5]\n" +
+                "Q = [5, 6]\n" +
+                "The BFS tree so far is:\n" +
+                "\n" +
+
+                "    1 -- 2 -- 3\n" +
+                "         |\n" +
+                "         4 -- 5 -- 6\n" +
+                "              |\n" +
+                "              3 -- 4 -- 6");
+
+        data2.putString("bfs_performance_title","Performance");
+        data2.putString("bfs_performance_description","BFS algorithm has a time complexity of O(V + E), where V is the number of vertices and E is the number of edges in the graph. The algorithm visits each vertex and each edge once, so the time complexity is proportional to the size of the input graph.\n" +
+                "\n" +
+                "In terms of space complexity, BFS uses a queue to store the nodes to be visited, and a boolean array to keep track of visited nodes. The maximum size of the queue is the maximum number of nodes at the same level in the graph, which can be as large as the diameter of the graph. Therefore, the space complexity of BFS is O(V), where V is the number of vertices in the graph.");
+        fragment.setArguments(data2);
         fragmentTransaction.replace(R.id.bfs_frameLayout,fragment, null)
                 .commit();
     }
@@ -102,54 +196,64 @@ public class BFS_Description extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-//        Bundle data = new Bundle();
-//        data.putString("selection_sort_code","import java.util.Arrays;\n" +
-//                "\n" +
-//                "public class Selection_Sort{\n" +
-//                "\n" +
-//                "    public static void sort(int arr[])\n" +
-//                "    {\n" +
-//                "        int n = arr.length;\n" +
-//                "\n" +
-//                "        for (int i = 0; i < n-1; i++)\n" +
-//                "        {\n" +
-//                "            int min_idx = i;\n" +
-//                "            for (int j = i+1; j < n; j++) {\n" +
-//                "                if (arr[j] < arr[min_idx]) {\n" +
-//                "                    min_idx = j;\n" +
-//                "                }\n" +
-//                "            }\n" +
-//                "            int temp = arr[min_idx];\n" +
-//                "            arr[min_idx] = arr[i];\n" +
-//                "            arr[i] = temp;\n" +
-//                "        }\n" +
-//                "    }\n" +
-//                "\n" +
-//                "     public static boolean isSorted(int[] arr){\n" +
-//                "        int prev = arr[0];\n" +
-//                "       \n" +
-//                "        for (int i = 1; i < arr.length; i++) {\n" +
-//                "            if (prev > arr[i]) {\n" +
-//                "                System.out.println(\"Selection Sort Fails!!\");\n" +
-//                "                return false;\n" +
-//                "            }\n" +
-//                "            prev = arr[i];\n" +
-//                "        }\n" +
-//                "         \n" +
-//                "        return true;\n" +
-//                "    }\n" +
-//                "\n" +
-//                "    public static void main(String[] args) {\n" +
-//                "        int[] arr = {4, 8, 2, 9, 5};\n" +
-//                "\t    \tsort(arr);\n" +
-//                "\t    \tif(isSorted(arr)) {\n" +
-//                "\t    \t\tSystem.out.println(Arrays.toString(arr));\n" +
-//                "\t    \t}\n" +
-//                "    }\n" +
-//                "}");
-//
-//        data.putString("selection_implementation","Implementation: Selection sort implementation given below - ");
-//        fragment.setArguments(data);
+        Bundle data = new Bundle();
+        data.putString("bfs_code","import java.util.*;\n" +
+                "\n" +
+                "public class BFS {\n" +
+                "    private int V; // number of vertices\n" +
+                "    private LinkedList<Integer>[] adj; // adjacency list\n" +
+                "\n" +
+                "    public BFS(int v) {\n" +
+                "        V = v;\n" +
+                "        adj = new LinkedList[v];\n" +
+                "        for (int i = 0; i < v; ++i) {\n" +
+                "            adj[i] = new LinkedList<>();\n" +
+                "        }\n" +
+                "    }\n" +
+                "\n" +
+                "    public void addEdge(int v, int w) {\n" +
+                "        adj[v].add(w);\n" +
+                "    }\n" +
+                "\n" +
+                "    public void bfs(int s) {\n" +
+                "        boolean[] visited = new boolean[V];\n" +
+                "        LinkedList<Integer> queue = new LinkedList<>();\n" +
+                "\n" +
+                "        visited[s] = true;\n" +
+                "        queue.add(s);\n" +
+                "\n" +
+                "        while (queue.size() != 0) {\n" +
+                "            s = queue.poll();\n" +
+                "            System.out.print(s + \" \");\n" +
+                "\n" +
+                "            Iterator<Integer> i = adj[s].listIterator();\n" +
+                "            while (i.hasNext()) {\n" +
+                "                int n = i.next();\n" +
+                "                if (!visited[n]) {\n" +
+                "                    visited[n] = true;\n" +
+                "                    queue.add(n);\n" +
+                "                }\n" +
+                "            }\n" +
+                "        }\n" +
+                "    }\n" +
+                "\n" +
+                "    public static void main(String[] args) {\n" +
+                "        BFS g = new BFS(4);\n" +
+                "\n" +
+                "        g.addEdge(0, 1);\n" +
+                "        g.addEdge(0, 2);\n" +
+                "        g.addEdge(1, 2);\n" +
+                "        g.addEdge(2, 0);\n" +
+                "        g.addEdge(2, 3);\n" +
+                "        g.addEdge(3, 3);\n" +
+                "\n" +
+                "        System.out.println(\"BFS Traversal starting from vertex 2:\");\n" +
+                "        g.bfs(2);\n" +
+                "    }\n" +
+                "}\n");
+
+        data.putString("bfs_implementation","Implementation: Breadth-First Search implementation given below - we create a graph with 4 vertices and add some edges to it. Then, we call the bfs method with the starting vertex 2 to perform BFS traversal starting from that vertex. The output should be: 2 0 3 1.");
+        fragment.setArguments(data);
         fragmentTransaction.replace(R.id.bfs_frameLayout,fragment, null)
                 .commit();
     }
@@ -159,14 +263,14 @@ public class BFS_Description extends AppCompatActivity {
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
 
-//        Bundle data2 = new Bundle();
-//        data2.putString("selection_problem_title","Problem 1");
-//        data2.putString("selection_problem_description","Problems not assigned yet\n");
-//
-//        data2.putString("selection_problem2_title","Problem 2");
-//        data2.putString("selection_problem2_description","Problems not assigned yet\n");
-//
-//        fragment.setArguments(data2);
+        Bundle data2 = new Bundle();
+        data2.putString("selection_problem_title","Problem 1");
+        data2.putString("selection_problem_description","Problems not assigned yet\n");
+
+        data2.putString("selection_problem2_title","Problem 2");
+        data2.putString("selection_problem2_description","Problems not assigned yet\n");
+
+        fragment.setArguments(data2);
 
         fragmentTransaction.replace(R.id.bfs_frameLayout,fragment, null)
                 .commit();

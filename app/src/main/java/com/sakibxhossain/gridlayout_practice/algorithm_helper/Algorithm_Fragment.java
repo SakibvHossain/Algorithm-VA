@@ -77,8 +77,84 @@ public class Algorithm_Fragment extends Fragment {
             load_queue_algorithm(data);
         }else if(Objects.equals(token,"binary_tt")){
             load_binary_tree_traverse_algorithm(data);
+        }else if(Objects.equals(token,"dfs")){
+            load_dfs_algorithm(data);
+        }else if(Objects.equals(token,"bfs")){
+            load_bfs_algorithm(data);
+        }else if(Objects.equals(token,"lcs")){
+            load_lcs_algorithm(data);
+        }else if(Objects.equals(token,"huffman_coding")){
+            load_huffman_coding_algorithm(data);
         }
         return myView;
+    }
+
+    private void load_huffman_coding_algorithm(Bundle data) {
+        if(data != null){
+            selection_title = data.getString("huffman_coding_title");
+            selection_description = data.getString("huffman_coding_description");
+
+            selection_process = data.getString("huffman_coding_algorithm_title");
+            selection_process_description = data.getString("huffman_coding_algorithm_description");
+
+            selection_in_detail = data.getString("huffman_coding_in_detail_title");
+            selection_in_detail_description = data.getString("huffman_coding_in_detail_description");
+
+            selection_performance = data.getString("huffman_coding_performance_title");
+            selection_performance_description = data.getString("huffman_coding_performance_description");
+        }
+        load_texts();
+    }
+
+    private void load_lcs_algorithm(Bundle data) {
+        if(data != null){
+            selection_title = data.getString("lcs_title");
+            selection_description = data.getString("lcs_description");
+
+            selection_process = data.getString("lcs_algorithm_title");
+            selection_process_description = data.getString("lcs_algorithm_description");
+
+            selection_in_detail = data.getString("lcs_in_detail_title");
+            selection_in_detail_description = data.getString("lcs_in_detail_description");
+
+            selection_performance = data.getString("lcs_performance_title");
+            selection_performance_description = data.getString("lcs_performance_description");
+        }
+        load_texts();
+    }
+
+    private void load_bfs_algorithm(Bundle data) {
+        if(data != null){
+            selection_title = data.getString("bfs_title");
+            selection_description = data.getString("bfs_description");
+
+            selection_process = data.getString("bfs_algorithm_title");
+            selection_process_description = data.getString("bfs_algorithm_description");
+
+            selection_in_detail = data.getString("bfs_in_detail_title");
+            selection_in_detail_description = data.getString("bfs_in_detail_description");
+
+            selection_performance = data.getString("bfs_performance_title");
+            selection_performance_description = data.getString("dfs_performance_description");
+        }
+        load_texts();
+    }
+
+    private void load_dfs_algorithm(Bundle data) {
+        if(data != null){
+            selection_title = data.getString("dfs_title");
+            selection_description = data.getString("dfs_description");
+
+            selection_process = data.getString("dfs_algorithm_title");
+            selection_process_description = data.getString("dfs_sort_algorithm_description");
+
+            selection_in_detail = data.getString("dfs_in_detail_title");
+            selection_in_detail_description = data.getString("dfs_sort_in_detail_description");
+
+            selection_performance = data.getString("dfs_performance_title");
+            selection_performance_description = data.getString("dfs_performance_description");
+        }
+        load_texts();
     }
 
     private void load_binary_tree_traverse_algorithm(Bundle data) {
