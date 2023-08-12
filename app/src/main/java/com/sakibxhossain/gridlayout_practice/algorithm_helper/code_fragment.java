@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 import com.sakibxhossain.gridlayout_practice.BFS_Analysis;
@@ -259,15 +260,17 @@ public class code_fragment extends Fragment {
             analysis_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent go_for_Analysis = new Intent(getContext(), Binary_Tree_Traversal_Analysis.class);
-                    startActivity(go_for_Analysis);
+                    Toast.makeText(getActivity(), "Not Implemented yet", Toast.LENGTH_SHORT).show();
+//                    Intent go_for_Analysis = new Intent(getContext(), Binary_Tree_Traversal_Analysis.class);
+//                    startActivity(go_for_Analysis);
                 }
             });
             visualize_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent go_for_Visualize = new Intent(getContext(), Binary_Tree_Traversal_Visualization.class);
-                    startActivity(go_for_Visualize);
+                    Toast.makeText(getActivity(), "Not Implemented yet", Toast.LENGTH_SHORT).show();
+//                    Intent go_for_Visualize = new Intent(getContext(), Binary_Tree_Traversal_Visualization.class);
+//                    startActivity(go_for_Visualize);
                 }
             });
             load_binary_tt_Code(data);

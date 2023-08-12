@@ -8,6 +8,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.sakibxhossain.gridlayout_practice.helper.ClickListener;
 import com.sakibxhossain.gridlayout_practice.helper.Main_Adapter;
@@ -89,25 +90,24 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(tree);
                         break;
                     case 4:
-                        Intent graph = new Intent(MainActivity.this, Graph_Algorithm.class);
-                        startActivity(graph);
-                        break;
-                    case 5:
-                        Intent dynamic = new Intent(MainActivity.this, Dynamic.class);
-                        startActivity(dynamic);
-                        break;
                     case 6:
-                        Intent greedy = new Intent(MainActivity.this, Greedy.class);
-                        startActivity(greedy);
-                        break;
+                    case 5:
+//                        Intent dynamic = new Intent(MainActivity.this, Dynamic.class);
+//                        startActivity(dynamic);
+//                        Intent greedy = new Intent(MainActivity.this, Greedy.class);
+//                        startActivity(greedy);
                     case 7:
-                        Intent string_algo = new Intent(MainActivity.this, Strings_Algorithm.class);
-                        startActivity(string_algo);
-                        break;
+
+//                        Intent string_algo = new Intent(MainActivity.this, Strings_Algorithm.class);
+//                        startActivity(string_algo);
                     case 8:
-                        Intent hashing = new Intent(MainActivity.this, Hashing.class);
-                        startActivity(hashing);
+                        Toast.makeText(MainActivity.this,"Under Implementation",Toast.LENGTH_SHORT).show();
+//                        Intent graph = new Intent(MainActivity.this, Graph_Algorithm.class);
+//                        startActivity(graph);
                         break;
+
+//                        Intent hashing = new Intent(MainActivity.this, Hashing.class);
+//                        startActivity(hashing);
                     default:
                         System.out.println("Looking forward to the Weekend");
                 }
