@@ -479,7 +479,7 @@ public class Insertion_Sort_Analysis extends AppCompatActivity {
 }
 
 
-//else if(count == 2){
+//        else if(count == 2){
 //        array_main_executed.setVisibility(View.VISIBLE);
 //        index_0.setText(String.valueOf(array[0]));
 //        index_1.setText(String.valueOf(array[1]));
@@ -494,7 +494,7 @@ public class Insertion_Sort_Analysis extends AppCompatActivity {
 //        index_2.setText(String.valueOf(copy_array_1[2]));
 //        index_3.setText(String.valueOf(copy_array_1[3]));
 //        index_4.setText(String.valueOf(copy_array_1[4]));
-////                            sort_method_executed.setVisibility(View.VISIBLE);
+//        sort_method_executed.setVisibility(View.VISIBLE);
 //        }else if(count == 5){
 //        sort_insertion(array);
 //        index_0.setText(String.valueOf(copy_array_2[0]));
@@ -502,8 +502,8 @@ public class Insertion_Sort_Analysis extends AppCompatActivity {
 //        index_2.setText(String.valueOf(copy_array_2[2]));
 //        index_3.setText(String.valueOf(copy_array_2[3]));
 //        index_4.setText(String.valueOf(copy_array_2[4]));
-////                            sort_method_variables_n.setVisibility(View.VISIBLE);
-////                            sort_method_variable_n.setText(String.valueOf(array.length));
+//        sort_method_variables_n.setVisibility(View.VISIBLE);
+//        sort_method_variable_n.setText(String.valueOf(array.length));
 //        }else if(count == 6){
 //        sort_insertion(array);
 //        index_0.setText(String.valueOf(copy_array_3[0]));
@@ -511,8 +511,8 @@ public class Insertion_Sort_Analysis extends AppCompatActivity {
 //        index_2.setText(String.valueOf(copy_array_3[2]));
 //        index_3.setText(String.valueOf(copy_array_3[3]));
 //        index_4.setText(String.valueOf(copy_array_3[4]));
-////                            sort_method_variable_i.setVisibility(View.VISIBLE);
-////                            sort_method_variable_i.setText(String.valueOf(inc));
+//        sort_method_variable_i.setVisibility(View.VISIBLE);
+//        sort_method_variable_i.setText(String.valueOf(inc));
 //        }else if(count == 7){
 //        sort_insertion(array);
 //        index_0.setText(String.valueOf(copy_array_4[0]));
@@ -520,6 +520,6 @@ public class Insertion_Sort_Analysis extends AppCompatActivity {
 //        index_2.setText(String.valueOf(copy_array_4[2]));
 //        index_3.setText(String.valueOf(copy_array_4[3]));
 //        index_4.setText(String.valueOf(copy_array_4[4]));
-////                            sort_method_variable_key.setVisibility(View.VISIBLE);
-////                            sort_method_variable_key.setText(String.valueOf(array[inc]));
+//        sort_method_variable_key.setVisibility(View.VISIBLE);
+//        sort_method_variable_key.setText(String.valueOf(array[inc]));
 //        }

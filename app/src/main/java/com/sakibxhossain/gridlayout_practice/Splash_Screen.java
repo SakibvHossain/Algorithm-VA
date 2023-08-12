@@ -17,7 +17,6 @@ public class Splash_Screen extends AppCompatActivity {
     //Variables
     ImageView splashscreen_ImageView;
     TextView splashscreen_textview;
-
     //Animation Variables
     Animation slide_right_anim, bottom_aim;
 
