@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.stack_queue,
             R.drawable.tree,
             R.drawable.graph,
-            R.drawable.dynamic,
-            R.drawable.greedy,
-            R.drawable.string,
-            R.raw.sorting
+//            R.drawable.dynamic,
+//            R.drawable.greedy,
+//            R.drawable.string,
+//            R.raw.sorting
     };
 
     String[] itemTitle = new String[]{
@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
             "Stack & Queue",
             "Tree",
             "Graph",
-            "Dynamic",
-            "Greedy",
-            "String",
-            "Hashing"
+//            "Dynamic",
+//            "Greedy",
+//            "String",
+//            "Hashing"
     };
 
     String[] itemDifficulty = new String[]{
@@ -45,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
             "Easy",
             "Medium",
             "Hard",
-            "Hard",
-            "Hard",
-            "Hard",
-            "Medium"
+//            "Hard",
+//            "Hard",
+//            "Hard",
+//            "Medium"
     };
 
     GridView gridView;
@@ -90,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(tree);
                         break;
                     case 4:
+                        Intent graph = new Intent(MainActivity.this, Graph_Algorithm.class);
+                        startActivity(graph);
+                        break;
                     case 6:
                     case 5:
 //                        Intent dynamic = new Intent(MainActivity.this, Dynamic.class);

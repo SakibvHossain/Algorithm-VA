@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.sakibxhossain.gridlayout_practice'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.sakibxhossain.gridlayout_practice"
-        minSdk 24
-        targetSdk 32
+        minSdk 30
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
