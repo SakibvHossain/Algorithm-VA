@@ -256,11 +256,12 @@ public class code_fragment extends Fragment {
                 }
             });
             load_queue_Code(data);
-        }else if(Objects.equals(token, "binary_tt")){
+        }
+        else if(Objects.equals(token, "binary_tt")){
             analysis_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(getActivity(), "Not Implemented yet", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Under Implementation", Toast.LENGTH_SHORT).show();
 //                    Intent go_for_Analysis = new Intent(getContext(), Binary_Tree_Traversal_Analysis.class);
 //                    startActivity(go_for_Analysis);
                 }
@@ -268,45 +269,52 @@ public class code_fragment extends Fragment {
             visualize_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(getActivity(), "Not Implemented yet", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Under Implementation", Toast.LENGTH_SHORT).show();
 //                    Intent go_for_Visualize = new Intent(getContext(), Binary_Tree_Traversal_Visualization.class);
 //                    startActivity(go_for_Visualize);
                 }
             });
             load_binary_tt_Code(data);
-        }else if(Objects.equals(token, "dfs")){
+        }
+        else if(Objects.equals(token, "dfs")){
             analysis_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent go_for_Analysis = new Intent(getContext(), DFS_Analysis.class);
-                    startActivity(go_for_Analysis);
+                    Toast.makeText(getActivity(), "Under Implementation", Toast.LENGTH_SHORT).show();
+//                    Intent go_for_Analysis = new Intent(getContext(), DFS_Analysis.class);
+//                    startActivity(go_for_Analysis);
                 }
             });
             visualize_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent go_for_Visualize = new Intent(getContext(), DFS_Visualization.class);
-                    startActivity(go_for_Visualize);
+                    Toast.makeText(getActivity(), "Under Implementation", Toast.LENGTH_SHORT).show();
+//                    Intent go_for_Visualize = new Intent(getContext(), DFS_Visualization.class);
+//                    startActivity(go_for_Visualize);
                 }
             });
             load_dfs_Code(data);
-        }else if(Objects.equals(token, "bfs")){
+        }
+        else if(Objects.equals(token, "bfs")){
             analysis_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent go_for_Analysis = new Intent(getContext(), BFS_Analysis.class);
-                    startActivity(go_for_Analysis);
+                    Toast.makeText(getActivity(), "Under Implementation", Toast.LENGTH_SHORT).show();
+//                    Intent go_for_Analysis = new Intent(getContext(), BFS_Analysis.class);
+//                    startActivity(go_for_Analysis);
                 }
             });
             visualize_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent go_for_Visualize = new Intent(getContext(), BFS_Visualization.class);
-                    startActivity(go_for_Visualize);
+                    Toast.makeText(getActivity(), "Under Implementation", Toast.LENGTH_SHORT).show();
+//                    Intent go_for_Visualize = new Intent(getContext(), BFS_Visualization.class);
+//                    startActivity(go_for_Visualize);
                 }
             });
             load_bfs_Code(data);
-        }else if(Objects.equals(token, "lcs")){
+        }
+        else if(Objects.equals(token, "lcs")){
             analysis_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -322,7 +330,8 @@ public class code_fragment extends Fragment {
                 }
             });
             load_lcs_Code(data);
-        }else if(Objects.equals(token, "huffman_coding")){
+        }
+        else if(Objects.equals(token, "huffman_coding")){
             analysis_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

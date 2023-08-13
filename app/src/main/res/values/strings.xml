@@ -14,6 +14,10 @@
     <string name="fourth_slide_title">Visualize Algorithm</string>
     <string name="f_th_slide_title">Well Structured</string>
 
+    <!-- to toggle the open close button of the navigation drawer -->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
     <!--Descriptions-->
     <string name="first_slide_desc">Learning algorithms and data structures is essential for anyone interested in computer science or programming. These enable us to solve complex problems efficiently, efficient programs.</string>
     <string name="second_slide_desc">Our Algorithm application is designed with a well-structured approach to optimize your coding experience!.</string>

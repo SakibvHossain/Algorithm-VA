@@ -1,6 +1,8 @@
 package com.sakibxhossain.gridlayout_practice;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -55,12 +57,16 @@ public class MainActivity extends AppCompatActivity {
     Main_Adapter adapter;
     Animation bottom_aim;
     ImageView icon_main;
+    public DrawerLayout drawerLayout;
+    public ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
       //  getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
+
 
         gridView = findViewById(R.id.grid_view);
       //  icon_main = findViewById(R.id.icon_main_activity);
